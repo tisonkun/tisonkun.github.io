@@ -1404,6 +1404,7 @@ pre code {
   border: 2px solid #333;
   max-width: 96px;
   padding: 2px;
+  border-radius: 50%;
 }
 .site-author-name {
   color: #f5f5f5;
@@ -1417,12 +1418,6 @@ pre code {
 }
 .links-of-author a {
   font-size: 0.8125em;
-}
-.links-of-author .fa,
-.links-of-author .fab,
-.links-of-author .far,
-.links-of-author .fas {
-  margin-right: 2px;
 }
 .sidebar .sidebar-button:not(:first-child) {
   margin-top: 15px;
@@ -2531,6 +2526,14 @@ ul.breadcrumb li:last-child {
   border-bottom-color: #111;
   color: #111;
 }
+.gt-header a,
+.gt-comments a,
+.gt-popup a {
+  border-bottom: 0;
+}
+.gt-container .gt-popup .gt-action.is--active::before {
+  top: 0.7em;
+}
 .search-active {
   overflow: hidden;
 }
@@ -2896,7 +2899,7 @@ hr {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #f5bd66;
+  background: #17d522;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
