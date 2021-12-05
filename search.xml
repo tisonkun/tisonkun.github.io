@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Engula 开源共同体观察报告</title>
-    <url>/2021/12/02/engula-community-observation/</url>
+    <url>/2021/12/05/engula-community-observation/</url>
     <content><![CDATA[<p>Contributor 参与开源共同体的过程一定会问两个问题，第一个是我能为你做什么，第二个是我该怎么做到它。本文以观察报告的形式总结了我在参与 <a href="https://engula.io/">Engula</a> 开源共同体期间的体会，以及 Engula 现有的部分切入点，可以作为想要参与的同学的参考。</p>
 <p>Engula 的设计目标是一个弹性、自适应、可扩展、平台无关的 serverless 存储引擎。基于 Engula 可以实现高可靠且高性价比的数据处理逻辑，例如数据库。Engula 从今年八月份开始以开源协同的方式发起，所有代码以 Apache 2.0 协议授权，使用 Rust 语言开发。</p>
 <span id="more"></span>
@@ -54,7 +54,6 @@
 <h2 id="Engula-开源共同体的发展"><a href="#Engula-开源共同体的发展" class="headerlink" title="Engula 开源共同体的发展"></a>Engula 开源共同体的发展</h2><p>开源共同体的核心是开源软件，因此它的发展肯定也离不开软件本身的演进。这一点在上面已经讨论了不少。针对围绕软件形成的共同体的运行，我之前做过一个 <a href="https://github.com/tisonkun/engula.github.io/blob/85350e76644a7d28049dfc7cb32e2dad03f84abf/docs/posts/community-project.md">The Engula Community Project</a> 的提案，里面有我对打造一个新的开源共同体的思考，欢迎阅读。</p>
 <p>由于这个提案本身不是一种硬性的承诺，其中的提议也需要共同体成员认可和实际执行才有效，所以我不再计划把它发布到 Engula 的网站上，而是针对每一个关键的提议，以 contributor 文档或共识的方式逐个落实到 Engula 开源共同体当中。</p>
 <p>我希望 Engula 能够成为发源于本土的优秀开源共同体，不仅作为一个 serverless 存储引擎创造技术价值，也是开源协同模式下健壮成长的标杆。</p>
-<img src="/media/wemp.png" class="" title="Subscribe Me" alt="Subscribe My WeChat Official Account: yatennosyo">
 ]]></content>
       <tags>
         <tag>Engula</tag>
@@ -63,7 +62,7 @@
   </entry>
   <entry>
     <title>《开放式组织》书评</title>
-    <url>/2021/12/02/open-organization/</url>
+    <url>/2021/12/05/open-organization/</url>
     <content><![CDATA[<p>本文部分启发自在 <a href="https://alc-beijing.github.io/alc-site/">ALC Beijing</a> 录制播客时讨论的内容，仅引用我个人的观点。播客内容应该近期会在前面链接的网站上发布。</p>
 <p><a href="https://book.douban.com/subject/26894636">《开放式组织》</a>这本书单看它本身，讲的是红帽公司的组织管理经验。这是一个将商业价值建立在开源项目之上的公司审视公司内部的组织形式的著作，并且主要关注在红帽这个案例上。这样，不管是在经验的普遍性上，还是在开放式组织这种形式跨越组织，尤其是建立商业公司和开源社区之间的联系这方面的讨论上，都有所欠缺。</p>
 <span id="more"></span>
@@ -123,7 +122,6 @@
 <li>我们鼓励并且期待开放、坦诚、充满热情的辩论。</li>
 <li>我们欢迎反馈意见，本着“早发行，勤发行”的精神做出改变。</li>
 </ol>
-<img src="/media/wemp.png" class="" title="Subscribe Me" alt="Subscribe My WeChat Official Account: yatennosyo">
 ]]></content>
       <tags>
         <tag>开源</tag>
@@ -133,7 +131,7 @@
   </entry>
   <entry>
     <title>高效参与开源的诀窍</title>
-    <url>/2021/12/02/effective-open-source-participant/</url>
+    <url>/2021/12/05/effective-open-source-participant/</url>
     <content><![CDATA[<p>大部分人参与开源社区会面临的一个巨大挑战，那就是缺乏时间。本文试图提供一种方式，帮助想要参与开源社区的同学高效利用有限的时间。</p>
 <p>在一个开源社区里，maintainers 需要关注的范围比 contributors 要大得多。本文分别讨论这两类人群适用的参与开源社区的技巧，以减少过程中的摩擦，提高时间的利用率。</p>
 <span id="more"></span>
@@ -231,7 +229,6 @@
 </ul>
 <h2 id="Have-fun"><a href="#Have-fun" class="headerlink" title="Have fun"></a>Have fun</h2><p>不论是 contributor 还是 maintainer 你都已经通过参与开源社区为社会创造出了价值。时不时想想你为什么要参与或维护这个项目，回顾这个项目已经取得的成就。你已经做得很好了。</p>
 <p>软件都有自己的生命周期，开源软件也不例外。开源社区的工作也不是你生活的全部。如果你找到了新的乐趣，完全可以把项目交给其他 maintainers 维护，或者直接归档。如果开源项目的维护已经超出你的能力范围或者消耗了太多的时间精力，也可以休息一段时间甚至放弃对项目的维护。作为开源社区成员的你没有义务非得维护这个项目或者响应别人的请求。你把自己的工作自由的提供给其他人利用，已经创造了非常客观的价值。</p>
-<img src="/media/wemp.png" class="" title="Subscribe Me" alt="Subscribe My WeChat Official Account: yatennosyo">
 ]]></content>
       <tags>
         <tag>开源</tag>
@@ -240,7 +237,7 @@
   </entry>
   <entry>
     <title>企业如何实践开源协同</title>
-    <url>/2021/12/02/open-source-collaboration-enterprise-perspective/</url>
+    <url>/2021/12/05/open-source-collaboration-enterprise-perspective/</url>
     <content><![CDATA[<p>随着开源概念的红火，越来越多的企业将内部项目公开托管到 GitHub 等平台，也有越来越多依托开源项目建立起来的企业。对于这些企业来说，它们的目标不只是开放项目源代码，更希望能够形成开源共同体，打造围绕项目的软件生态。</p>
 <p>然而，其中大部分项目由于成员背景的单一性，最终都终结于仅源码可得的形态。对于这些新兴项目来说，初始成员从属于同一企业是既定事实。在这样的前提下，企业应该如何实践开源协同，形成开源共同体呢？</p>
 <span id="more"></span>
@@ -347,7 +344,6 @@
 <p>另一方面，泛泛而谈数据库这样一个复杂的领域其实是一种懒惰。既然复杂的项目本身会分模块开发，为什么在招募新成员的时候就只想着完全理解整个领域的人呢？如果项目的并发设计不佳，只要是精通该语言并发编程的专家，愿意 contribute 做改进，你管他懂不懂数据库的专业概念。醉心于编译器前端的开发者，也许能解决 SQL Parser 当中经年的性能问题。进入 Apache 孵化器的项目的导师，往往也不是项目所在领域的专家，甚至不是开发者，但是他们能够帮助项目以 Apache 的方式建立起开源共同体。</p>
 <p>以这样的方式去寻找潜在的开发核心逻辑的成员，相信你的视野会更加广阔。</p>
 <p>其实，这才是“开源共同体”的含义。不止于项目，也不是社区居委会，而是围绕开源项目的发展，基于对项目的认同，形成的多层次合作共同体。</p>
-<img src="/media/wemp.png" class="" title="Subscribe Me" alt="Subscribe My WeChat Official Account: yatennosyo">
 ]]></content>
       <tags>
         <tag>开源</tag>
