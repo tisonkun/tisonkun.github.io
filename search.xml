@@ -191,7 +191,8 @@
 <p>最后是设计文档。Contributors 要深度参与技术贡献需要了解相关代码的设计背景和演进过程，设计文档就是最好的参考材料。良好的代码质量有助于避免 contributor 阅读源码时受挫，但是项目固有的复杂度还是需要设计文档来辅助解释。如果代码质量和设计文档都缺位，想要深度参与技术贡献的 contributor 就不得不指望 maintainer 花费大量的时间解释和指导了。这点对于 maintainer 自己也是一样的。当你想要做一个新的功能，如果没有好的技术文档，你也得懵圈，也得拉人反复对齐。</p>
 <p><strong>第三点是避免私下讨论</strong>。有关项目和社区的讨论，唯一的信源应该是一个公开的渠道。例如，ASF 治下的项目要求所有有效的讨论都应该发生在邮件列表上。例如，大部分托管在 GitHub 上的项目隐含了讨论应该发生在 GitHub 平台上。社区成员可能还会通过其他的沟通渠道辅助交流，例如即时通信软件。但是这些辅助渠道的讨论需要被抄送到唯一信源上才实际生效。这样，contributor 才能在无需了解诸多渠道的前提下有能力获取所有有价值的信息。</p>
 <p>这些公开讨论的内容以及表现出来的做事方式，就是社区当中的“活文档”。模仿是人类的天性，如果你希望别人遵循某种做事方式以减少冲突，那么最好以身作则，再带动更多的人跟随。前面讨论 contributor 的参与技巧时候说过，加入社区并首先观察别人是怎么做的，是一种避免浪费时间的好方法。那么与之相对的，maintainer 也要在项目维护和日常交流方面为此提供方便。</p>
-<blockquote><p>Open Communications: as a virtual organization, the ASF requires all communications related to code and decision-making to be publicly accessible to ensure asynchronous collaboration, as necessitated by a globally-distributed community.</p><footer><strong>Apache Software Foundation</strong><cite><a href="https://www.apache.org/theapacheway/index.html">BRIEFING: THE APACHE WAY</a></cite></footer></blockquote>
+<blockquote><p>Open Communications: as a virtual organization, the ASF requires all communications related to code and decision-making to be publicly accessible to ensure asynchronous collaboration, as necessitated by a globally-distributed community.</p>
+<footer><strong>Apache Software Foundation</strong><cite><a href="https://www.apache.org/theapacheway/index.html">BRIEFING: THE APACHE WAY</a></cite></footer></blockquote>
 
 <p><strong>第四点是考虑自动化</strong>。结构化的流程更容易自动化。当你的流程越来越结构化，那么是时候考虑自动化它了。显然，无需 maintainer 亲自动手的自动化流程能够减轻项目维护的压力。</p>
 <p>同样，最好的自动化是符合直觉的。GitHub 平台提供了一系列自动化的支持。尤其是 <a href="https://github.com/features/actions">GitHub Actions</a> 发布以后，自动化的灵活性得到了进一步的提升。利用项目代码托管的平台提供的开箱即用的能力做自动化，能够最大程度的避免各种冲突。</p>
