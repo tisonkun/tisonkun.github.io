@@ -547,6 +547,9 @@ figure.highlight .code pre {
   padding-left: 10px;
   width: 100%;
 }
+figure.highlight .marked {
+  background: rgba(0,0,0,0.3);
+}
 pre .caption,
 pre figcaption {
   margin-bottom: 10px;
@@ -2893,7 +2896,7 @@ hr {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #6cff6b;
+  background: #c703dd;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
