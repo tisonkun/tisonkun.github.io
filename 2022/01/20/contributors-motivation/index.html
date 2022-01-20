@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CPingFang+SC:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"tisonkun.org","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="本文整理自我在开源社举办的 COSCon’21 活动上的主题分享《Why Contributors Stay and Grow》的第一部分。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="开源共同体参与者的动机">
+<meta property="og:url" content="https://tisonkun.org/2022/01/20/contributors-motivation/index.html">
+<meta property="og:site_name" content="夜天之书">
+<meta property="og:description" content="本文整理自我在开源社举办的 COSCon’21 活动上的主题分享《Why Contributors Stay and Grow》的第一部分。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-01-20T00:00:00.000Z">
+<meta property="article:modified_time" content="2022-01-20T14:07:27.320Z">
+<meta property="article:author" content="tison">
+<meta property="article:tag" content="开源">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://tisonkun.org/2022/01/20/contributors-motivation/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://tisonkun.org/2022/01/20/contributors-motivation/","path":"2022/01/20/contributors-motivation/","title":"开源共同体参与者的动机"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>开源共同体参与者的动机 | 夜天之书</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2WD628YD8Y"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-2WD628YD8Y","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+<meta name="twitter:image" content="https://tisonkun.org/media/yatennosyo.png">
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">夜天之书</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">A modern wizard.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B4%E6%8E%A5%E5%88%A9%E7%9B%8A"><span class="nav-number">1.</span> <span class="nav-text">直接利益</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%84%E7%BB%87%E9%A9%B1%E5%8A%A8"><span class="nav-number">2.</span> <span class="nav-text">组织驱动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E6%88%91%E9%A9%B1%E5%8A%A8"><span class="nav-number">3.</span> <span class="nav-text">自我驱动</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="tison"
+      src="/media/eugeo.jpg">
+  <p class="site-author-name" itemprop="name">tison</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/tisonkun" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;tisonkun" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:wander4096@gmail.com" title="E-Mail → mailto:wander4096@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/tison1096" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;tison1096" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/tisonkun" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://tisonkun.org/2022/01/20/contributors-motivation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/media/eugeo.jpg">
+      <meta itemprop="name" content="tison">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夜天之书">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          开源共同体参与者的动机
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-01-20 00:00:00 / 修改时间：14:07:27" itemprop="dateCreated datePublished" datetime="2022-01-20T00:00:00+00:00">2022-01-20</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>本文整理自我在开源社举办的 COSCon’21 活动上的主题分享<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Tg411K7KS/">《Why Contributors Stay and Grow》</a>的第一部分。</p>
+<span id="more"></span>
+
+<p>正文开始之前，简单讲讲题目中的两个名词。</p>
+<p>一个是相比起开源社区，我现在倾向于使用<strong>开源共同体</strong>来指代 open-source community 的概念。这个词借鉴自科学共同体，科学共同体是由科学观念相同的科学家所组成的集合体，也即科学活动的主体。我认为开源软件的开发以及围绕开源软件开展的活动更加贴近这类共同体的概念，而不应与街道社区的概念混淆。关于这个词的详细阐述，可以参考<a target="_blank" rel="noopener" href="https://opensourceway.community/posts/community_leadership_development/what-is-open-source-community/">《根本就没有什么所谓的“开源社区”》</a>一文。</p>
+<p>另一个是相比起贡献者，我现在倾向于使用<strong>参与者</strong>来指代 contributor 的概念。因为我认为 contributor 参与到开源共同体当中是以他们亲力亲为的行为来支持共同体发展，这是一种赢得声誉的方式，而不是近义于奉献的贡献。关于这个词的翻译，我还不够满意，做出贡献本身也是中立的，只是容易被误会成无私奉献。</p>
+<p>开源运动持续吸引新的参与者加入，围绕开源软件建立起来的生态也越来越繁荣复杂。在这样的背景下，形形色色的参与者的动机也各有不同，我将这些动机分成三类。</p>
+<h2 id="直接利益"><a href="#直接利益" class="headerlink" title="直接利益"></a>直接利益</h2><p>一开始，自由软件运动当中的黑客虽然能够销售自己编写的软件，但是由于软件本身以自由软件协议许可，所以这类直接利益实际上非常有限，对于参与者来说也不是主要的动机来源。</p>
+<p>随着开源运动的影响力日渐增长，针对性的运营岗位和运营预算的出现，导致参与开源软件的开发或者以其他形式为开源共同体做出贡献能够实际获得直接利益。例如，提交补丁赢得马克杯或者文化衫等小礼物，参加改进开源软件的挑战赛赢取奖金，或者有偿为开源软件撰稿及宣传等等。这类动机下参与到开源共同体的人，都可以归类到直接利益激励之下。</p>
+<p>这类参与行为的特点是成果可以明确衡量。例如，提交多少个补丁，反馈了多少个问题，挑战赛下每个题目的积分以及是否被解决，稿件是否交付，宣传的效果包括文章阅读量，视频播放量，植入链接点击转化率等等。</p>
+<p>我并不反对这种参与动机，因为无论是出于何种理由，参与到开源共同体的建设当中，支持它的发展，都是实质的贡献。只是对于发放直接利益的运营人员，或者认为如此运营非常有效的决策者，需要提醒一句不要高估了这种参与的价值。</p>
+<p>实际上，面对各个开源项目推出的五花八门的活动，有不少人会专门盯着这些消息，计算其中门槛低，收益高的活动去参与。例如，开源项目刻意放出诸如修复 linter 等机械化的待办项，完成一个或几个就可以兑换主题小礼品。例如，为了挑战赛的奖金，选择一个与开源项目勉强挂钩的自己熟悉的主题参赛。事成之后，也就把项目完全抛诸脑后，物色下一个“送财童子”。</p>
+<p>求仁得仁。既然提供直接利益的衡量标准就是数字化指标，那么如此运营最终也就会得到相应的指标。但是，发展开源共同体需要有责任心的参与者。这样的活动如果不是根据共同体发展的实际需要顺势而为，而是刻意为之，例如故意留下缺陷找人修复，那么为此而来的参与者就不会尊重这个项目，而有责任心的参与者和维护者，也不会重视这样的活动。到头来只是劳民伤财，甚至培养出核心参与者和活动参与者之间的矛盾，真是得不偿失。</p>
+<p>直接利益的激励方式也能够正向的结果。如同上一段提到的，带来问题的活动是刻意为之，如果活动本身是顺应共同体发展而举办的，就不会有这种问题。</p>
+<p>第一类，比如 <a target="_blank" rel="noopener" href="https://pingcap.com/zh/blog/how-to-join-in-the-tidb-performance-challenge-program">TiDB 性能挑战赛</a>根据 TiDB 对表达式模块发展的需要，把标准化的任务发布出来并利用宣传渠道和直接利益激励鼓励参与。虽然参与的人大部分也没有持续投入，但是这个活动本身确实解决了 TiDB 的实际问题，且有部分后来非常活跃的参与者是从这个契机加入进来的。</p>
+<p>第二类，比如各个开源项目每年参与 <a target="_blank" rel="noopener" href="https://summerofcode.withgoogle.com/">GSoC</a> 等活动的主题。这类主题一般是把项目重要而不紧急的工作借力第三方渠道发布出来，利用第三方对自身品牌的需要和投入，吸引相应的参与者合作开发，最终由第三方支付直接利益报酬。这类活动比起标准化的任务，通常更具有独特性，参与其中的成员也更有可能留存在共同体当中持续贡献。</p>
+<p>第三类，比如 Perl 共同体的 <a target="_blank" rel="noopener" href="https://www.perlfoundation.org/grants.html">Grants</a> 流程。这是从近二十年前开始的一个拨款项目。类似于其他非盈利组织，Perl 基金会接受社会各界的捐助。不同于 Apache 软件基金会和 Linux 基金会，Perl 基金会专门有一部分款项是提供给为 Perl 共同体做出贡献的参与者的。任何人都可以提出拨款请求，说明自己想要完成的项目，预计投入的时间精力和估算的应得报酬。只要拨款委员会认同，就可以成立一个新的工作项。申请人需要落实工作，定期汇报并在完成工作后由委员会验收确认发放拨款。</p>
+<p>不得不说，Perl 共同体的运营能力首屈一指。我在 Perl IRC 聊天室里曾经多次听到核心成员包括 Larry Wall 谈论如何优化 marketing 的事，这在其他开源共同体当中是少见的。一个典型的例子是 Perl 6 项目在 2008 年收到了一笔二十万美元的捐款，而后来 Perl 6 的核心开发者 @jnthn 也多次为自己的工作申请拨款。从上面提供的 Grants 网页当中探索，你就可以发现 Perl 共同体是如何利用这一机制推动项目发展的。这种自发捐赠为参与者提供直接利益激励，以达到维持软件迭代开发的手段，在如今以 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/The_DAO_(organization)">DAO</a> 等形式继续探索，有志于这个方向的人，不如看看 Perl 共同体二十年来都是如何运作的。</p>
+<h2 id="组织驱动"><a href="#组织驱动" class="headerlink" title="组织驱动"></a>组织驱动</h2><p>另一类参与开源共同体的动机是组织驱动。组织驱动的意思是参与者受雇于某个组织，这个组织的存续和发展依赖于开源共同体的存续和发展，在这种情况下，组织有动力通过支付报酬和挂钩绩效等方式，推动其雇员参与到开源共同体当中。</p>
+<p>根据组织动机的来源，这类参与动机又可以继续细分。</p>
+<p>第一类是组织的业务发展依赖于开源软件，为了保证这个依赖的稳定供应，组织投入人员参与维护，并赢得话语权以推动有利于组织发展的工作。</p>
+<p>典型的是发起该项目的公司，例如 PingCAP 之于 TiDB 或谷歌之于 Kubernetes 等等。进一步推广，任何基于开源项目提供商业服务或解决方案的公司，例如 Tetrate 之于 Istio 或 DataStax 之于 Apache Pulsar 等等，都有动力发动其雇员全职参与开源软件的开发和维护，甚至直接雇佣开源软件的核心维护者。</p>
+<p>除去这类销售基于开源软件的商业产品的公司，另一类不可忽视的是核心业务建立在开源软件之上的公司。前段时间的 Log4Shell 事件和 Faker.js 删库事件，提醒了采用开源软件构建自己核心业务的公司，不应该把开源软件彻底当成免费的午餐，而应该按照合理的软件供应链安全视角看待开源软件的使用。软件采购本身可能是免费的，但是维护和保障却不是。无论是自己投入员工积极维护，还是购买开源软件服务供应商的服务，都是可行的策略。这两种应对策略，也分别直接或间接地参与了开源共同体的发展。</p>
+<p>关于开源软件供应链的详细讨论，可以参考<a target="_blank" rel="noopener" href="https://zhuangbiaowei.github.io/opensource/2021/05/12/about-OSS-Supply-Chain.html">《我所理解的开源软件供应链安全》</a>和<a target="_blank" rel="noopener" href="https://zhuangbiaowei.github.io/opensource/2022/01/15/Talking-again-about-OSS-Supply-Chain.html">《再谈开源软件供应链安全》</a>两篇文章。</p>
+<p>第二类是组织通过发起或参与开源项目，来赢得自己的品牌。品牌对于人员招聘和漏斗转换都有不可忽视的作用。谁不愿意为了一个伟大的目标而工作呢？谁不想要在一个技术实力强劲的组织当中开发代码锻炼自己呢？谁不倾向于选择一个品牌文化上更值得信任的组织的产品呢？这方面的例子不胜枚举，尤其是个体价值崛起的今天，年轻人在选择就业的时候，相当一部分倾向于选择能够参与令人兴奋的开源项目的工作。</p>
+<p>第三类是组织通过发起或参与开源项目，来定义行业的标准。典型的例子是 Kubernetes 的初始成员，合力把 Kubernetes 做成了容器调度的标准，从而使自己的前期投入都获得了巨大的回报，同时打击了下注给其他解决方案的竞争对手。</p>
+<p>另一个例子是世界上大规模使用 C++ 来开发项目的公司，往往都在 C++ 委员会当中有一席之地。谷歌、苹果、微软和 IBM 等公司都是如此。如果能够参与到行业标准的定义，对于保证自己的业务能够持续的受到整个开源共同体工作的增益至关重要。又例如 Java 委员会当中对模块化标准的讨论，对预先编译标准的讨论，都牵扯到组织内部数百万行乃至更多的代码在新的软件开发部署形势下是要痛苦地迁移或兼容上游，甚至完全重写，还是能平滑地过度。</p>
+<p>开源共同体当中参与者的动机，占比最大的我认为就是组织驱动类型的。</p>
+<h2 id="自我驱动"><a href="#自我驱动" class="headerlink" title="自我驱动"></a>自我驱动</h2><p>虽然组织驱动类型的占比最高，但是支撑开源软件长久的存续和发展，赋予开源共同体灵魂的核心参与者，往往是自我驱动的。</p>
+<p>自我驱动分成两个阶段。第一个阶段是对开源软件的认同和责任带来的动力，典型的是开源软件作者希望它能够产生价值，为更多人所用。</p>
+<p>不谈 Linux 一类广为人知的项目，我在上周录制某个播客的时候提到的 <a target="_blank" rel="noopener" href="https://inlong.apache.org/">Apache InLong (Incubating)</a> 项目就是如此。项目的主要作者出于对项目的认同和责任，在它从某大公司捐赠给 Apache 软件基金会之后，积极思考如何避免公司内部的使用跟开源软件的开发分化成两套工作流，定义出了统一的开发和发布流程，避免了某些 KPI 开源项目管生不管养的窘境。</p>
+<p>软件的作者毕竟是特殊的一个或少数的几个人。随着软件的发展并逐渐为人所知，越来越多的参与者加入进来，喜欢这个项目，或者把职业生涯都绑定在这个项目及其所代表的领域上，这样的人就有成为核心维护者的潜力。</p>
+<p>例如，Apache Flink 的 PMC @wuchong 就在长年参与项目的过程中，把自己和项目紧密地绑定在了一起。现在你提及中国乃至世界范围内的 Flink 专家，都很容易能够听到他的名字。这是他从 2016 年参与至今，从 Flink SQL 到 Flink CDC 跨越多个项目的持续参与，积极解答大量用户问题所积累的贡献赢得的声誉。</p>
+<p>例如，Netty 的核心维护者 Norman Maurer 在项目发起的三年以后与它结缘，认同它的价值并把自己的职业生涯的相当一部分建立在 Netty 项目之上。从 红帽到苹果，公司变了，核心技术栈却不变。Norman 一直维护 Netty 项目至今，并为 Netty 著书推广。</p>
+<p>数不胜数的例子，是开源项目的开放属性带给软件作者和核心参与者跨越职业生涯不同阶段的参与可能性，以及长期参与带来的认同感和责任感。开源软件就是自己的价值所在，这样的自我驱动推动着参与者以年为单位投入到开源共同体当中。</p>
+<p>第二个阶段是对开源文化的认同带来的动力。我在 COSCon’21 上讲到自我驱动的时候，幻灯片展示的是三本与开源文化相关的书籍，<a target="_blank" rel="noopener" href="https://book.douban.com/subject/26314527/">《若为自由故》</a>、<a target="_blank" rel="noopener" href="https://book.douban.com/subject/25930025/">《只是为了好玩》</a>以及<a target="_blank" rel="noopener" href="https://book.douban.com/subject/25881855/">《大教堂与集市》</a>。</p>
+<p>这里，我把开源运动和自由软件运动的文化并起来讲，虽然它们的关注点略有不同，但是在创造出好的软件并造福大众的这一点上是一致的。RMS 相信自由软件是软件本来就该有的属性；Linus 认为开发开源软件能够选择自己愿意共事的伙伴，并且在 GPLv2 “我赠与你源代码，你回馈我相关的修改”的理念下共同开发；ESR 相信开源软件的开发模式能够创造出更加优秀的软件。他们对开源文化的认同已经固化到自己的认知当中，我想终其一生也不会改变。</p>
+<p>对于一个或几个开源项目的认同带来的自我驱动，能够让参与者在相当长的一段时间内持续地投入自己可观的精力。对于开源文化的认同带来的自我驱动，将影响参与者一生的价值判断，以至于在相当广泛的范围内践行自己受开源文化影响的理念。</p>
+<p>我认为，分析开源共同体参与者的动机，以发展开源共同体的目的来看，首先要关注组织驱动类型的动机。这种类型的占比最大，且能够提供成建制的投入，帮助开源共同体壮大自身。当然，不是所有的开源软件都要成为类别杀手，不是所有的开源软件都要不断壮大，作为实用工具和胶水层的开源项目也是支撑起整个开源生态不可缺少的部分。</p>
+<p>对于所有的开源共同体来说，必须发展的是由自我驱动类型的动机参与的成员。他们未必是一开始就完全是自我驱动的，项目本身的价值，参与过程的反馈，声誉对参与者社交需要、尊重需要和自我实现需要的满足，以及开源文化熏陶下的思想转变，这些契机有可能让一个潜在的核心参与者觉醒，并产生自我驱动的动机。发现这样的人，并适当引导成为共同体的核心成员，能够极大地增强共同体的生命力和号召力。</p>
+<p>直接利益的动机可以作为辅助手段使用，但是应该顺应实际需要，且不必抱有太高的期待。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer"><img alt="Subscribe My WeChat Official Account: yatennosyo" src="/media/wemp.png"/>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>tison
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://tisonkun.org/2022/01/20/contributors-motivation/" title="开源共同体参与者的动机">https://tisonkun.org/2022/01/20/contributors-motivation/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%BC%80%E6%BA%90/" rel="tag"># 开源</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/01/06/open-source-governance/" rel="prev" title="开源共同体的治理模型">
+                  <i class="fa fa-chevron-left"></i> 开源共同体的治理模型
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="tisonkun/comments" 
+        data-repo-id="R_kgDOGc-oGw" 
+        data-category="General"
+        data-category-id="DIC_kwDOGc-oG84CAEoB"
+        data-mapping="title" 
+        data-reactions-enabled="1" 
+        data-emit-metadata="1" 
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">tison</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">55k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">50 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
