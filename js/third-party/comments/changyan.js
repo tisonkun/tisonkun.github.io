@@ -1,39 +1,24 @@
 /* global NexT, CONFIG */
 
 document.addEventListener('page:loaded', () => {
-  const { appid, appkey } = CONFIG.changyan;
-  const mainJs = 'https://cy-cdn.kuaizhan.com/upload/changyan.js';
-  const countJs = `https://cy-cdn.kuaizhan.com/upload/plugins/plugins.list.count.js?clientId=${appid}`;
-
-  // Get the number of comments
-  setTimeout(() => {
-    return NexT.utils.getScript(countJs, {
-      attributes: {
-        async: true,
-        id   : 'cy_cmt_num'
-      }
-    });
-  }, 0);
-
-  // When scroll to comment section
-  if (CONFIG.page.comments && !CONFIG.page.isHome) {
+  if (CONFIG.page.isHome) {
+    NexT.utils.getScript(
+      `https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=${CONFIG.changyan.appid}`,
+      { attributes: { id: 'cy_cmt_num' } }
+    );
+  } else if (CONFIG.page.comments) {
     NexT.utils.loadComments('#SOHUCS')
       .then(() => {
-        return NexT.utils.getScript(mainJs, {
-          attributes: {
-            async: true
-          }
-        });
+        delete window.changyan;
+        delete window.cyan;
+        return NexT.utils.getScript('https://changyan.sohu.com/upload/changyan.js');
       })
       .then(() => {
         window.changyan.api.config({
-          appid,
-          conf: appkey
+          appid: CONFIG.changyan.appid,
+          conf : CONFIG.changyan.appkey
         });
-      })
-      .catch(error => {
-        // eslint-disable-next-line no-console
-        console.error('Failed to load Changyan', error);
       });
+    NexT.utils.getScript('https://assets.changyan.sohu.com/upload/plugins/plugins.count.js');
   }
 });
