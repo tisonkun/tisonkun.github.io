@@ -118,10 +118,12 @@
 <p>现在的开源处于一个相对好的时代，MongoDB 和 Elastic 当初面临的那种激烈冲突不太可能再次发生了。当然最终能够守住自己的利益，还是依赖自己强大的实力，不管是技术实力、谈判能力，还是其他。</p>
 <p>我现在感觉到最难找的是有技术能力，且认同开源理念的团队。有技术实力，才能够在运营的时候依靠正道的方法掌握主动权。否则所谓的“运营”，就会变成为了技术不足的团队“善后”社群的技术挑战，而采取排他垄断的一个部门。这样就跟开源的理念背道而驰了。</p>
 ]]></content>
+      <categories>
+        <category>大图书馆</category>
+      </categories>
       <tags>
         <tag>开源</tag>
         <tag>开源社群</tag>
-        <tag>大图书馆</tag>
       </tags>
   </entry>
   <entry>
@@ -226,69 +228,12 @@
 <h2 id="Have-fun"><a href="#Have-fun" class="headerlink" title="Have fun"></a>Have fun</h2><p>不论是 contributor 还是 maintainer 你都已经通过参与开源社区为社会创造出了价值。时不时想想你为什么要参与或维护这个项目，回顾这个项目已经取得的成就。你已经做得很好了。</p>
 <p>软件都有自己的生命周期，开源软件也不例外。开源社区的工作也不是你生活的全部。如果你找到了新的乐趣，完全可以把项目交给其他 maintainers 维护，或者直接归档。如果开源项目的维护已经超出你的能力范围或者消耗了太多的时间精力，也可以休息一段时间甚至放弃对项目的维护。作为开源社区成员的你没有义务非得维护这个项目或者响应别人的请求。你把自己的工作自由的提供给其他人利用，已经创造了非常客观的价值。</p>
 ]]></content>
+      <categories>
+        <category>夜天之书</category>
+      </categories>
       <tags>
         <tag>开源</tag>
         <tag>开源协同</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Engula 开源共同体观察报告</title>
-    <url>/2021/12/05/engula-community-observation/</url>
-    <content><![CDATA[<p>Contributor 参与开源共同体的过程一定会问两个问题，第一个是我能为你做什么，第二个是我该怎么做到它。本文以观察报告的形式总结了我在参与 <a href="https://engula.io/">Engula</a> 开源共同体期间的体会，以及 Engula 现有的部分切入点，可以作为想要参与的同学的参考。</p>
-<p>Engula 的设计目标是一个弹性、自适应、可扩展、平台无关的 serverless 存储引擎。基于 Engula 可以实现高可靠且高性价比的数据处理逻辑，例如数据库。Engula 从今年八月份开始以开源协同的方式发起，所有代码以 Apache 2.0 协议授权，使用 Rust 语言开发。</p>
-<span id="more"></span>
-
-<p>“好的软件作品，往往源自开发者的个人需要。”这句话对于 Engula 而言也是成立的。因为看到了云原生时代单机系统演进为集群系统的趋势，深感于云数据库等数据处理逻辑在新时代下重复实现存储引擎的冗余，Engula 将存储系统的基本功能模块化后就云环境做了针对性设计，从而支持后来的开发者在实现云环境的数据处理逻辑时，能够有开箱即用的存储系统功能，例如共识、复制、缓存、压缩等等，以及针对不同功能的不同资源配置。</p>
-<p>今年十月份，Engula 发布了<a href="https://engula.io/posts/demo-1">概念验证报告</a>。目前概念验证阶段已经结束，共同体成员正在主分支上以发布第一个原型版本为目标快速迭代。</p>
-<h2 id="Engula-开源共同体的沟通"><a href="#Engula-开源共同体的沟通" class="headerlink" title="Engula 开源共同体的沟通"></a>Engula 开源共同体的沟通</h2><p>讨论具体的项目内容之前，我想先介绍一下 Engula 开源共同体的沟通手段。这样，在讲到具体的参与切入点的时候，你也能知道应该以什么方式与其他成员沟通。</p>
-<p>目前，Engula 所有正式的讨论和开发都发生在 GitHub 上。<a href="https://github.com/engula/engula">项目代码</a>不用说当然托管在 GitHub 的代码仓库里。工作项以 issue 记录，代码评审基于 pull request 来做。</p>
-<p>值得一提的是，Engula 主仓库开启了 GitHub Discussion 功能。这是一个进行开放式讨论或者提问解答的小型论坛，取代了其他开源项目常见的邮件列表或者 Discourse 论坛的功能。类似于 Apache 孵化项目一开始只有一个 dev 邮件列表，目前 Engula 的 Discussion 论坛也只有开放讨论形式的 General 目录和问答形式的 Q&amp;A 目录。虽然 General 目录下的讨论主题很泛化，比如 Journal 或 Cache 等，但是我认为这些并不起到目录的作用。也就是说，如果你有关于 Journal 的问题要问，或者灵感要分享，不是一定要在那个主题下回复，而是完全可以另起一个主题来讨论。实际上，我更倾向于类似邮件列表体验的大量简短且能收敛的讨论，而不是一个大而全什么都聊的主题。后者很容易丧失焦点并且难以输出价值。</p>
-<p>另外，作为非正式沟通和即时通讯需要的补充，Engula 共同体创建了 <a href="https://engula.zulipchat.com/">Zulip 聊天室</a>。这跟 Rust 共同体的选型是一样的，并且由于是开源项目，Zulip Cloud 提供了免费的支持保存所有聊天记录的标准服务。需要注意的是，正式的讨论和开发仍然需要记录在 GitHub 上，其他所有渠道的讨论都是辅助性的。关注共同体运营的同学可以看看<a href="https://github.com/engula/engula/discussions/141">有关即时通讯工具选型的讨论</a>，后续我也会针对开源共同体的沟通发布一篇文章。</p>
-<h2 id="Engula-v0-2"><a href="#Engula-v0-2" class="headerlink" title="Engula v0.2"></a>Engula v0.2</h2><p>“早发布，常发布，倾听用户的反馈。”这是开源软件开发的最有效方式。对于 Engula 这样新发起的项目来说，发布第一个可用版本，将允许参与者在一个最小可行的基础上持续开发。否则所有设计都不过是思想实验，拿不出可行的软件，参与者的热情也将被消磨殆尽。</p>
-<p>由于 Engula 在概念验证阶段使用了 0.1 的版本号，因此目前正在开发的第一个原型是 v0.2 版本。该版本的开发在 <a href="https://github.com/engula/engula/issues/57">RoadMap v0.2</a> 上追踪，预计将于今年十二月底发布。下面具体介绍目前的进展。</p>
-<h3 id="存储引擎内核"><a href="#存储引擎内核" class="headerlink" title="存储引擎内核"></a>存储引擎内核</h3><p>v0.2 版本计划包含的主要内容就是存储引擎内核，包括底层的 Journal 和 Storage 抽象，这两者的上层封装 Kernel 抽象，以及存储引擎的用户接口 Engine 抽象。</p>
-<p>在过去的一个半月里，共同体成员针对这些抽象做了不少讨论和原型设计。目前，这些实现正在朝着一个可发布的状态迭代，包括基于内存的实现，基于本地文件的实现，以及基于 gRPC 协议的实现。项目的发起人 @huachaohuang 正在总结之前的讨论，沉淀出反应 v0.2 设计的设计文档。相关的主题和工作项如下。</p>
-<ul>
-<li><a href="https://github.com/engula/engula/issues/57">Roadmap v0.2</a></li>
-<li><a href="https://github.com/engula/engula/issues/65">Roadmap v0.2 - Journal</a></li>
-<li><a href="https://github.com/engula/engula/discussions/70">Discussion: Journal</a></li>
-<li><a href="https://github.com/engula/engula/issues/68">Roadmap v0.2 - Storage</a></li>
-<li><a href="https://github.com/engula/engula/issues/145">Roadmap v0.2 - Kernel</a></li>
-<li><a href="https://github.com/engula/engula/issues/73">Roadmap v0.2 - Engine</a></li>
-<li><a href="https://github.com/engula/engula/discussions/55">Discussion: API</a></li>
-<li><a href="https://github.com/engula/engula/pull/132">docs: rewrite the design document</a></li>
-</ul>
-<p>主题讨论是开放式的，工作项则是相对确定的。欢迎熟悉存储引擎开发的同学参与到讨论中来，review 抽象的设计。对于上面工作项里具体的待实现内容，也欢迎想要参与 Engula 的同学一起开发。</p>
-<h3 id="软件开发流程"><a href="#软件开发流程" class="headerlink" title="软件开发流程"></a>软件开发流程</h3><p>项目发起之初，我们就开始讨论<a href="https://github.com/engula/engula/discussions/32">如何高效地开发 Engula 项目</a>。对于正在朝着第一个发布版本努力的 Engula 来说，我们并不需要复杂高端的开发流程，而是适合当下需要的简洁有效的手段。</p>
-<p>目前有一个<a href="https://github.com/engula/engula/issues/144">关于版本发布的工作项</a>正待解决，我先引用之前的讨论回复了<a href="https://github.com/engula/engula/discussions/32#discussioncomment-1561701">开源项目发布的整体关注点</a>和 <a href="https://github.com/engula/engula/discussions/32#discussioncomment-1561991">v0.2 版本的极简发布策略</a>。如果你有相关的项目发布经验，也欢迎参与到这个工作项当中来，一起发布 v0.2 版本。我想在版本发布之后，会总结一个版本发布手册，也确保任何人都能够从代码仓库开始复现发布产物。</p>
-<p>项目开发所需要的持续集成流水线已经基于 GitHub Actions 搭建起来了。对于托管在 GitHub 上的开源项目来说，这是一个非常方便的持续集成实现。有时间我会展开讲讲相关的知识和最佳实践。持续集成的另一面是如何在本地进行验证，我在<a href="https://github.com/engula/engula/issues/150">这个议题</a>下有相关的回复。如果你有高效的开发实践，欢迎加入分享。</p>
-<h3 id="命令行工具"><a href="#命令行工具" class="headerlink" title="命令行工具"></a>命令行工具</h3><p>上面提到，Engula v0.2 发布将是一个可用版本。它设计上提供两种使用方式，一种是作为三方库内嵌使用，这类似于 RocksDB 的用法，另一种则是作为服务提供，用户使用客户端与存储服务交互。</p>
-<p>对于后一种使用方式，Engula 需要提供命令行工具以简化部署、启停、基础交互等操作。最基础的，需要有一个二进制文件来启动基于 gRPC 协议的 Engula 服务。进一步的，类似 CockroachDB 或 Docker 的命令行工具，优雅的实现支持不同操作一行命令完成。</p>
-<p>目前，Engula 使用 <a href="https://github.com/clap-rs/clap">clap-rs</a> 库来封装自己的命令行工具。设计哲学方面则参考自 <a href="https://clig.dev/">Command Line Interface Guidelines</a> 文档。欢迎 CLI 爱好者一起讨论 Engula 的需要，打造一个让人爱不释手的命令行工具。</p>
-<h3 id="集群服务部署"><a href="#集群服务部署" class="headerlink" title="集群服务部署"></a>集群服务部署</h3><p>原本的 v0.2 版本计划中，包括实现 Engula 部署到集群环境中的功能。但是基于开发周期的考虑，第一个原型版本只要在本地环境可以使用就应该发布。所以集群服务部署的内容被延迟到下一个开发周期当中实现和交付。v0.2 版本仍然会交付直接在本地环境启动 Engula 服务的能力，但是集群部署或者说与云环境集成的部署能力，将不会包含在 v0.2 版本当中。</p>
-<p>关于集群服务部署的话题，前几天有参与者问我有什么相关材料可以学习，我在这里也做一个回答。目前看来，Engula 服务在集群上部署的时候，直接打交道的应该 Kubernetes 或者 YARN 一类的集群管理系统，而不是重新实现一遍 Kubernetes 直接跟物理机或容器打交道。</p>
-<p>在此前提下，我能想到的两种实现集群服务部署的方向，一个是实现资源申请和调度的抽象，另一个是在主要支持 Kubernetes 平台部署的前提下，利用 Operator 等平台提供的机制进行部署。我倾向于后者。</p>
-<p>前者实际上是为 Engula 服务实现了一套自己的集群管理逻辑，把 Kubernetes 或 YARN 当成资源提供方，申请到资源后转换成自己的资源抽象，并实现调度和部署。这样做的好处是有一层抽象隔开了 Engula 资源管理逻辑和不同的集群环境，实质是一个双层资源调度，能够提供额外的定制空间。缺点是设计实现极其复杂，并且为了用上底层集群环境的功能，实际上做到最后会变成底层集群环境接口的超集。如果做成简单的抽象，则会损失很多底层集群环境本来能够提供的能力。</p>
-<p>后者基于 Kubernetes Operator 的能力，把 Engula 服务作为定制资源调度起来。这种设计下，Engula 存储引擎内核对集群服务部署是无感知的，完全由 Operator 来决定最终的 Engula 服务的拓扑结构。资源管理和集群管理都由 Operator 切面来完成，而 Engula 存储引擎内核的各个模块则像运行在多个物理机上一样，通过发现服务相互连接和通信。</p>
-<p>关于 Kubernetes Operator 的相关材料，推荐阅读以下内容。</p>
-<ul>
-<li><a href="https://kubernetes.io/docs/concepts/extend-kubernetes/operator/">Operator pattern</a></li>
-<li><a href="https://www.redhat.com/en/topics/containers/what-is-a-kubernetes-operator">What is a Kubernetes operator?</a></li>
-<li><a href="https://github.com/cncf/tag-app-delivery/blob/main/operator-wg/whitepaper/Operator-WhitePaper_v1-0.md">CNCF Operator White Paper</a></li>
-</ul>
-<p>同时，虽然倾向于不实现另外一套集群管理逻辑，但是无论如何集群服务部署要跟集群管理系统打交道，Engula 服务层面也会有应用集群的管理逻辑。推荐阅读以下材料掌握一些基础知识。</p>
-<ul>
-<li><a href="https://doc.akka.io/docs/akka/current/typed/cluster-concepts.html">Cluster Specification</a></li>
-<li><a href="https://kubernetes.io/docs/concepts/architecture/">Cluster Architecture</a></li>
-<li><a href="https://blog.cloudera.com/resource-localization-in-yarn-deep-dive/">Resource Localization in YARN: Deep Dive</a></li>
-</ul>
-<h2 id="Engula-开源共同体的发展"><a href="#Engula-开源共同体的发展" class="headerlink" title="Engula 开源共同体的发展"></a>Engula 开源共同体的发展</h2><p>开源共同体的核心是开源软件，因此它的发展肯定也离不开软件本身的演进。这一点在上面已经讨论了不少。针对围绕软件形成的共同体的运行，我之前做过一个 <a href="https://github.com/tisonkun/engula.github.io/blob/85350e76644a7d28049dfc7cb32e2dad03f84abf/docs/posts/community-project.md">The Engula Community Project</a> 的提案，里面有我对打造一个新的开源共同体的思考，欢迎阅读。</p>
-<p>由于这个提案本身不是一种硬性的承诺，其中的提议也需要共同体成员认可和实际执行才有效，所以我不再计划把它发布到 Engula 的网站上，而是针对每一个关键的提议，以 contributor 文档或共识的方式逐个落实到 Engula 开源共同体当中。</p>
-<p>我希望 Engula 能够成为发源于本土的优秀开源共同体，不仅作为一个 serverless 存储引擎创造技术价值，也是开源协同模式下健壮成长的标杆。</p>
-]]></content>
-      <tags>
-        <tag>开源</tag>
-        <tag>Engula</tag>
       </tags>
   </entry>
   <entry>
@@ -354,9 +299,11 @@
 <li>我们欢迎反馈意见，本着“早发行，勤发行”的精神做出改变。</li>
 </ol>
 ]]></content>
+      <categories>
+        <category>大图书馆</category>
+      </categories>
       <tags>
         <tag>开源</tag>
-        <tag>大图书馆</tag>
         <tag>组织管理</tag>
       </tags>
   </entry>
@@ -470,6 +417,9 @@
 <p>以这样的方式去寻找潜在的开发核心逻辑的成员，相信你的视野会更加广阔。</p>
 <p>其实，这才是“开源共同体”的含义。不止于项目，也不是社区居委会，而是围绕开源项目的发展，基于对项目的认同，形成的多层次合作共同体。</p>
 ]]></content>
+      <categories>
+        <category>夜天之书</category>
+      </categories>
       <tags>
         <tag>开源</tag>
         <tag>开源协同</tag>
@@ -667,6 +617,9 @@
 <p>另外，关注点分离也强调权限的独立。除非明确需要层级结构，例如 PostgreSQL 的 Core Team 对整个开源软件负责，因此它需要决策 Committer 团队的人员组成，否则你并不需要把所有的子共同体组织成一个层级结构，网络结构也是可行的。例如，Linux Foundation 实际上与 Linus 控制的开源软件共同体并没有层级关系。例如，StreamNative 公司建立的 Apache Pulsar 中文社区也不需要对 Apache Pulsar 的 PMC 负责。这种独立往往发生在分地区和语言成立的本地用户组上，或者围绕同一开源软件但是面向不同目标的群体之间。</p>
 <p>总的来说，所有这些情况都超出了现有治理机构在时间、知识或技能方面的管理能力。事务的多少是判断是否扩大治理机构的正当理由。如果你只有少数几个特定领域的清楚，当前的核心成员努力一下就能处理完，那就不应该成立一个独立挂钩权限的团队。但是如果核心团队定期且重复地抽到一些请求，那么就有必要考虑成立新团队应对瓶颈了。当然，这不是唯一的解法。</p>
 ]]></content>
+      <categories>
+        <category>夜天之书</category>
+      </categories>
       <tags>
         <tag>开源</tag>
         <tag>开源协同</tag>
@@ -799,9 +752,11 @@
 <p>如今，想要创造局部垄断的一种新方式，是通过开源协同的集市模式创造出一个类别杀手，在此过程中获得某种程度上的原厂品牌效应，并积累足以应付软件在使用上的种种问题的开发者团队。进一步的，将原本的市场格局改变，在不改变固有需求的情况下改变产生商业价值的位置。以操作系统为例，原本商业公司以创造出商业操作系统为竞争优势，Linux 出现后，如何基于 Linux 提供更好的服务，或者看到 RedHat 如今的上云策略，提供海量 Linux 服务器资源的运维和应用的部署服务。</p>
 <p>改变不利于自己的商业格局，并在环境有利于自己的时候做好下一次颠覆的准备，才是开源时代的商业未来。我也相信这种形式，能够促使企业家真正成为创新的先锋，而不是被长时间垄断所麻痹，不思进取乃至阻止社会生产力的进步。</p>
 ]]></content>
+      <categories>
+        <category>大图书馆</category>
+      </categories>
       <tags>
         <tag>开源</tag>
-        <tag>大图书馆</tag>
         <tag>开源协同</tag>
       </tags>
   </entry>
@@ -958,6 +913,9 @@
 <p>不过，聊天室作为即时沟通工具，较之论坛或者相对更为正式的邮件，在即时响应问题上有独特的优势。一两句话能解决的问题，即时通信工具更加轻量级。模糊概念的讨论，即时通信工具能够更好地完成实时的头脑风暴。前者的典型例如 <a href="https://gitter.im/akka/akka">Akka 的 Gitter 聊天室</a>，后者的典型例如 <a href="https://rust-lang.zulipchat.com/">Rust 的 Zulip 聊天室</a>。</p>
 <p>但是，聊天室核心的问题就在于它的信息密度太低，一旦超过一百人，昨天的消息基本上就已经完全归入历史，要想重提就得从头再来了。虽然现代聊天室大多支持主题化讨论的功能，但是较之论坛的设计理念，还是比较薄弱。因此我在设计沟通工具方案的时候，总是以论坛作为唯一信源。同时在选择聊天室方案的时候，总是选择公开的聊天室，选择支持主题化讨论的聊天室，选择支持引用内容链接的聊天室。支持引用内容链接，就可以在论坛当中直接链接到聊天室的特定讨论串当中，从而打通两边内容的交叉引用。这样避免了大量内容存在于聊天室当中，削弱论坛定位的情况，既能维护论坛唯一信源的定位，又能利用即时通信的优势。</p>
 ]]></content>
+      <categories>
+        <category>夜天之书</category>
+      </categories>
       <tags>
         <tag>开源</tag>
         <tag>开源协同</tag>
