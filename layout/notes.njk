@@ -1,0 +1,16 @@
+{% extends '_layout.njk' %}
+{% import '_macro/sidebar.njk' as sidebar_template with context %}
+
+{% block title %}{{ __('title.notes') }}{% endblock %}
+
+{% block class %}index posts-expand{% endblock %}
+
+{% block content %}
+  {%- for post in page.posts %}
+      {{ partial('_macro/post.njk', {post: post, is_index: true}) }}
+  {%- endfor %}
+{% endblock %}
+
+{% block sidebar %}
+  {{ sidebar_template.render(false) }}
+{% endblock %}
