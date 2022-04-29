@@ -2134,6 +2134,22 @@ pre code {
   margin: initial;
   overflow-wrap: break-word;
 }
+.posts-expand .post-title .post-edit-link {
+  border-bottom: 0;
+  color: #bbb;
+  float: right;
+  font-size: 1.25em;
+  margin-left: -1.2em;
+  transition: color 0.2s ease-in;
+}
+@media (max-width: 567px) {
+  .posts-expand .post-title .post-edit-link {
+    margin-left: initial;
+  }
+}
+.posts-expand .post-title .post-edit-link:hover {
+  color: #87daff;
+}
 .posts-expand .post-title-link {
   border-bottom: 0;
   color: var(--link-color);
@@ -2935,7 +2951,7 @@ hr {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #ffe440;
+  background: #126bff;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
