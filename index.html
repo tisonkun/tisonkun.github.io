@@ -160,7 +160,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -171,7 +171,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -222,6 +222,116 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://tisonkun.org/2022/05/22/open-source-attention-economy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/media/eugeo.jpg">
+      <meta itemprop="name" content="tison">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夜天之书">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 夜天之书">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/05/22/open-source-attention-economy/" class="post-title-link" itemprop="url">开源社群的注意力经济</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-05-22 00:00:00" itemprop="dateCreated datePublished" datetime="2022-05-22T00:00:00+00:00">2022-05-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-05-25 10:55:37" itemprop="dateModified" datetime="2022-05-25T10:55:37+00:00">2022-05-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%A4%9C%E5%A4%A9%E4%B9%8B%E4%B9%A6/" itemprop="url" rel="index"><span itemprop="name">夜天之书</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>9.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>9 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a target="_blank" rel="noopener" href="https://book.douban.com/subject/25881855/">《大教堂与集市》</a>中有一个著名的 Linus 定律，“只要眼睛多，bug 容易捉”。在这本书里面，作者讨论了开源社群的集市开发模式，以其开放的特征，以及提供源码从而支持参与者基于相同的真实的源码进行高效交流，驯服了大型软件开发的复杂性。诚然，在其论述中，基于源码的，快速发布反馈缺陷报告和补丁修补的开源协同方式，能够制造出 Linux 这样的大型开源软件。然而，这一论述却有一个隐含的前提假设，那就是开源软件得到了足够多的关注。</p>
+<p>Linux 无疑得到了全世界开发者的海量关注，并且一直如此。开源运动的启蒙阶段，大量的软件都被开创式的制造出来，彼时少有其他开源竞争者的存在，因此眼球或者叫注意力能够投放到的目标是相对有限的。另一方面，开源社群彼时仍是小众圈子，天然地对进入其中的注意力有一个质量筛选的机制，除非货真价实的黑客，否则很难在当时的开源社群当中生存。</p>
+<p>然而，如今的开源软件从覆盖面到数量上已经彻底超出了所有人的预期，在软件渗透到社会生活的方方面面的前提下，形成了几乎任何软件都包含开源组件的“软件吞噬世界，开源吞噬软件”的格局。越来越多的开源参与者，已经观察到<a target="_blank" rel="noopener" href="https://zhuangbiaowei.github.io/opensource/2022/01/15/Talking-again-about-OSS-Supply-Chain.html">“眼球不够用”</a>的情况了。换句话说，整个开源共同体的注意力供给总量，不足以应对所有开源软件高效发展的需求。</p>
+<p>在这样的前提下，开源社群的参与者，应该考虑如何分配自己宝贵的注意力，以促进自身利益与开源社群发展需要的双赢；开源社群的维护者或说开源软件的作者，还需要额外考虑如何吸引开源参与者乃至整个社会可能提供的注意力，从而维系开源软件的高质量，并放大高质量开源软件的影响力。本文将从开源共同体具体的案例出发，讨论这两个问题。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/05/22/open-source-attention-economy/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://tisonkun.org/2022/05/08/open-source-tech-writing/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -258,7 +368,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-18 09:25:16" itemprop="dateModified" datetime="2022-05-18T09:25:16+00:00">2022-05-18</time>
+      <time title="修改时间：2022-05-25 10:55:37" itemprop="dateModified" datetime="2022-05-25T10:55:37+00:00">2022-05-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -366,7 +476,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-18 09:25:16" itemprop="dateModified" datetime="2022-05-18T09:25:16+00:00">2022-05-18</time>
+      <time title="修改时间：2022-05-25 10:55:37" itemprop="dateModified" datetime="2022-05-25T10:55:37+00:00">2022-05-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -473,7 +583,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-18 09:25:16" itemprop="dateModified" datetime="2022-05-18T09:25:16+00:00">2022-05-18</time>
+      <time title="修改时间：2022-05-25 10:55:37" itemprop="dateModified" datetime="2022-05-25T10:55:37+00:00">2022-05-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -584,7 +694,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-18 09:25:16" itemprop="dateModified" datetime="2022-05-18T09:25:16+00:00">2022-05-18</time>
+      <time title="修改时间：2022-05-25 10:55:37" itemprop="dateModified" datetime="2022-05-25T10:55:37+00:00">2022-05-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -692,7 +802,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-18 09:25:16" itemprop="dateModified" datetime="2022-05-18T09:25:16+00:00">2022-05-18</time>
+      <time title="修改时间：2022-05-25 10:55:37" itemprop="dateModified" datetime="2022-05-25T10:55:37+00:00">2022-05-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -805,7 +915,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-18 09:25:16" itemprop="dateModified" datetime="2022-05-18T09:25:16+00:00">2022-05-18</time>
+      <time title="修改时间：2022-05-25 10:55:37" itemprop="dateModified" datetime="2022-05-25T10:55:37+00:00">2022-05-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -913,7 +1023,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-18 09:25:16" itemprop="dateModified" datetime="2022-05-18T09:25:16+00:00">2022-05-18</time>
+      <time title="修改时间：2022-05-25 10:55:37" itemprop="dateModified" datetime="2022-05-25T10:55:37+00:00">2022-05-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1023,7 +1133,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-18 09:25:16" itemprop="dateModified" datetime="2022-05-18T09:25:16+00:00">2022-05-18</time>
+      <time title="修改时间：2022-05-25 10:55:37" itemprop="dateModified" datetime="2022-05-25T10:55:37+00:00">2022-05-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1130,7 +1240,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-18 09:25:16" itemprop="dateModified" datetime="2022-05-18T09:25:16+00:00">2022-05-18</time>
+      <time title="修改时间：2022-05-25 10:55:37" itemprop="dateModified" datetime="2022-05-25T10:55:37+00:00">2022-05-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1197,119 +1307,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://tisonkun.org/2022/02/10/value-creation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/media/eugeo.jpg">
-      <meta itemprop="name" content="tison">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="夜天之书">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 夜天之书">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/10/value-creation/" class="post-title-link" itemprop="url">共同创造价值</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-02-10 00:00:00" itemprop="dateCreated datePublished" datetime="2022-02-10T00:00:00+00:00">2022-02-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-18 09:25:16" itemprop="dateModified" datetime="2022-05-18T09:25:16+00:00">2022-05-18</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%A4%9C%E5%A4%A9%E4%B9%8B%E4%B9%A6/" itemprop="url" rel="index"><span itemprop="name">夜天之书</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>11k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>10 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>如何吸引开源开发人员参与项目？如何让他们留下来，成为项目共同体的一部分？这是两个做开源运营必须回答的问题。</p>
-<p>我对这两个问题的回答，简而言之是和开源参与者共同创造价值，使得开源项目和开源共同体能够回答潜在参与者的两个事关去留的灵魂提问。</p>
-<ol>
-<li>我能为你做什么？</li>
-<li>我应该怎么做到？</li>
-</ol>
-<p>从共同创造价值的角度出发，通过开源运营回答参与者可以做什么的问题，只有可做的事情是令人兴奋的价值创造，才有可能触发潜在的参与者的兴趣。进一步，只有潜在的参与者能够在文档材料与其他成员的帮助下共同完成价值创造，这样的正向激励才能让参与者留下来，成为项目共同体的一部分。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/02/10/value-creation/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1334,13 +1331,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">105k</span>
+    <span title="站点总字数">115k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:35</span>
+    <span title="站点阅读时长">1:44</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
