@@ -463,6 +463,9 @@ hue-6-2: #c18401
 pre:hover .copy-btn {
   opacity: 1;
 }
+figure.highlight .table-container {
+  position: relative;
+}
 .copy-btn {
   color: #333;
   cursor: pointer;
@@ -1185,7 +1188,7 @@ pre code {
     display: none;
   }
 }
-.header {
+header.header {
   background: var(--content-bg-color);
 }
 .header-inner {
@@ -1207,7 +1210,7 @@ pre code {
   flex-shrink: 0;
   padding: 0 10px;
 }
-.use-motion .header,
+.use-motion header.header,
 .use-motion .site-brand-container .toggle {
   opacity: 0;
 }
@@ -2984,7 +2987,7 @@ hr {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #ff82db;
+  background: #d4c896;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
