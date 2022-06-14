@@ -159,7 +159,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -170,7 +170,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -221,6 +221,116 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://tisonkun.org/2022/03/13/the-apache-community/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/media/eugeo.jpg">
+      <meta itemprop="name" content="tison">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夜天之书">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 夜天之书">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/03/13/the-apache-community/" class="post-title-link" itemprop="url">Apache 开源社群的经验</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-03-13 00:00:00" itemprop="dateCreated datePublished" datetime="2022-03-13T00:00:00+00:00">2022-03-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-06-14 08:44:52" itemprop="dateModified" datetime="2022-06-14T08:44:52+00:00">2022-06-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%A4%9C%E5%A4%A9%E4%B9%8B%E4%B9%A6/" itemprop="url" rel="index"><span itemprop="name">夜天之书</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>7.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>7 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>大约二十年前我刚开始进入互联网的世界的时候，支撑起整个网络的基础设施，就包括了 Apache 软件基金会（ASF）治下的软件。</p>
+<p><a target="_blank" rel="noopener" href="https://httpd.apache.org/">Apache Httpd</a> 是开启这个故事的软件，巅峰时期有超过七成的市场占有率，即使是在今天 NGINX 等新技术蓬勃发展的时代，也有三成左右的市场占有率。由 Linux、Apache Httpd、MySQL 和 PHP 组成的 LAMP 技术栈，是开源吞噬软件应用的第一场大型胜利。</p>
+<p>我从 2018 年参与 <a target="_blank" rel="noopener" href="https://flink.apache.org/">Apache Flink</a> 开始正式直接接触到成立于 1999 年，如今已经有二十年以上历史的 <a target="_blank" rel="noopener" href="https://www.apache.org/">Apache 软件基金会</a>，并在一年后的 2019 年成为 Apache Flink 项目 Committer 队伍的一员，2020 年成为 <a target="_blank" rel="noopener" href="https://curator.apache.org/">Apache Curator</a> 项目 PMC（项目管理委员会）的一员。今年，经由<a target="_blank" rel="noopener" href="https://github.com/WillemJiang">姜宁</a>老师推荐，成为了 <a target="_blank" rel="noopener" href="https://www.apache.org/foundation/members.html">Apache Members</a> 之一，也就是 Apache 软件基金会层面的正式成员。</p>
+<p>我想系统性地做一个开源案例库已经很久了。无论怎么分类筛选优秀的开源共同体，The Apache Community 都是无法绕开的。然而，拥有三百余个开源软件项目的 Apache 软件基金会，并不是一篇文章就能讲清楚的案例。本文也没有打算写成一篇长文顾及方方面面，而是启发于自己的新角色，回顾过去近五年在 Apache Community 当中的经历和体验，简单讨论 Apache 的理念，以及这些理念是如何落实到基金会组织、项目组织以及每一个参与者的日常生活事务当中的。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/13/the-apache-community/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://tisonkun.org/2022/03/08/gradle-protobuf/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -257,7 +367,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-11 02:44:51" itemprop="dateModified" datetime="2022-06-11T02:44:51+00:00">2022-06-11</time>
+      <time title="修改时间：2022-06-14 08:44:52" itemprop="dateModified" datetime="2022-06-14T08:44:52+00:00">2022-06-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -364,7 +474,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-11 02:44:51" itemprop="dateModified" datetime="2022-06-11T02:44:51+00:00">2022-06-11</time>
+      <time title="修改时间：2022-06-14 08:44:52" itemprop="dateModified" datetime="2022-06-14T08:44:52+00:00">2022-06-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -475,7 +585,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-11 02:44:51" itemprop="dateModified" datetime="2022-06-11T02:44:51+00:00">2022-06-11</time>
+      <time title="修改时间：2022-06-14 08:44:52" itemprop="dateModified" datetime="2022-06-14T08:44:52+00:00">2022-06-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -588,7 +698,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-11 02:44:51" itemprop="dateModified" datetime="2022-06-11T02:44:51+00:00">2022-06-11</time>
+      <time title="修改时间：2022-06-14 08:44:52" itemprop="dateModified" datetime="2022-06-14T08:44:52+00:00">2022-06-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -697,7 +807,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-11 02:44:51" itemprop="dateModified" datetime="2022-06-11T02:44:51+00:00">2022-06-11</time>
+      <time title="修改时间：2022-06-14 08:44:52" itemprop="dateModified" datetime="2022-06-14T08:44:52+00:00">2022-06-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -806,7 +916,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-11 02:44:51" itemprop="dateModified" datetime="2022-06-11T02:44:51+00:00">2022-06-11</time>
+      <time title="修改时间：2022-06-14 08:44:52" itemprop="dateModified" datetime="2022-06-14T08:44:52+00:00">2022-06-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -914,7 +1024,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-11 02:44:51" itemprop="dateModified" datetime="2022-06-11T02:44:51+00:00">2022-06-11</time>
+      <time title="修改时间：2022-06-14 08:44:52" itemprop="dateModified" datetime="2022-06-14T08:44:52+00:00">2022-06-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1022,7 +1132,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-11 02:44:51" itemprop="dateModified" datetime="2022-06-11T02:44:51+00:00">2022-06-11</time>
+      <time title="修改时间：2022-06-14 08:44:52" itemprop="dateModified" datetime="2022-06-14T08:44:52+00:00">2022-06-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1110,13 +1220,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">131k</span>
+    <span title="站点总字数">140k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:59</span>
+    <span title="站点阅读时长">2:07</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
