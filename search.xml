@@ -377,7 +377,7 @@
 <h2 id="20220626-更新"><a href="#20220626-更新" class="headerlink" title="20220626 更新"></a>20220626 更新</h2><ol>
 <li>这样 relocated 以后的结果，只会体现在本仓库再次被依赖时。因为 shadowJar 作业发生在打包阶段，因此如果在同一个包内使用 Protobuf Plugin 生成的类，此时依赖的还是 relocated 前的全限定名。</li>
 <li>多模块的 Gradle 项目中，一个子项目依赖 shadowJar 产生的另一个子项目需要形如 <code>implementation project(path: &#39;:foo-proto&#39;, configuration: &#39;shadow&#39;)</code> 的语法。</li>
-<li>如果使用 Intellj IDEA 来开发，需要在 <code>build.gradle</code> 里加载名为 <code>idea</code> 的 Gradle Plugin 才能正确索引 Protobuf Plugin 生成的文件。</li>
+<li>如果使用 Intellij IDEA 来开发，需要在 <code>build.gradle</code> 里加载名为 <code>idea</code> 的 Gradle Plugin 才能正确索引 Protobuf Plugin 生成的文件。</li>
 </ol>
 <p>具体可以参考在线的完整案例 <a href="https://github.com/korandoru/dryad">Dryad</a> 仓库。</p>
 ]]></content>
