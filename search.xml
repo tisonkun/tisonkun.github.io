@@ -97,6 +97,116 @@
       </tags>
   </entry>
   <entry>
+    <title>高效参与开源的诀窍</title>
+    <url>/2021/12/05/effective-open-source-participant/</url>
+    <content><![CDATA[<p>大部分人参与开源社区会面临的一个巨大挑战，那就是缺乏时间。本文试图提供一种方式，帮助想要参与开源社区的同学高效利用有限的时间。</p>
+<p>在一个开源社区里，maintainers 需要关注的范围比 contributors 要大得多。本文分别讨论这两类人群适用的参与开源社区的技巧，以减少过程中的摩擦，提高时间的利用率。</p>
+<span id="more"></span>
+
+<h2 id="Contributors"><a href="#Contributors" class="headerlink" title="Contributors"></a>Contributors</h2><h3 id="第一步要加入社区"><a href="#第一步要加入社区" class="headerlink" title="第一步要加入社区"></a>第一步要加入社区</h3><p>参与开源社区的第一步就是加入社区。加入社区的方式有很多，可以订阅邮件列表，关注开发活动，参与技术或非技术讨论，等等。很多希望参与开源社区的人迟迟迈不出第一步就是忽略了自己首先要加入社区，跟社区建立起联系。</p>
+<p>一个典型的错误做法是完全不顾开源社区是开发开源项目的主体，一头钻进技术细节里，暗搓搓地做一个“大功能”，然后希望社区尽快合并这个补丁，让自己得到荣誉。</p>
+<p>Linux Foundation 有一篇博文明确反对了这种做法。</p>
+<blockquote><p>Some organizations make the mistake of developing big chunks of code in house and then dumping them into the open source project, which is almost never seen as a positive way to engage with the community. The reality is that open source projects can be complex, and what seems like an obvious change might have far reaching side effects in other parts of the project. Any significant change is likely to require some community discussion before it moves to implementation to make sure that there are no side effects and that the solution is aligned with the broader goals for the project. While you discuss it with the community, it can help to focus on the problem, rather than a specific solution, before you invest too much time in the creation of a body of code.</p>
+<footer><strong>Linux Foundation</strong><cite><a href="https://www.linuxfoundation.org/tools/participating-in-open-source-communities/">Participating in Open Source Communities</a></cite></footer></blockquote>
+
+<p>一个现实的例子，前几天有人问我，自己做了一个 Flink StateBackend 的实现，提交给社区是不是就能当 PMC 了。这个问题属实把我整不会了。从来没有在社区当中亮相的人，突然出现并提出自己实现了一个“大功能”，在其他成员眼里跟民科没什么不同。绝大部分情况下，这种实现跟上游社区的开发节奏是脱节的，很难合回去。也就是说，闭门造车的形式自我感动地开发项目，即使花费了时间，大概率还是白忙一场。</p>
+<p>刚开始接触 Flink 社区的时候，我就按照项目文档的提示订阅了 users 和 dev 两个邮件列表。实话说，最初的三个月，我基本看不懂他们在说什么。当时的我尽可能地读每一封邮件，从邮件里面引用的链接一个个点进去了解背景，混沌当中建立起对项目的初步印象。直到四个月后第一次提交代码，这个祛魅的过程才算完成。从此以后，我逐渐能够轻松地参与到技术讨论，也掌握了 review 的沟通习惯。</p>
+<p>最近，我在跟人介绍 Engula 项目的时候，也是先发<a href="https://github.com/engula/engula/discussions">讨论区</a>和<a href="https://discord.gg/AN6vgVXaHC">聊天室</a>的链接。新成员可以阅读过往的讨论，挂在聊天室里，观察社区讨论问题和推进工作的方式，了解已有的设计实现和结论。参与闲聊或者回复感兴趣的话题，找到自己愿意投入的工作。只有这样，才能进一步深入参与开源社区，而不是接触了好几年，却始终迈不出第一步。</p>
+<h3 id="找到感兴趣的问题"><a href="#找到感兴趣的问题" class="headerlink" title="找到感兴趣的问题"></a>找到感兴趣的问题</h3><p>要想利用有限的时间创造更多价值，最好的方法是找到一个感兴趣的问题，然后持续投入进去直到解决。</p>
+<p>一个典型的错误做法是强迫自己做着不感兴趣的工作。这种情况下，由于内心是抗拒的，即使投入再多的时间，也几乎不会有产出。</p>
+<p>可能有人会不理解，开源社区的 contributor 都是自愿参与，如果不想做某个工作，不是不做就可以了吗。其实不然，社区成员身处其中很容易感受到无形的社交压力。</p>
+<p>一种情况是不懂得拒绝。知乎上有个问题，<a href="https://www.zhihu.com/question/475269038/answer/2045981148">如何优雅地拒绝开源项目的 PR 邀请</a>，讲的就是这种情况。我在回答里分享了一个自己拒绝 Flink 社区成员里的 PR 邀请的案例。另一种情况是错误估计难度，即自以为能搞定这个工作，做的过程里发现不对，又不好意思改口说自己搞不定。应对这些情况的方法非常简单，直截了当地说明情况即可，解放自己避免浪费时间。</p>
+<p>另外一个难题是自己往往对比较有挑战性的工作感兴趣，但是从一个刚接触项目的 contributor 到能够完成一个复杂任务之间有一道坎。</p>
+<p>要跨过这道坎，同样需要积极采取行动，而不要独自纠结。首先可以考虑从简单的工作入手，比如阅读项目文档时发现的拼写错误。一个简单的贡献能带你走完整个 contribution 流程。一回生二回熟，做其他有挑战性的工作也就不会在流程上踩坑。其次可以保持和 maintainers 的交流，以了解现有逻辑的设计背景和演进过程。只有对工作涉及的逻辑有充分的了解，才能写出高质量的代码。高质量的代码也意味着更少的返工和不必要的争论，也就避免了时间的浪费。</p>
+<h3 id="建立与其他成员的联系"><a href="#建立与其他成员的联系" class="headerlink" title="建立与其他成员的联系"></a>建立与其他成员的联系</h3><p>随着参与的深入，总有你一个人无法完成的工作。开源协同的价值就在于跨越所属组织的边界合作开发项目。合作的基础是成员之间的信任，也就是良好的关系。</p>
+<p>开源社区是围绕开源软件建立起来的。但是并不只有软件本身带来技术价值，人与人的连结带来认同感和归属感，这些也能满足社区成员的需要。此外，相互信任的基础能很大程度提升价值创造的效率，例如减少浪费在同步和对齐上的时间。因此，建立并保持与其他项目成员的关系至关重要。</p>
+<p>做到这一点的方式就是充分的沟通。同样，这需要以开放的心态对待平时的交流。不要把所有事情都憋在心里。不要纠结于想清楚所有细节再开始沟通，其他成员一时间内往往没办法追上你所想的所有细节。我的建议是，当你有一个初步的想法，也做了力所能及的调研，就可以整理一下，发布到社区当中征求意见。</p>
+<p>我给 Engula 项目做了一个<a href="https://github.com/engula/engula.github.io/pull/15">社区计划</a>。老实说，内容并不成熟，但是我一个人干想也得不出结论，所以在经过几轮自我 Review 以后，就先抛出来征求意见。另一个例子是 Engula 的 maintainer @huachaohuang 想为 contributor 提供开发文档，于是就发起了一个<a href="https://github.com/engula/engula/discussions/84">关于 Dev Guide 的讨论</a>。正好我对这个话题也早有想法，当我看到发出来的讨论以后，发现他也在关注这个话题。于是我花了一个小时把自己的想法写下来，经过讨论以后提 PR 推进主分支。</p>
+<p>沟通协作的过程里冲突在所难免。我在好几个项目里都别人讨论甚至争论过很多次技术问题，给别人的行为提过意见，也夸赞过好的做法。开源社区解决冲突的方式比较朴素，一般是有话直说，尽量客观地达成共识，按照流程约定做出决策。不用整那么多弯弯绕浪费时间。</p>
+<p>举一个现实的例子，曾经有人跟我抱怨提上去的 PR 被 maintainer 挑战了，问我应该怎么回复。怀疑 maintainer 是不是有偏见，抱怨很难跟 maintainer 沟通，大量的时间精力浪费在纠结这些臆想出来的问题，自然是筋疲力竭，感觉在开源社区里寸步难行。</p>
+<h3 id="适合参与开源协同的工作"><a href="#适合参与开源协同的工作" class="headerlink" title="适合参与开源协同的工作"></a>适合参与开源协同的工作</h3><p>最后，关注到相当一部分 contributors 的公司员工的身份。这显然会影响到他们参与社区的动力和能力。</p>
+<p>主要的挑战是，如果工作期间不允许参与开源社区，同时工作本身已经消耗了太多的时间精力，那么 contributors 对参与开源社区也只能是有心无力。这其实是很长一段时间里开源社区的参与在国内发展缓慢的原因。大量的开发者都在过度工作，下班只想躺平休息，没有动力再谈什么开源贡献。</p>
+<p>不过，随着时间的发展，情况也在发生着变化。越来越多的公司采用更加灵活合理的工作时间，尤其是以研发为核心竞争力的公司。如果你所在的公司仍然要求超负荷工作，燃烧生命赚血汗钱，那么是时候找份新工作了。时代已经变了，就让这些公司被无情的淘汰吧。</p>
+<p>另一个方向是考虑在工作期间参与开源社区。如果你确实喜欢某个开源项目，那么最佳策略就是找一份允许你全职投入这个项目的工作。这样的工作岗位如今并不少见。尤其是随着企业级解决方案越来越倾向于采用开源组件，企业对熟悉开源软件的人才的需求只会日益增加。如果找不到全职投入开源项目的工作，与之相关的工作也是备选方案。</p>
+<p>不过，即使这份工作允许你全职投入开源项目，也并不意味着你能够参与开源社区。特别是当你的老板认为参与开源社区不能为公司创造价值的时候。面对这个问题，首先你可以问问你的老板，说不定他不这么觉得，那就省事儿了。如果你的老板确实难以理解，那你就得像兜售一个技术方案一样向他宣传参与开源社区的价值了。我在其他的文章里对这一点已经有不少讨论，你可以看看。</p>
+<p>普适的时间管理手段这里就不展开介绍了，各种相关书籍和 GTD 方法论都很值得一看。</p>
+<h2 id="Maintainers"><a href="#Maintainers" class="headerlink" title="Maintainers"></a>Maintainers</h2><h3 id="发展新成员"><a href="#发展新成员" class="headerlink" title="发展新成员"></a>发展新成员</h3><p>Maintainers 比起 contributors 需要关注的更多的事情。随着开源项目日渐复杂，开源社区逐渐成长，单靠一个人的力量很难处理好所有的事务。这个时候，就需要 maintainer 适时地发展项目维护的队伍。</p>
+<p>首先需要理清 maintainer 头衔的定位。实际上，大部分项目的维护是个苦力活，而 maintainers 就是一群承担这些工作的社区成员。Maintainers 可能会拥有合并 PR 的权限，在社区治理中能投票做决策，确定项目发展的方向。但是，这种权限并非特权。在一个健康的社区里，任何社区成员都可以做技术讨论，也可以就社区发展话题提出自己的观点。对于技术观点，客观上更加合理的方案理应被采纳。对于社区发展话题，maintainers 也一定会考虑建设性的提议。</p>
+<p>可能有不少人把成为 maintainer 当成参与开源社区的目标，这是很好的。如果你理解了 maintainer 的职责，通过 contribution 积累了足够的信誉，成为 maintainer 为开源社区服务，这个头衔是一个显式的认可。不过，大可不必过分纠结于 maintainer 头衔。这只是对 contribution 认可形式的其中一种，而不是唯一一种。</p>
+<p>Maintainers 的职责并不轻松，所以 Python 社区和 Apache 软件基金会下的项目社区都会有一个询问 contributor 是否愿意成为 maintainer 的流程。也存在 contributor 拒绝邀请的情况，因为就像前面提到的，健康的开源社区里，只要提议是合理的，就能凭借其客观的优势胜出。成为 maintainer 并不意味着在方案选择上有特权。</p>
+<p>对于 contributor 的感谢，也可以通过宣传渠道发布。比起一个模糊的 maintainer 头衔，作为技术人员，我会更在意这个人实际在开源社区里实际完成的事情。</p>
+<p>基于上面的认识，我们引出下一个观点。Maintainers 发展新成员，必须是有选择性的。</p>
+<p>这种选择性的主要依据是维护项目的需要，而不是追求数量或者过分在意 diversity 等等。这可以类比到开发软件的目的是提供技术价值，而不是代码行数或者所采用的编程语言的数量。</p>
+<p>一个典型的错误案例是出于自己同时是公司员工的身份，被命令将 maintainers 的人数发展到某个数字。这种指标只关注数字而不关注具体的人，而且往往定得脱离实际。公司员工迫于指标压力很容易降低 maintainers 的标准，逮到一个算一个的凑人头，或者为了 diversity 对不同背景的 contributor 采取不同的标准。这样发展出来的 maintainers 不仅不能分担项目维护的职责，还很有可能因为不胜任而产生新的问题。</p>
+<p>另一个典型的错误经常出现在个人项目上，当个人项目发展壮大，唯一的 maintainer 想要发展新成员时，很容易陷入到要找一个自己的分身的误区。 也就是说，新的 maintainer 必须和自己一样能够关注到项目的方方面面。这是不对的。没有两个人完全相同。只要一个 contributor 有足够的信誉，并且能在项目或社区的维护的某个方面上承担职责，他就是一个好的 maintainer 人选。</p>
+<p>不过，这里讲到的信誉是一个非常主观的概念，提名 maintainer 的倾向每个项目也各有不同。</p>
+<ul>
+<li>Perl 社区最初由 Larry Wall 独裁。近年来，随着他逐渐淡出核心成员圈子，Perl 社区的治理实际上已经变成由 28 人组成的 core team 负责。</li>
+<li>PostgreSQL 社区由 7 人组成的 core team 和 28 位 committers 处理所有工作。</li>
+<li>ASF 治下的项目有一套比较固定的<a href="http://www.apache.org/foundation/how-it-works.html#roles">治理模型</a>。具体到每个项目，例如 <a href="https://pulsar.apache.org/en/contributing/#becoming-a-committer">Apache Pulsar</a> 和 <a href="https://flink.apache.org/contributing/how-to-contribute.html">Apache Flink</a> 会有自己具体的要求和倾向。</li>
+<li>Spring Project 社区的 committers 都是 Pivotal 公司或 VMWare 公司的员工。但是它显然也是诞生于开源协同的作品。</li>
+<li>Linux Kernel 基本上还是由 Linus 独裁。同时，海量的驱动和架构支持有各自的 maintainer 进行维护。参考 <a href="https://www.kernel.org/doc/html/latest/process/maintainers.html">Linux Kernel Maintainers 页面</a>。</li>
+<li>Netty 社区没有明确的规则。Trustin Lee 发起项目并独自维护了三年。随后，Norman Maurer 和 Scott Mitchell 等少数几个人持续参与，成为 maintainer 并共同维护 Netty 项目至今。</li>
+</ul>
+<p>如果让我对 maintainer 提一个基础要求，我会希望他在项目或社区中做出了卓越的贡献，并且当前的 maintainers 团队乐于和他一起工作。</p>
+<h3 id="结构化流程"><a href="#结构化流程" class="headerlink" title="结构化流程"></a>结构化流程</h3><p>除了增加项目维护的人员，另一个基本的减少时间浪费的手段就是结构化流程。我们分点介绍其内涵。</p>
+<p><strong>第一点是直觉大于文档</strong>。对于托管在 GitHub 上的项目来说，help wanted 和 good first issue 标签是一个众所周知的约定。合理标记 issue 能让 contributor 按照过往的经验快速找到切入点。我在<a href="https://github.com/pingcap/community/issues/516">修订 TiDB 社区的治理方案</a>的时候，也是以跟 GitHub 开箱即用的功能亲和为主要目标之一。如果参与一个开源项目有太多新东西要学，那么 maintainers 就有的是要解释的东西了。大部分人效率最高的路径是完全凭直觉做事，并取得好的结果。所以如无必要，请勿设立复杂的规则。</p>
+<p><strong>第二点是文档大于口述</strong>。直觉毕竟只能解决部分问题，对于特殊的或者需要强调的内容，明确记录下来作为文档绝对是个好主意。</p>
+<p>不过文档首要的还不是记录流程，而是项目的目标或者叫定位。这是每个对项目感兴趣的人都会问的问题，高水平的 contributor 尤甚。他们不仅仅是想在开源社区里做简单的工作，更想成为一个伟大的或富有价值的项目的缔造者。如果你想为你的项目吸引到高水平的开发者，那么最好是确定一个清晰且令人振奋的目标，并将它展示在最显眼的地方。例如，Apache Flink 的定位是数据流上的有状态计算，其中有状态这点是开源世界里开创性的工作。例如，PostgreSQL 的定位是世界最先进的开源关系型数据库。例如，Elixir 语言的目标是构建可扩展和可维护的应用。</p>
+<p>其次是约定俗成的文档，包括 README 和 CONTRIBUTING 等等。其中一般包含项目的简介，开始使用的方法，参与贡献的基本流程，和指向更多文档的链接。大部分 contributor 会尝试寻找和阅读这些文档。如果他们能从其中解决自己的问题，就不需要 maintainer 花时间说明了。至少，在有人提问的时候，直接发一个文档的链接，也能省不少事儿。</p>
+<p>另一个值得强调的是 Code of Conduct 即行为准则。提名新的 maintainer 之前最好确保被提名人知悉和理解社区行为准则。行为准则通常是一些涉及平等、尊重和避免冒犯的原则。虽然大多数开源社区很少遇到严重违反行为准则的情况，但是 maintainers 应该对此保持敏感。这类问题一旦处理不当，很容易演变成政治斗争，甚至导致社区分裂或项目停摆。</p>
+<p>最后是设计文档。Contributors 要深度参与技术贡献需要了解相关代码的设计背景和演进过程，设计文档就是最好的参考材料。良好的代码质量有助于避免 contributor 阅读源码时受挫，但是项目固有的复杂度还是需要设计文档来辅助解释。如果代码质量和设计文档都缺位，想要深度参与技术贡献的 contributor 就不得不指望 maintainer 花费大量的时间解释和指导了。这点对于 maintainer 自己也是一样的。当你想要做一个新的功能，如果没有好的技术文档，你也得懵圈，也得拉人反复对齐。</p>
+<p><strong>第三点是避免私下讨论</strong>。有关项目和社区的讨论，唯一的信源应该是一个公开的渠道。例如，ASF 治下的项目要求所有有效的讨论都应该发生在邮件列表上。例如，大部分托管在 GitHub 上的项目隐含了讨论应该发生在 GitHub 平台上。社区成员可能还会通过其他的沟通渠道辅助交流，例如即时通信软件。但是这些辅助渠道的讨论需要被抄送到唯一信源上才实际生效。这样，contributor 才能在无需了解诸多渠道的前提下有能力获取所有有价值的信息。</p>
+<p>这些公开讨论的内容以及表现出来的做事方式，就是社区当中的“活文档”。模仿是人类的天性，如果你希望别人遵循某种做事方式以减少冲突，那么最好以身作则，再带动更多的人跟随。前面讨论 contributor 的参与技巧时候说过，加入社区并首先观察别人是怎么做的，是一种避免浪费时间的好方法。那么与之相对的，maintainer 也要在项目维护和日常交流方面为此提供方便。</p>
+<blockquote><p>Open Communications: as a virtual organization, the ASF requires all communications related to code and decision-making to be publicly accessible to ensure asynchronous collaboration, as necessitated by a globally-distributed community.</p>
+<footer><strong>Apache Software Foundation</strong><cite><a href="https://www.apache.org/theapacheway/index.html">BRIEFING: THE APACHE WAY</a></cite></footer></blockquote>
+
+<p><strong>第四点是考虑自动化</strong>。结构化的流程更容易自动化。当你的流程越来越结构化，那么是时候考虑自动化它了。显然，无需 maintainer 亲自动手的自动化流程能够减轻项目维护的压力。</p>
+<p>同样，最好的自动化是符合直觉的。GitHub 平台提供了一系列自动化的支持。尤其是 <a href="https://github.com/features/actions">GitHub Actions</a> 发布以后，自动化的灵活性得到了进一步的提升。利用项目代码托管的平台提供的开箱即用的能力做自动化，能够最大程度的避免各种冲突。</p>
+<p>自动化还应该建立在现有的成熟流程上，而不应该凭空生造一个流程。好的案例包括提交文档变更后自动部署文档页面，利用 merge bot 提高 pull requests review 和 merge 的效率等等。</p>
+<p>其中，后者的采用是有两面性的。许多代码提交极其活跃的开源社区也仍然不需要引入自动化流程。当然，测试基本是自动化的，至少有脚本。不过 review 和 merge 还是可以人工完成的。我比较认同 merge bot 的地方是有些实现了排队合并功能以及 roll up 打包测试功能。这两个功能在保证合入主分支的代码是基于最新的主分支测试过的前提下，减少了需要进行测试的次数和人为协调的负担。但是，有些 merge bot 强制要求 review 和 merge 走非常严格的审批流程，把这个过程变得复杂不堪，这是我非常反对的。所以在引入 merge bot 之前，请确保你清楚地知道它如何改善协作效率，并保留回滚的能力。</p>
+<p>另一个典型的错误案例是 stale bot 的自动关闭功能。真的，没人喜欢这个功能。开发者来到社区是为了和人建立联系，共同开发好的软件，而不是为了被机器人支配。应对 issue 或 PR 的积压问题，首先应该尽可能的及时处理。其次，大部分积压的 issue 是无效的内容，例如愿望清单和模糊的想法，这些只需要快速关闭即可。对于低优先级的 bug issue 的积压，既然问题是实际存在的，也不是 wontfix 的情形，凭什么关掉呢？如果当前的 maintainers 积极主动地处理 issue 和 PR 还是处理不过来，那么是时候寻找一个新的 maintainer 了。</p>
+<blockquote><p>Users SHALL NOT log feature requests, ideas, suggestions, or any solutions to problems that are not explicitly documented and provable.</p>
+<footer><strong>Collective Code Construction Contract</strong><cite><a href="https://rfc.zeromq.org/spec/42/#24-development-process">Development Process</a></cite></footer></blockquote>
+
+<p>流程自动化的标杆案例包括 <a href="https://github.com/kubernetes/test-infra/tree/master/prow">Kubernetes 社区</a>和 <a href="https://github.com/rust-lang/homu">Rust 社区</a>。在学习这两个社区的做法的时候，需要强调的是</p>
+<ol>
+<li>请关注这两个社区为流程自动化投入了多少人力。</li>
+<li>请关注这两个社区是在什么时候引入了何种自动化逻辑。</li>
+<li>请关注这两个社区的成员如何利用自动化流程。</li>
+<li>请关注这两个社区在流程自动化上的异同。</li>
+<li>请关注这两个社区推行流程自动化时的讨论，尤其是争议。</li>
+<li>请勿货物崇拜，直接照抄它们的方案。否则你会死得很惨。</li>
+</ol>
+<p>既然 Rust 社区都不抄 Kubernetes 社区的方案，你为啥贸贸然就要抄？</p>
+<h3 id="日常事务"><a href="#日常事务" class="headerlink" title="日常事务"></a>日常事务</h3><p>前面讲的是一些整体的做法，回到每个 maintainer 身上，实际的项目维护工作其实是日常事务。</p>
+<p><strong>最常见的问题是开发的风险控制</strong>。开源项目通常会有自己的版本发布周期。有时候你希望下个版本能交付某几个关键功能或改进，而这些工作并不都是由你一个人完成。尤其是，你之所以想交付这些变更，是因为公司的要求，而开发团队包括并非公司员工的成员。这个时候就需要你做好项目的风险控制。</p>
+<p>从公司员工的角度，我介绍过开源项目和商业公司独立运营的协同模型。运用这个模型，可以把商业上紧急的需求实现在 fork 仓库上，交付 hotfix 应对紧急情况。稍后，把改动 contribute back 到开源项目当中。这样就可以把商业要求和软件开发的工程要求隔离开来，避免向开源社区倾倒粗糙的补丁。<a href="https://github.com/streamnative/pulsar">Stream Native</a> 就在公司组织下有 Apache Pulsar 的 fork 仓库。我没有仔细研究过他们的具体做法，但是显然他们把一些公司关心的内容都放在 fork 仓库上记录。让上帝的归上帝，凯撒的归凯撒。这是好文明。</p>
+<p>如果评估出来更合适的做法是把改动直接做在上游，那么我会建议在需要严格控制风险的情况下，直接由公司员工组成开发团队。当然，这些员工得靠自己的努力在开源社区当中赢得信誉，而不是只根据职位就被允许直接提交代码。如果同样的需求已经有其他团队在做，那么沟通就是必要的。如果信得过这个团队，保持关注并提供帮助即可。否则，可以尝试接管项目开发。Flink 社区的 <a href="https://issues.apache.org/jira/browse/FLINK-16654">FLIP-85</a> 提案是我和 Uber 的工程师分别独立提出的。经过几轮邮件列表上的讨论，最终由阿里的工程师主导实现。我参与了 review 和提供了部分参考实现。</p>
+<p>上面讲的是一个好的案例。其实对于一个活跃的开源社区来说，PR 冲突的情况不会太少，种类也很多。</p>
+<p>TiDB 社区发生过一起有名的 <a href="https://github.com/pingcap/tipb/pull/208">Xuanwo 事件</a>。完全相同的两个补丁，后提交的反而先被合入，导致先提交的被迫关闭。尤其是这个事件发生在并不繁忙的仓库上，并且两个补丁提交的时间相差一个月。这是一种非常典型的情况，需要 maintainers 保持对项目范围内发生的活动的关注。</p>
+<p>Flink 社区有不少经典的乐子。<a href="https://issues.apache.org/jira/browse/FLINK-10052">FLINK-10052</a> 作为我从 2019 年就和 @lamberken 配合修复完成并经过生产环境验证的高严重性问题，在过去的三年里提交的三个补丁都因为缺乏响应最终没有合并。这也导致不少用户被迫手动打补丁。<a href="https://issues.apache.org/jira/browse/FLINK-11937">FLINK-11937</a> 是另一个例子。两家员工提供了不同的方案，其中一方缺少社区话语权，无力单独推进合并，另一方有能力但是无意推进，也不允许其他人推进。同样的案例还有 <a href="https://cwiki.apache.org/confluence/display/FLINK/FLIP-44%3A+Support+Local+Aggregation+in+Flink">FLIP-44</a> 和 <a href="https://lists.apache.org/thread/snlsb5z9lcogdo7359dcwr4hn5qpymlo">Queryable State</a> 等等。</p>
+<p>Flink 的例子其实证明了商业公司需要通过 fork 仓库的来应对商业需求。另外也可以看到这些讨论的发起人是如何被 stale bot 二次伤害的。</p>
+<p>从开源协同的角度，contributor 不是程序，而是真实的人。上面提到的沟通手段，去掉公司员工的背景也同样适用。商业公司要做风险控制，开源社区也是一个组织，也可以做风险控制。只不过，开源社区是一个开放式组织。在这个环境下控制风险的手段不是管控，而是协同。前面讲到的文档和结构化的流程在这里同样可以起作用。信息在 contributor 之间自由流通，就不会有 FUD 产生的伤害。平时保持和其他 contributor 的联系，就能知道当前的工作最应该找谁一起做。</p>
+<p>大部分情况下，contributor 是能够自我驱动和自我激励的。他们爆发出的创造力不可小觑。单就时间上的风险而言，如果你在开发文档里明确写下开发周期和发布模型，contributor 是乐于见到自己参与或主导开发的工作随新版本一起发布的。越是自我驱动参与开源社区的 contributor 越重视积累信誉。这个过程中，如果你作为 shepherd 指导或参与进去，只需要切实地关注和解决开发团队成员遇到的困难，并在需要时帮助他们管理好进度。</p>
+<p>其他的沟通技巧和 maintainer 的最佳实践这里不再展开。Open Source Guides 提供了这个话题非常有益的补充，推荐延伸阅读。</p>
+<ul>
+<li><a href="https://opensource.guide/best-practices">Best Practices for Maintainers</a></li>
+<li><a href="https://opensource.guide/leadership-and-governance">Leadership and Governance</a></li>
+<li><a href="https://opensource.guide/building-community/#growing-your-community">Building Welcoming Communities</a></li>
+</ul>
+<h2 id="Have-fun"><a href="#Have-fun" class="headerlink" title="Have fun"></a>Have fun</h2><p>不论是 contributor 还是 maintainer 你都已经通过参与开源社区为社会创造出了价值。时不时想想你为什么要参与或维护这个项目，回顾这个项目已经取得的成就。你已经做得很好了。</p>
+<p>软件都有自己的生命周期，开源软件也不例外。开源社区的工作也不是你生活的全部。如果你找到了新的乐趣，完全可以把项目交给其他 maintainers 维护，或者直接归档。如果开源项目的维护已经超出你的能力范围或者消耗了太多的时间精力，也可以休息一段时间甚至放弃对项目的维护。作为开源社区成员的你没有义务非得维护这个项目或者响应别人的请求。你把自己的工作自由的提供给其他人利用，已经创造了非常客观的价值。</p>
+]]></content>
+      <categories>
+        <category>夜天之书</category>
+      </categories>
+      <tags>
+        <tag>开源</tag>
+        <tag>开源协同</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《知识社群》书评</title>
     <url>/2022/02/27/cultivate-communities/</url>
     <content><![CDATA[<p>时隔两年，以姜宁老师的分享为契机，我重读了<a href="https://book.douban.com/subject/35083568/">《知识社群》</a>一书。结合这两年在开源社群方向的经验，我从中发现了不少极具实践价值的内容。</p>
@@ -223,116 +333,6 @@
       </tags>
   </entry>
   <entry>
-    <title>高效参与开源的诀窍</title>
-    <url>/2021/12/05/effective-open-source-participant/</url>
-    <content><![CDATA[<p>大部分人参与开源社区会面临的一个巨大挑战，那就是缺乏时间。本文试图提供一种方式，帮助想要参与开源社区的同学高效利用有限的时间。</p>
-<p>在一个开源社区里，maintainers 需要关注的范围比 contributors 要大得多。本文分别讨论这两类人群适用的参与开源社区的技巧，以减少过程中的摩擦，提高时间的利用率。</p>
-<span id="more"></span>
-
-<h2 id="Contributors"><a href="#Contributors" class="headerlink" title="Contributors"></a>Contributors</h2><h3 id="第一步要加入社区"><a href="#第一步要加入社区" class="headerlink" title="第一步要加入社区"></a>第一步要加入社区</h3><p>参与开源社区的第一步就是加入社区。加入社区的方式有很多，可以订阅邮件列表，关注开发活动，参与技术或非技术讨论，等等。很多希望参与开源社区的人迟迟迈不出第一步就是忽略了自己首先要加入社区，跟社区建立起联系。</p>
-<p>一个典型的错误做法是完全不顾开源社区是开发开源项目的主体，一头钻进技术细节里，暗搓搓地做一个“大功能”，然后希望社区尽快合并这个补丁，让自己得到荣誉。</p>
-<p>Linux Foundation 有一篇博文明确反对了这种做法。</p>
-<blockquote><p>Some organizations make the mistake of developing big chunks of code in house and then dumping them into the open source project, which is almost never seen as a positive way to engage with the community. The reality is that open source projects can be complex, and what seems like an obvious change might have far reaching side effects in other parts of the project. Any significant change is likely to require some community discussion before it moves to implementation to make sure that there are no side effects and that the solution is aligned with the broader goals for the project. While you discuss it with the community, it can help to focus on the problem, rather than a specific solution, before you invest too much time in the creation of a body of code.</p>
-<footer><strong>Linux Foundation</strong><cite><a href="https://www.linuxfoundation.org/tools/participating-in-open-source-communities/">Participating in Open Source Communities</a></cite></footer></blockquote>
-
-<p>一个现实的例子，前几天有人问我，自己做了一个 Flink StateBackend 的实现，提交给社区是不是就能当 PMC 了。这个问题属实把我整不会了。从来没有在社区当中亮相的人，突然出现并提出自己实现了一个“大功能”，在其他成员眼里跟民科没什么不同。绝大部分情况下，这种实现跟上游社区的开发节奏是脱节的，很难合回去。也就是说，闭门造车的形式自我感动地开发项目，即使花费了时间，大概率还是白忙一场。</p>
-<p>刚开始接触 Flink 社区的时候，我就按照项目文档的提示订阅了 users 和 dev 两个邮件列表。实话说，最初的三个月，我基本看不懂他们在说什么。当时的我尽可能地读每一封邮件，从邮件里面引用的链接一个个点进去了解背景，混沌当中建立起对项目的初步印象。直到四个月后第一次提交代码，这个祛魅的过程才算完成。从此以后，我逐渐能够轻松地参与到技术讨论，也掌握了 review 的沟通习惯。</p>
-<p>最近，我在跟人介绍 Engula 项目的时候，也是先发<a href="https://github.com/engula/engula/discussions">讨论区</a>和<a href="https://discord.gg/AN6vgVXaHC">聊天室</a>的链接。新成员可以阅读过往的讨论，挂在聊天室里，观察社区讨论问题和推进工作的方式，了解已有的设计实现和结论。参与闲聊或者回复感兴趣的话题，找到自己愿意投入的工作。只有这样，才能进一步深入参与开源社区，而不是接触了好几年，却始终迈不出第一步。</p>
-<h3 id="找到感兴趣的问题"><a href="#找到感兴趣的问题" class="headerlink" title="找到感兴趣的问题"></a>找到感兴趣的问题</h3><p>要想利用有限的时间创造更多价值，最好的方法是找到一个感兴趣的问题，然后持续投入进去直到解决。</p>
-<p>一个典型的错误做法是强迫自己做着不感兴趣的工作。这种情况下，由于内心是抗拒的，即使投入再多的时间，也几乎不会有产出。</p>
-<p>可能有人会不理解，开源社区的 contributor 都是自愿参与，如果不想做某个工作，不是不做就可以了吗。其实不然，社区成员身处其中很容易感受到无形的社交压力。</p>
-<p>一种情况是不懂得拒绝。知乎上有个问题，<a href="https://www.zhihu.com/question/475269038/answer/2045981148">如何优雅地拒绝开源项目的 PR 邀请</a>，讲的就是这种情况。我在回答里分享了一个自己拒绝 Flink 社区成员里的 PR 邀请的案例。另一种情况是错误估计难度，即自以为能搞定这个工作，做的过程里发现不对，又不好意思改口说自己搞不定。应对这些情况的方法非常简单，直截了当地说明情况即可，解放自己避免浪费时间。</p>
-<p>另外一个难题是自己往往对比较有挑战性的工作感兴趣，但是从一个刚接触项目的 contributor 到能够完成一个复杂任务之间有一道坎。</p>
-<p>要跨过这道坎，同样需要积极采取行动，而不要独自纠结。首先可以考虑从简单的工作入手，比如阅读项目文档时发现的拼写错误。一个简单的贡献能带你走完整个 contribution 流程。一回生二回熟，做其他有挑战性的工作也就不会在流程上踩坑。其次可以保持和 maintainers 的交流，以了解现有逻辑的设计背景和演进过程。只有对工作涉及的逻辑有充分的了解，才能写出高质量的代码。高质量的代码也意味着更少的返工和不必要的争论，也就避免了时间的浪费。</p>
-<h3 id="建立与其他成员的联系"><a href="#建立与其他成员的联系" class="headerlink" title="建立与其他成员的联系"></a>建立与其他成员的联系</h3><p>随着参与的深入，总有你一个人无法完成的工作。开源协同的价值就在于跨越所属组织的边界合作开发项目。合作的基础是成员之间的信任，也就是良好的关系。</p>
-<p>开源社区是围绕开源软件建立起来的。但是并不只有软件本身带来技术价值，人与人的连结带来认同感和归属感，这些也能满足社区成员的需要。此外，相互信任的基础能很大程度提升价值创造的效率，例如减少浪费在同步和对齐上的时间。因此，建立并保持与其他项目成员的关系至关重要。</p>
-<p>做到这一点的方式就是充分的沟通。同样，这需要以开放的心态对待平时的交流。不要把所有事情都憋在心里。不要纠结于想清楚所有细节再开始沟通，其他成员一时间内往往没办法追上你所想的所有细节。我的建议是，当你有一个初步的想法，也做了力所能及的调研，就可以整理一下，发布到社区当中征求意见。</p>
-<p>我给 Engula 项目做了一个<a href="https://github.com/engula/engula.github.io/pull/15">社区计划</a>。老实说，内容并不成熟，但是我一个人干想也得不出结论，所以在经过几轮自我 Review 以后，就先抛出来征求意见。另一个例子是 Engula 的 maintainer @huachaohuang 想为 contributor 提供开发文档，于是就发起了一个<a href="https://github.com/engula/engula/discussions/84">关于 Dev Guide 的讨论</a>。正好我对这个话题也早有想法，当我看到发出来的讨论以后，发现他也在关注这个话题。于是我花了一个小时把自己的想法写下来，经过讨论以后提 PR 推进主分支。</p>
-<p>沟通协作的过程里冲突在所难免。我在好几个项目里都别人讨论甚至争论过很多次技术问题，给别人的行为提过意见，也夸赞过好的做法。开源社区解决冲突的方式比较朴素，一般是有话直说，尽量客观地达成共识，按照流程约定做出决策。不用整那么多弯弯绕浪费时间。</p>
-<p>举一个现实的例子，曾经有人跟我抱怨提上去的 PR 被 maintainer 挑战了，问我应该怎么回复。怀疑 maintainer 是不是有偏见，抱怨很难跟 maintainer 沟通，大量的时间精力浪费在纠结这些臆想出来的问题，自然是筋疲力竭，感觉在开源社区里寸步难行。</p>
-<h3 id="适合参与开源协同的工作"><a href="#适合参与开源协同的工作" class="headerlink" title="适合参与开源协同的工作"></a>适合参与开源协同的工作</h3><p>最后，关注到相当一部分 contributors 的公司员工的身份。这显然会影响到他们参与社区的动力和能力。</p>
-<p>主要的挑战是，如果工作期间不允许参与开源社区，同时工作本身已经消耗了太多的时间精力，那么 contributors 对参与开源社区也只能是有心无力。这其实是很长一段时间里开源社区的参与在国内发展缓慢的原因。大量的开发者都在过度工作，下班只想躺平休息，没有动力再谈什么开源贡献。</p>
-<p>不过，随着时间的发展，情况也在发生着变化。越来越多的公司采用更加灵活合理的工作时间，尤其是以研发为核心竞争力的公司。如果你所在的公司仍然要求超负荷工作，燃烧生命赚血汗钱，那么是时候找份新工作了。时代已经变了，就让这些公司被无情的淘汰吧。</p>
-<p>另一个方向是考虑在工作期间参与开源社区。如果你确实喜欢某个开源项目，那么最佳策略就是找一份允许你全职投入这个项目的工作。这样的工作岗位如今并不少见。尤其是随着企业级解决方案越来越倾向于采用开源组件，企业对熟悉开源软件的人才的需求只会日益增加。如果找不到全职投入开源项目的工作，与之相关的工作也是备选方案。</p>
-<p>不过，即使这份工作允许你全职投入开源项目，也并不意味着你能够参与开源社区。特别是当你的老板认为参与开源社区不能为公司创造价值的时候。面对这个问题，首先你可以问问你的老板，说不定他不这么觉得，那就省事儿了。如果你的老板确实难以理解，那你就得像兜售一个技术方案一样向他宣传参与开源社区的价值了。我在其他的文章里对这一点已经有不少讨论，你可以看看。</p>
-<p>普适的时间管理手段这里就不展开介绍了，各种相关书籍和 GTD 方法论都很值得一看。</p>
-<h2 id="Maintainers"><a href="#Maintainers" class="headerlink" title="Maintainers"></a>Maintainers</h2><h3 id="发展新成员"><a href="#发展新成员" class="headerlink" title="发展新成员"></a>发展新成员</h3><p>Maintainers 比起 contributors 需要关注的更多的事情。随着开源项目日渐复杂，开源社区逐渐成长，单靠一个人的力量很难处理好所有的事务。这个时候，就需要 maintainer 适时地发展项目维护的队伍。</p>
-<p>首先需要理清 maintainer 头衔的定位。实际上，大部分项目的维护是个苦力活，而 maintainers 就是一群承担这些工作的社区成员。Maintainers 可能会拥有合并 PR 的权限，在社区治理中能投票做决策，确定项目发展的方向。但是，这种权限并非特权。在一个健康的社区里，任何社区成员都可以做技术讨论，也可以就社区发展话题提出自己的观点。对于技术观点，客观上更加合理的方案理应被采纳。对于社区发展话题，maintainers 也一定会考虑建设性的提议。</p>
-<p>可能有不少人把成为 maintainer 当成参与开源社区的目标，这是很好的。如果你理解了 maintainer 的职责，通过 contribution 积累了足够的信誉，成为 maintainer 为开源社区服务，这个头衔是一个显式的认可。不过，大可不必过分纠结于 maintainer 头衔。这只是对 contribution 认可形式的其中一种，而不是唯一一种。</p>
-<p>Maintainers 的职责并不轻松，所以 Python 社区和 Apache 软件基金会下的项目社区都会有一个询问 contributor 是否愿意成为 maintainer 的流程。也存在 contributor 拒绝邀请的情况，因为就像前面提到的，健康的开源社区里，只要提议是合理的，就能凭借其客观的优势胜出。成为 maintainer 并不意味着在方案选择上有特权。</p>
-<p>对于 contributor 的感谢，也可以通过宣传渠道发布。比起一个模糊的 maintainer 头衔，作为技术人员，我会更在意这个人实际在开源社区里实际完成的事情。</p>
-<p>基于上面的认识，我们引出下一个观点。Maintainers 发展新成员，必须是有选择性的。</p>
-<p>这种选择性的主要依据是维护项目的需要，而不是追求数量或者过分在意 diversity 等等。这可以类比到开发软件的目的是提供技术价值，而不是代码行数或者所采用的编程语言的数量。</p>
-<p>一个典型的错误案例是出于自己同时是公司员工的身份，被命令将 maintainers 的人数发展到某个数字。这种指标只关注数字而不关注具体的人，而且往往定得脱离实际。公司员工迫于指标压力很容易降低 maintainers 的标准，逮到一个算一个的凑人头，或者为了 diversity 对不同背景的 contributor 采取不同的标准。这样发展出来的 maintainers 不仅不能分担项目维护的职责，还很有可能因为不胜任而产生新的问题。</p>
-<p>另一个典型的错误经常出现在个人项目上，当个人项目发展壮大，唯一的 maintainer 想要发展新成员时，很容易陷入到要找一个自己的分身的误区。 也就是说，新的 maintainer 必须和自己一样能够关注到项目的方方面面。这是不对的。没有两个人完全相同。只要一个 contributor 有足够的信誉，并且能在项目或社区的维护的某个方面上承担职责，他就是一个好的 maintainer 人选。</p>
-<p>不过，这里讲到的信誉是一个非常主观的概念，提名 maintainer 的倾向每个项目也各有不同。</p>
-<ul>
-<li>Perl 社区最初由 Larry Wall 独裁。近年来，随着他逐渐淡出核心成员圈子，Perl 社区的治理实际上已经变成由 28 人组成的 core team 负责。</li>
-<li>PostgreSQL 社区由 7 人组成的 core team 和 28 位 committers 处理所有工作。</li>
-<li>ASF 治下的项目有一套比较固定的<a href="http://www.apache.org/foundation/how-it-works.html#roles">治理模型</a>。具体到每个项目，例如 <a href="https://pulsar.apache.org/en/contributing/#becoming-a-committer">Apache Pulsar</a> 和 <a href="https://flink.apache.org/contributing/how-to-contribute.html">Apache Flink</a> 会有自己具体的要求和倾向。</li>
-<li>Spring Project 社区的 committers 都是 Pivotal 公司或 VMWare 公司的员工。但是它显然也是诞生于开源协同的作品。</li>
-<li>Linux Kernel 基本上还是由 Linus 独裁。同时，海量的驱动和架构支持有各自的 maintainer 进行维护。参考 <a href="https://www.kernel.org/doc/html/latest/process/maintainers.html">Linux Kernel Maintainers 页面</a>。</li>
-<li>Netty 社区没有明确的规则。Trustin Lee 发起项目并独自维护了三年。随后，Norman Maurer 和 Scott Mitchell 等少数几个人持续参与，成为 maintainer 并共同维护 Netty 项目至今。</li>
-</ul>
-<p>如果让我对 maintainer 提一个基础要求，我会希望他在项目或社区中做出了卓越的贡献，并且当前的 maintainers 团队乐于和他一起工作。</p>
-<h3 id="结构化流程"><a href="#结构化流程" class="headerlink" title="结构化流程"></a>结构化流程</h3><p>除了增加项目维护的人员，另一个基本的减少时间浪费的手段就是结构化流程。我们分点介绍其内涵。</p>
-<p><strong>第一点是直觉大于文档</strong>。对于托管在 GitHub 上的项目来说，help wanted 和 good first issue 标签是一个众所周知的约定。合理标记 issue 能让 contributor 按照过往的经验快速找到切入点。我在<a href="https://github.com/pingcap/community/issues/516">修订 TiDB 社区的治理方案</a>的时候，也是以跟 GitHub 开箱即用的功能亲和为主要目标之一。如果参与一个开源项目有太多新东西要学，那么 maintainers 就有的是要解释的东西了。大部分人效率最高的路径是完全凭直觉做事，并取得好的结果。所以如无必要，请勿设立复杂的规则。</p>
-<p><strong>第二点是文档大于口述</strong>。直觉毕竟只能解决部分问题，对于特殊的或者需要强调的内容，明确记录下来作为文档绝对是个好主意。</p>
-<p>不过文档首要的还不是记录流程，而是项目的目标或者叫定位。这是每个对项目感兴趣的人都会问的问题，高水平的 contributor 尤甚。他们不仅仅是想在开源社区里做简单的工作，更想成为一个伟大的或富有价值的项目的缔造者。如果你想为你的项目吸引到高水平的开发者，那么最好是确定一个清晰且令人振奋的目标，并将它展示在最显眼的地方。例如，Apache Flink 的定位是数据流上的有状态计算，其中有状态这点是开源世界里开创性的工作。例如，PostgreSQL 的定位是世界最先进的开源关系型数据库。例如，Elixir 语言的目标是构建可扩展和可维护的应用。</p>
-<p>其次是约定俗成的文档，包括 README 和 CONTRIBUTING 等等。其中一般包含项目的简介，开始使用的方法，参与贡献的基本流程，和指向更多文档的链接。大部分 contributor 会尝试寻找和阅读这些文档。如果他们能从其中解决自己的问题，就不需要 maintainer 花时间说明了。至少，在有人提问的时候，直接发一个文档的链接，也能省不少事儿。</p>
-<p>另一个值得强调的是 Code of Conduct 即行为准则。提名新的 maintainer 之前最好确保被提名人知悉和理解社区行为准则。行为准则通常是一些涉及平等、尊重和避免冒犯的原则。虽然大多数开源社区很少遇到严重违反行为准则的情况，但是 maintainers 应该对此保持敏感。这类问题一旦处理不当，很容易演变成政治斗争，甚至导致社区分裂或项目停摆。</p>
-<p>最后是设计文档。Contributors 要深度参与技术贡献需要了解相关代码的设计背景和演进过程，设计文档就是最好的参考材料。良好的代码质量有助于避免 contributor 阅读源码时受挫，但是项目固有的复杂度还是需要设计文档来辅助解释。如果代码质量和设计文档都缺位，想要深度参与技术贡献的 contributor 就不得不指望 maintainer 花费大量的时间解释和指导了。这点对于 maintainer 自己也是一样的。当你想要做一个新的功能，如果没有好的技术文档，你也得懵圈，也得拉人反复对齐。</p>
-<p><strong>第三点是避免私下讨论</strong>。有关项目和社区的讨论，唯一的信源应该是一个公开的渠道。例如，ASF 治下的项目要求所有有效的讨论都应该发生在邮件列表上。例如，大部分托管在 GitHub 上的项目隐含了讨论应该发生在 GitHub 平台上。社区成员可能还会通过其他的沟通渠道辅助交流，例如即时通信软件。但是这些辅助渠道的讨论需要被抄送到唯一信源上才实际生效。这样，contributor 才能在无需了解诸多渠道的前提下有能力获取所有有价值的信息。</p>
-<p>这些公开讨论的内容以及表现出来的做事方式，就是社区当中的“活文档”。模仿是人类的天性，如果你希望别人遵循某种做事方式以减少冲突，那么最好以身作则，再带动更多的人跟随。前面讨论 contributor 的参与技巧时候说过，加入社区并首先观察别人是怎么做的，是一种避免浪费时间的好方法。那么与之相对的，maintainer 也要在项目维护和日常交流方面为此提供方便。</p>
-<blockquote><p>Open Communications: as a virtual organization, the ASF requires all communications related to code and decision-making to be publicly accessible to ensure asynchronous collaboration, as necessitated by a globally-distributed community.</p>
-<footer><strong>Apache Software Foundation</strong><cite><a href="https://www.apache.org/theapacheway/index.html">BRIEFING: THE APACHE WAY</a></cite></footer></blockquote>
-
-<p><strong>第四点是考虑自动化</strong>。结构化的流程更容易自动化。当你的流程越来越结构化，那么是时候考虑自动化它了。显然，无需 maintainer 亲自动手的自动化流程能够减轻项目维护的压力。</p>
-<p>同样，最好的自动化是符合直觉的。GitHub 平台提供了一系列自动化的支持。尤其是 <a href="https://github.com/features/actions">GitHub Actions</a> 发布以后，自动化的灵活性得到了进一步的提升。利用项目代码托管的平台提供的开箱即用的能力做自动化，能够最大程度的避免各种冲突。</p>
-<p>自动化还应该建立在现有的成熟流程上，而不应该凭空生造一个流程。好的案例包括提交文档变更后自动部署文档页面，利用 merge bot 提高 pull requests review 和 merge 的效率等等。</p>
-<p>其中，后者的采用是有两面性的。许多代码提交极其活跃的开源社区也仍然不需要引入自动化流程。当然，测试基本是自动化的，至少有脚本。不过 review 和 merge 还是可以人工完成的。我比较认同 merge bot 的地方是有些实现了排队合并功能以及 roll up 打包测试功能。这两个功能在保证合入主分支的代码是基于最新的主分支测试过的前提下，减少了需要进行测试的次数和人为协调的负担。但是，有些 merge bot 强制要求 review 和 merge 走非常严格的审批流程，把这个过程变得复杂不堪，这是我非常反对的。所以在引入 merge bot 之前，请确保你清楚地知道它如何改善协作效率，并保留回滚的能力。</p>
-<p>另一个典型的错误案例是 stale bot 的自动关闭功能。真的，没人喜欢这个功能。开发者来到社区是为了和人建立联系，共同开发好的软件，而不是为了被机器人支配。应对 issue 或 PR 的积压问题，首先应该尽可能的及时处理。其次，大部分积压的 issue 是无效的内容，例如愿望清单和模糊的想法，这些只需要快速关闭即可。对于低优先级的 bug issue 的积压，既然问题是实际存在的，也不是 wontfix 的情形，凭什么关掉呢？如果当前的 maintainers 积极主动地处理 issue 和 PR 还是处理不过来，那么是时候寻找一个新的 maintainer 了。</p>
-<blockquote><p>Users SHALL NOT log feature requests, ideas, suggestions, or any solutions to problems that are not explicitly documented and provable.</p>
-<footer><strong>Collective Code Construction Contract</strong><cite><a href="https://rfc.zeromq.org/spec/42/#24-development-process">Development Process</a></cite></footer></blockquote>
-
-<p>流程自动化的标杆案例包括 <a href="https://github.com/kubernetes/test-infra/tree/master/prow">Kubernetes 社区</a>和 <a href="https://github.com/rust-lang/homu">Rust 社区</a>。在学习这两个社区的做法的时候，需要强调的是</p>
-<ol>
-<li>请关注这两个社区为流程自动化投入了多少人力。</li>
-<li>请关注这两个社区是在什么时候引入了何种自动化逻辑。</li>
-<li>请关注这两个社区的成员如何利用自动化流程。</li>
-<li>请关注这两个社区在流程自动化上的异同。</li>
-<li>请关注这两个社区推行流程自动化时的讨论，尤其是争议。</li>
-<li>请勿货物崇拜，直接照抄它们的方案。否则你会死得很惨。</li>
-</ol>
-<p>既然 Rust 社区都不抄 Kubernetes 社区的方案，你为啥贸贸然就要抄？</p>
-<h3 id="日常事务"><a href="#日常事务" class="headerlink" title="日常事务"></a>日常事务</h3><p>前面讲的是一些整体的做法，回到每个 maintainer 身上，实际的项目维护工作其实是日常事务。</p>
-<p><strong>最常见的问题是开发的风险控制</strong>。开源项目通常会有自己的版本发布周期。有时候你希望下个版本能交付某几个关键功能或改进，而这些工作并不都是由你一个人完成。尤其是，你之所以想交付这些变更，是因为公司的要求，而开发团队包括并非公司员工的成员。这个时候就需要你做好项目的风险控制。</p>
-<p>从公司员工的角度，我介绍过开源项目和商业公司独立运营的协同模型。运用这个模型，可以把商业上紧急的需求实现在 fork 仓库上，交付 hotfix 应对紧急情况。稍后，把改动 contribute back 到开源项目当中。这样就可以把商业要求和软件开发的工程要求隔离开来，避免向开源社区倾倒粗糙的补丁。<a href="https://github.com/streamnative/pulsar">Stream Native</a> 就在公司组织下有 Apache Pulsar 的 fork 仓库。我没有仔细研究过他们的具体做法，但是显然他们把一些公司关心的内容都放在 fork 仓库上记录。让上帝的归上帝，凯撒的归凯撒。这是好文明。</p>
-<p>如果评估出来更合适的做法是把改动直接做在上游，那么我会建议在需要严格控制风险的情况下，直接由公司员工组成开发团队。当然，这些员工得靠自己的努力在开源社区当中赢得信誉，而不是只根据职位就被允许直接提交代码。如果同样的需求已经有其他团队在做，那么沟通就是必要的。如果信得过这个团队，保持关注并提供帮助即可。否则，可以尝试接管项目开发。Flink 社区的 <a href="https://issues.apache.org/jira/browse/FLINK-16654">FLIP-85</a> 提案是我和 Uber 的工程师分别独立提出的。经过几轮邮件列表上的讨论，最终由阿里的工程师主导实现。我参与了 review 和提供了部分参考实现。</p>
-<p>上面讲的是一个好的案例。其实对于一个活跃的开源社区来说，PR 冲突的情况不会太少，种类也很多。</p>
-<p>TiDB 社区发生过一起有名的 <a href="https://github.com/pingcap/tipb/pull/208">Xuanwo 事件</a>。完全相同的两个补丁，后提交的反而先被合入，导致先提交的被迫关闭。尤其是这个事件发生在并不繁忙的仓库上，并且两个补丁提交的时间相差一个月。这是一种非常典型的情况，需要 maintainers 保持对项目范围内发生的活动的关注。</p>
-<p>Flink 社区有不少经典的乐子。<a href="https://issues.apache.org/jira/browse/FLINK-10052">FLINK-10052</a> 作为我从 2019 年就和 @lamberken 配合修复完成并经过生产环境验证的高严重性问题，在过去的三年里提交的三个补丁都因为缺乏响应最终没有合并。这也导致不少用户被迫手动打补丁。<a href="https://issues.apache.org/jira/browse/FLINK-11937">FLINK-11937</a> 是另一个例子。两家员工提供了不同的方案，其中一方缺少社区话语权，无力单独推进合并，另一方有能力但是无意推进，也不允许其他人推进。同样的案例还有 <a href="https://cwiki.apache.org/confluence/display/FLINK/FLIP-44%3A+Support+Local+Aggregation+in+Flink">FLIP-44</a> 和 <a href="https://lists.apache.org/thread/snlsb5z9lcogdo7359dcwr4hn5qpymlo">Queryable State</a> 等等。</p>
-<p>Flink 的例子其实证明了商业公司需要通过 fork 仓库的来应对商业需求。另外也可以看到这些讨论的发起人是如何被 stale bot 二次伤害的。</p>
-<p>从开源协同的角度，contributor 不是程序，而是真实的人。上面提到的沟通手段，去掉公司员工的背景也同样适用。商业公司要做风险控制，开源社区也是一个组织，也可以做风险控制。只不过，开源社区是一个开放式组织。在这个环境下控制风险的手段不是管控，而是协同。前面讲到的文档和结构化的流程在这里同样可以起作用。信息在 contributor 之间自由流通，就不会有 FUD 产生的伤害。平时保持和其他 contributor 的联系，就能知道当前的工作最应该找谁一起做。</p>
-<p>大部分情况下，contributor 是能够自我驱动和自我激励的。他们爆发出的创造力不可小觑。单就时间上的风险而言，如果你在开发文档里明确写下开发周期和发布模型，contributor 是乐于见到自己参与或主导开发的工作随新版本一起发布的。越是自我驱动参与开源社区的 contributor 越重视积累信誉。这个过程中，如果你作为 shepherd 指导或参与进去，只需要切实地关注和解决开发团队成员遇到的困难，并在需要时帮助他们管理好进度。</p>
-<p>其他的沟通技巧和 maintainer 的最佳实践这里不再展开。Open Source Guides 提供了这个话题非常有益的补充，推荐延伸阅读。</p>
-<ul>
-<li><a href="https://opensource.guide/best-practices">Best Practices for Maintainers</a></li>
-<li><a href="https://opensource.guide/leadership-and-governance">Leadership and Governance</a></li>
-<li><a href="https://opensource.guide/building-community/#growing-your-community">Building Welcoming Communities</a></li>
-</ul>
-<h2 id="Have-fun"><a href="#Have-fun" class="headerlink" title="Have fun"></a>Have fun</h2><p>不论是 contributor 还是 maintainer 你都已经通过参与开源社区为社会创造出了价值。时不时想想你为什么要参与或维护这个项目，回顾这个项目已经取得的成就。你已经做得很好了。</p>
-<p>软件都有自己的生命周期，开源软件也不例外。开源社区的工作也不是你生活的全部。如果你找到了新的乐趣，完全可以把项目交给其他 maintainers 维护，或者直接归档。如果开源项目的维护已经超出你的能力范围或者消耗了太多的时间精力，也可以休息一段时间甚至放弃对项目的维护。作为开源社区成员的你没有义务非得维护这个项目或者响应别人的请求。你把自己的工作自由的提供给其他人利用，已经创造了非常客观的价值。</p>
-]]></content>
-      <categories>
-        <category>夜天之书</category>
-      </categories>
-      <tags>
-        <tag>开源</tag>
-        <tag>开源协同</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Protobuf Gradle Plugin 的用例</title>
     <url>/2022/03/08/gradle-protobuf/</url>
     <content><![CDATA[<p>近日尝试利用 <a href="https://github.com/apache/ratis">Apache Ratis</a> 这个项目包装一个 Raft 协议驱动的状态机的时候，遇到了需要用 Protobuf 传输数据的场景。由于 Gradle 构建工具的门槛和 Java 语言项目的某些惯例碰到了使用上的问题，这里记录一下我在这个玩具项目当中的用例。</p>
@@ -388,76 +388,6 @@
         <tag>Gradle</tag>
         <tag>Java</tag>
         <tag>Protobuf</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CMake 是怎么工作的？</title>
-    <url>/2022/04/15/how-cmake-works/</url>
-    <content><![CDATA[<blockquote>
-<p>关于开源软件的发布相关的内容还在构思当中，先摆烂重发部分以前讨论过的关于构建系统的文章。构建和发布密不可分，可以认为都是持续交付流水线的一环。</p>
-<p>我会分多篇文章讨论软件发布和开源软件发布的各个方面，文章内容再加以提炼放到编撰当中的《开源指南》里。</p>
-</blockquote>
-<p>构建系统是软件开发的重要组成部分，生产环境中的绝大多数软件都由多个组件所组成，由一系列依赖和分散的编译单元聚合而成，而自动化这些组件的集成的系统，就是构建系统。</p>
-<p>笼统地说，构建系统负责除了应用代码编写以外的，所有从代码到可执行文件的步骤的自动化。其中，查找、编译和链接等具体执行由其他工具支持。构建系统本身处理的内容分为两大部分，第一部分是构建过程各个步骤的编排，第二部分是包管理或说第三方依赖管理。这两者的区别可以参考 Java 生态中 Ant 和 Ivy 的区别和联系。狭义的构建系统仅包括第一部分，因为狭义的构建过程只关心有某种方法可以取得依赖并将其引入构建，而不关心依赖本身是怎么管理和获取的。</p>
-<p>那么，本文主角 CMake 是哪一种或者两者都是呢？</p>
-<span id="more"></span>
-
-<h2 id="CMake-是构建系统生成器"><a href="#CMake-是构建系统生成器" class="headerlink" title="CMake 是构建系统生成器"></a>CMake 是构建系统生成器</h2><p>CMake 两者都不是，作为 C&#x2F;C++ 生态构建系统事实标准的 CMake 其实是一个构建系统生成器。CMake 的主要功能是描述项目结构，表达模块依赖，从而以人类友好的方式表达构建过程步骤编排的需求，最终从声明式的 CMake 代码中生成实际的构建系统，比如生成一系列 GNU Make 构建需要的文件。</p>
-<p>举个例子，假设我们有一个 hello world 代码文件 main.cpp 和对应的 CMake 项目描述文件 CMakeLists.txt 如下。</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">$ (root) tree</span><br><span class="line">.</span><br><span class="line">├── CMakeLists.txt</span><br><span class="line">└── main.cpp</span><br><span class="line">$ (root) cat CMakeLists.txt</span><br><span class="line">cmake_minimum_required(VERSION 3.19)</span><br><span class="line">project (hello_cmake)</span><br><span class="line">add_executable(hello_cmake_exe main.cpp)</span><br><span class="line"></span><br><span class="line">$ (root) mkdir build &amp;&amp; cd build &amp;&amp; cmake .. &amp;&amp; make</span><br><span class="line">$ (root/build) ls</span><br><span class="line">CMakeCache.txt      Makefile            hello_cmake_exe</span><br><span class="line">CMakeFiles          cmake_install.cmake</span><br><span class="line">$ (root/build) ./hello_cmake_exe</span><br><span class="line">Hello CMake!</span><br></pre></td></tr></table></figure>
-
-<p>可以看到，CMakeLists.txt 里关键的内容是 add_executable 一行。这行表达了我们希望在项目中创建一个名为 hello_cmake_exe 的可执行文件，它的构建要素是 main.cpp 文件。</p>
-<p>我们通过 <code>cmake</code> 命令在当前目录下创建了 GNU Make 构建需要的 Makefile 文件及其依赖，随后执行 <code>make</code> 命令实际完成构建。</p>
-<h2 id="CMake-围绕构建目标声明"><a href="#CMake-围绕构建目标声明" class="headerlink" title="CMake 围绕构建目标声明"></a>CMake 围绕构建目标声明</h2><p>刚开始接触 CMake 的同学往往会被它茫茫多的指令吓到，尤其是神秘的结构化语法、没有命名规律的声明、不知所云的参数列表和复杂的命令行参数，让人不知道从何入手。</p>
-<p>其实，CMake 尤其是现代化的 CMake 核心是围绕构建目标来组织声明，上一节例子中 add_executable 一行里的 hello_cmake_exe 就是一个构建目标。此外，add_library 定义的库也是一种构建目标。可执行文件和库是构建最终对用户可见的产物，CMake 对项目模块依赖的声明就是围绕着这两种目标来展开的。</p>
-<p>add_executable 和 add_library 的第一个参数说明了构建目标的名称，它必须是全局唯一的符号，并且随后全局可访问；紧跟着是各自专有的控制参数，例如可以指定库是静态链接还是动态链接等；再之后是一个可变长度的源文件数组，用于描述直接参与构建当前目标的源文件。</p>
-<p>CMake 的声明参数是一系列空格隔开的符号或字符串，同时每个命令都可以有自己的参数列表，这些参数列表没有统一的风格，同时仅通过位置区分而没有命名参数，可以说是 CMake 最为用户不友好的一点了。</p>
-<p>定义了构建目标之后，就是描述构建目标的各种特性。上面两个命令列出了构建目标所需的源文件，但是还有链接时的库依赖，这就需要 target_link_library 来声明目标构建依赖的库。构建目标可以是 add_executable 或 add_library 声明的，库可以是 add_library 声明的构建目标，也可以是库文件等。</p>
-<p>此外，构建目标可能还需要包含头文件等 include 预编译命令依赖的文件，除了在 add_executable 和 add_library 中加入以外，还可以随后通过 target_sources 逐个包含，或者更常见的，通过 target_include_directories 包含目录下的文件。</p>
-<p>最后，构建目标在编译时还可能有一系列编译选项和宏定义等，可以通过 target_compile_options 和 target_compile_definitions 来声明。</p>
-<p>可以看到，链接、文件包含和编译选项的命令都以 target_xxx 的形式出现，第一个参数是 add_executable 或 add_library 声明的构建目标。这就是现代化的 CMake 围绕构建目标声明的含义。</p>
-<p>值得一提的是，旧版的 CMake 不支持 target_xxx 形式的命令，而是通过不带 target_ 前缀的命令来表达相似的含义，但是旧版的命令是通过修改全局状态和获取全局状态来声明的，而非按照构建目标所构成的命名空间区分开的。举例来说，include_directories 命令将导致之后及子项目中的所有构建目标在编译时都带上此命令引入的路径下的文件。显然，这很容易导致声明的泄漏，尤其在项目层次复杂，引入其他子项目或作为子项目被其他项目引入时，容易出现难以排查的非预期构建结果，也就限制了项目规模的扩大。</p>
-<p>现代 CMake 的最佳实践是牢记围绕构建目标组织声明，不仅能避免意外的声明泄漏，还能获得更好的表达力。</p>
-<h2 id="CMake-灵活地支持三方库"><a href="#CMake-灵活地支持三方库" class="headerlink" title="CMake 灵活地支持三方库"></a>CMake 灵活地支持三方库</h2><p>一开始我们就提到，广义的构建系统包括三方库的依赖管理。即使是狭义的只处理构建步骤编排的构建系统，也需要有某种方式引入三方库的依赖。</p>
-<p>程序设计实践发展至今，引入三方库依赖的方式无非是 systemwise 安装依赖，vendor 方式携带依赖和利用依赖管理系统的接口与专门的依赖管理系统协作。CMake 支持以上三种形式的三方库依赖引入方式，并且抽象了自己统一的 find_package 接口。</p>
-<p>我们先介绍 find_package 接口，它的主要使用形式如下。</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">find_package(&lt;PackageName&gt; [version] [REQUIRED] [[COMPONENTS] [components...]])</span><br></pre></td></tr></table></figure>
-
-<p>后面都是可选项，最基础的使用形式就是 find_package 加一个 PackageName 信息。CMake 会在约定路径和通过选项指定的路径下搜索名为 FindPackageName.cmake 的文件，并执行其中的逻辑以设置一些关键的变量。约定的 PackageName_FOUND 标识是否找到对应的依赖以进行差别处理逻辑，其他的变量则根据不同 FindPackageName.cmake 的策略有所不同，通常包括该依赖暴露的头文件信息，可供链接的库的信息，以及库的构建目标等等，并可能按照模块进行划分以获得更细粒度的导出控制。</p>
-<p>不少成熟的三方库都得到了 CMake 的原生支持或者提供了可移植的 Find 脚本，例如 Protobuf 和 Boost 等。这些 Find 脚本通常被写成仅搜索系统级路径的形式，也就是原生支持了查找 systemwise 安装的第三方依赖的方法。换个角度看，也就是把 <code>/usr/</code> 和 <code>/usr/local/</code> 等经典安装路径等同于 Maven 当中的 <code>.m2</code> 路径来处理。</p>
-<p>然而，systemwise 的方式对运行环境的侵入性明显，很容易影响 PATH 环境变量和实际使用的三方库，同时容易产生难以解决的版本冲突问题。通常只在临时开发或者隔离性较强的容器环境中才考虑采用这种方法。</p>
-<p>为了避免 systemwise 的安装依赖，另一种方案是 vendor 方式携带依赖，也就是常说的 third party 或 contrib 或 submodule 等等。ClickHouse 重度使用了这种模式，几乎 vendor 了它的所有依赖。C &#x2F; C++ &#x2F; Scheme 广泛流行的库通常也是通过此种形式来组织的，Go 语言在 go mod 面世之前乃至现在都广泛使用了 vendor 的依赖引入模式。</p>
-<p>具体地说，vendor 的含义就是依赖库和根项目在源代码层面一起分发，从而在下载根项目源代码时同步就绪了所有依赖库的代码。前面提到原生的 Find 脚本通常只搜索系统级路径，因此 vendor 通常也需要手动编写 CMake 脚本引入依赖项的问题。</p>
-<p>最理想的情况是三方库已经充分考虑了作为子项目被外部引入的情况，例如 GoogleTest 或 gRPC 等。它们在项目的根目录下有 CMakeLists.txt 文件来定义和导出项目的构建目标和头文件、静态链接库等信息，只需要在父项目中通过 add_subdirectory 声明引入三方库，就可以在 CMake 的解析框架下导出所有需要的符号。</p>
-<p>然而，现实往往是更复杂的。有些三方库未曾想过跟其他项目协作，有些三方库并不支持 CMake 或者实现的 CMake 脚本有问题，例如典型的 Poco 项目的 ENABLE_TESTS 选项命名很容易冲突，又未启用相应的 CMake Policy 以允许上层临时屏蔽选项。诸如此类的细节问题常常引出难以排查的非预期构建结果，所以富余人力的项目研发团队倾向于撰写一个轻量级的 CMake 层来管理三方库。</p>
-<p>典型的例如 ClickHouse 项目，它几乎对所有的项目都配备了一组 CMake 脚本，并且精心裁剪了依赖库的文件，仅保留构建相关的文件。在根项目的 CMake 文件中，通过 include 执行来执行这组配置三方库依赖的 CMake 脚本，从而达到和 find_package 或者丝滑的 add_subdirectory 类似的符号导出效果。</p>
-<p>不过，上面提到的手写 CMake 脚本跟直接调用 find_package 的方式并不冲突，从导出符号的角度看，效果是一样的。但是，我们还能做得更加一致，即利用 find_package 提供的机制，将 vendor 的依赖作为 systemwise 依赖的前置或后置候选被挑选和导入。通过自定义 Find 脚本的逻辑，兼容 systemwise 的引入方法，再修改 CMake 查找 Find 脚本的配置，就可以实现 CMake 脚本里一致的使用 find_package 声明来引入三方库依赖了。</p>
-<p>最后讨论的引入三方库依赖的方式是与其他专门的依赖管理系统协作，例如 vcpkg 或 conan 等。这两者都有自己的中央仓库，类似于 Maven Central 或 JCenter 等，来管理三方库，包括版本、平台、名称和库的具体内容等。</p>
-<p>vcpkg 通过 CMake 原生的 TOOLCHAIN 机制 Hook 了 CMake 执行前的阶段，以配置好 CMake 随后 find_package 的环境从而能够正确的找到依赖。conan 则在 CMake 对构建系统的一层抽象的基础上再做一层抽象，支持生成 CMake 生成构建系统所需要的文件，加一层套娃，在生成 CMake Binary 路径的内容的时候把依赖库的内容也拷贝过去支持 CMake 索引到。</p>
-<p>可惜由于 C++ 的跨平台构建太过复杂，并且一直以来的习惯都是 vendor + 魔改三方库，因此这两种已经是最流行的专门的依赖管理系统并没有大范围的获得采用。</p>
-<p>顺带一提，CMake 本身还提供了 ExternalProject 和 FetchContent 等内容来支持 vendor 以外的模式，在生成构建系统期间拉取或者根据配置寻找三方库依赖并复制到构建路径下，最终以相对路径生成构建系统文件。不过这两个方案非常难用，而且没有类似于 <code>.m2</code> 或 <code>.ivy</code> 这样全局的依赖管理目录，其实每次构建的时候还是要每项目的重新拉依赖，比起 vendor 来说并不少多少力气，反而失去了 vendor 魔改的灵活性。实际采用的人少之又少。</p>
-<h2 id="CMake-新时代的最佳实践"><a href="#CMake-新时代的最佳实践" class="headerlink" title="CMake 新时代的最佳实践"></a>CMake 新时代的最佳实践</h2><p>上面只讨论了 CMake 的两个最为关键且值得的内容，其他诸如指定 CMake 版本、指定 C++ 标准兼容、设置 CMake Policy 开关、添加变量和定义宏及函数等等内容，要么非常显而易见，要么比较少见，需要的时候自然可以弄懂，不做过多展开。</p>
-<p>文字的讨论只是帮助厘清概念和建立感性认识，CMake 作为构建系统还有丰富的细节，熟悉实际系统也需要从实践出发。CMake 介绍的最后附上我在接触这个构建系统的过程中最受启发的几份最佳实践的材料。</p>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=bsXLMQ6WgIk">Effective CMake - a random seletion of best practices</a>(<a href="https://github.com/boostcon/cppnow_presentations_2017/blob/master/05-19-2017_friday/effective_cmake__daniel_pfeifer__cppnow_05-19-2017.pdf">slides</a>)</li>
-<li><a href="https://www.youtube.com/watch?v=eC9-iRN2b04">Using Modern CMake Patterns to Enforce a Good Modular Design</a>(<a href="https://github.com/CppCon/CppCon2017/blob/master/Tutorials/Using%20Modern%20CMake%20Patterns%20to%20Enforce%20a%20Good%20Modular%20Design/Using%20Modern%20CMake%20Patterns%20to%20Enforce%20a%20Good%20Modular%20Design%20-%20Mathieu%20Ropert%20-%20CppCon%202017.pdf">slides</a>)</li>
-</ul>
-<p>这两个演讲和 Slides 是近年来比较有代表性的讲 Modern CMake 的材料。不多说，主要也是围绕构建目标和模块化项目来介绍的。</p>
-<ul>
-<li><a href="https://github.com/ttroy50/cmake-examples">CMake Examples</a></li>
-</ul>
-<p>简练又恰到好处的 CMake 实例，新手跟着实践一遍 01 和 02 就差不多了，其他的可以按需阅读。</p>
-<ul>
-<li><a href="http://www.aosabook.org/en/cmake.html">How CMake Is Implemented</a></li>
-</ul>
-<p>CMake 实现上的原理，包括解析声明和生成构建系统的步骤以及一些执行细节，富有黑客精神的同学可以看一看。</p>
-]]></content>
-      <categories>
-        <category>天工开物</category>
-      </categories>
-      <tags>
-        <tag>CMake</tag>
-        <tag>软件构建</tag>
       </tags>
   </entry>
   <entry>
@@ -555,6 +485,76 @@
       </tags>
   </entry>
   <entry>
+    <title>CMake 是怎么工作的？</title>
+    <url>/2022/04/15/how-cmake-works/</url>
+    <content><![CDATA[<blockquote>
+<p>关于开源软件的发布相关的内容还在构思当中，先摆烂重发部分以前讨论过的关于构建系统的文章。构建和发布密不可分，可以认为都是持续交付流水线的一环。</p>
+<p>我会分多篇文章讨论软件发布和开源软件发布的各个方面，文章内容再加以提炼放到编撰当中的《开源指南》里。</p>
+</blockquote>
+<p>构建系统是软件开发的重要组成部分，生产环境中的绝大多数软件都由多个组件所组成，由一系列依赖和分散的编译单元聚合而成，而自动化这些组件的集成的系统，就是构建系统。</p>
+<p>笼统地说，构建系统负责除了应用代码编写以外的，所有从代码到可执行文件的步骤的自动化。其中，查找、编译和链接等具体执行由其他工具支持。构建系统本身处理的内容分为两大部分，第一部分是构建过程各个步骤的编排，第二部分是包管理或说第三方依赖管理。这两者的区别可以参考 Java 生态中 Ant 和 Ivy 的区别和联系。狭义的构建系统仅包括第一部分，因为狭义的构建过程只关心有某种方法可以取得依赖并将其引入构建，而不关心依赖本身是怎么管理和获取的。</p>
+<p>那么，本文主角 CMake 是哪一种或者两者都是呢？</p>
+<span id="more"></span>
+
+<h2 id="CMake-是构建系统生成器"><a href="#CMake-是构建系统生成器" class="headerlink" title="CMake 是构建系统生成器"></a>CMake 是构建系统生成器</h2><p>CMake 两者都不是，作为 C&#x2F;C++ 生态构建系统事实标准的 CMake 其实是一个构建系统生成器。CMake 的主要功能是描述项目结构，表达模块依赖，从而以人类友好的方式表达构建过程步骤编排的需求，最终从声明式的 CMake 代码中生成实际的构建系统，比如生成一系列 GNU Make 构建需要的文件。</p>
+<p>举个例子，假设我们有一个 hello world 代码文件 main.cpp 和对应的 CMake 项目描述文件 CMakeLists.txt 如下。</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">$ (root) tree</span><br><span class="line">.</span><br><span class="line">├── CMakeLists.txt</span><br><span class="line">└── main.cpp</span><br><span class="line">$ (root) cat CMakeLists.txt</span><br><span class="line">cmake_minimum_required(VERSION 3.19)</span><br><span class="line">project (hello_cmake)</span><br><span class="line">add_executable(hello_cmake_exe main.cpp)</span><br><span class="line"></span><br><span class="line">$ (root) mkdir build &amp;&amp; cd build &amp;&amp; cmake .. &amp;&amp; make</span><br><span class="line">$ (root/build) ls</span><br><span class="line">CMakeCache.txt      Makefile            hello_cmake_exe</span><br><span class="line">CMakeFiles          cmake_install.cmake</span><br><span class="line">$ (root/build) ./hello_cmake_exe</span><br><span class="line">Hello CMake!</span><br></pre></td></tr></table></figure>
+
+<p>可以看到，CMakeLists.txt 里关键的内容是 add_executable 一行。这行表达了我们希望在项目中创建一个名为 hello_cmake_exe 的可执行文件，它的构建要素是 main.cpp 文件。</p>
+<p>我们通过 <code>cmake</code> 命令在当前目录下创建了 GNU Make 构建需要的 Makefile 文件及其依赖，随后执行 <code>make</code> 命令实际完成构建。</p>
+<h2 id="CMake-围绕构建目标声明"><a href="#CMake-围绕构建目标声明" class="headerlink" title="CMake 围绕构建目标声明"></a>CMake 围绕构建目标声明</h2><p>刚开始接触 CMake 的同学往往会被它茫茫多的指令吓到，尤其是神秘的结构化语法、没有命名规律的声明、不知所云的参数列表和复杂的命令行参数，让人不知道从何入手。</p>
+<p>其实，CMake 尤其是现代化的 CMake 核心是围绕构建目标来组织声明，上一节例子中 add_executable 一行里的 hello_cmake_exe 就是一个构建目标。此外，add_library 定义的库也是一种构建目标。可执行文件和库是构建最终对用户可见的产物，CMake 对项目模块依赖的声明就是围绕着这两种目标来展开的。</p>
+<p>add_executable 和 add_library 的第一个参数说明了构建目标的名称，它必须是全局唯一的符号，并且随后全局可访问；紧跟着是各自专有的控制参数，例如可以指定库是静态链接还是动态链接等；再之后是一个可变长度的源文件数组，用于描述直接参与构建当前目标的源文件。</p>
+<p>CMake 的声明参数是一系列空格隔开的符号或字符串，同时每个命令都可以有自己的参数列表，这些参数列表没有统一的风格，同时仅通过位置区分而没有命名参数，可以说是 CMake 最为用户不友好的一点了。</p>
+<p>定义了构建目标之后，就是描述构建目标的各种特性。上面两个命令列出了构建目标所需的源文件，但是还有链接时的库依赖，这就需要 target_link_library 来声明目标构建依赖的库。构建目标可以是 add_executable 或 add_library 声明的，库可以是 add_library 声明的构建目标，也可以是库文件等。</p>
+<p>此外，构建目标可能还需要包含头文件等 include 预编译命令依赖的文件，除了在 add_executable 和 add_library 中加入以外，还可以随后通过 target_sources 逐个包含，或者更常见的，通过 target_include_directories 包含目录下的文件。</p>
+<p>最后，构建目标在编译时还可能有一系列编译选项和宏定义等，可以通过 target_compile_options 和 target_compile_definitions 来声明。</p>
+<p>可以看到，链接、文件包含和编译选项的命令都以 target_xxx 的形式出现，第一个参数是 add_executable 或 add_library 声明的构建目标。这就是现代化的 CMake 围绕构建目标声明的含义。</p>
+<p>值得一提的是，旧版的 CMake 不支持 target_xxx 形式的命令，而是通过不带 target_ 前缀的命令来表达相似的含义，但是旧版的命令是通过修改全局状态和获取全局状态来声明的，而非按照构建目标所构成的命名空间区分开的。举例来说，include_directories 命令将导致之后及子项目中的所有构建目标在编译时都带上此命令引入的路径下的文件。显然，这很容易导致声明的泄漏，尤其在项目层次复杂，引入其他子项目或作为子项目被其他项目引入时，容易出现难以排查的非预期构建结果，也就限制了项目规模的扩大。</p>
+<p>现代 CMake 的最佳实践是牢记围绕构建目标组织声明，不仅能避免意外的声明泄漏，还能获得更好的表达力。</p>
+<h2 id="CMake-灵活地支持三方库"><a href="#CMake-灵活地支持三方库" class="headerlink" title="CMake 灵活地支持三方库"></a>CMake 灵活地支持三方库</h2><p>一开始我们就提到，广义的构建系统包括三方库的依赖管理。即使是狭义的只处理构建步骤编排的构建系统，也需要有某种方式引入三方库的依赖。</p>
+<p>程序设计实践发展至今，引入三方库依赖的方式无非是 systemwise 安装依赖，vendor 方式携带依赖和利用依赖管理系统的接口与专门的依赖管理系统协作。CMake 支持以上三种形式的三方库依赖引入方式，并且抽象了自己统一的 find_package 接口。</p>
+<p>我们先介绍 find_package 接口，它的主要使用形式如下。</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">find_package(&lt;PackageName&gt; [version] [REQUIRED] [[COMPONENTS] [components...]])</span><br></pre></td></tr></table></figure>
+
+<p>后面都是可选项，最基础的使用形式就是 find_package 加一个 PackageName 信息。CMake 会在约定路径和通过选项指定的路径下搜索名为 FindPackageName.cmake 的文件，并执行其中的逻辑以设置一些关键的变量。约定的 PackageName_FOUND 标识是否找到对应的依赖以进行差别处理逻辑，其他的变量则根据不同 FindPackageName.cmake 的策略有所不同，通常包括该依赖暴露的头文件信息，可供链接的库的信息，以及库的构建目标等等，并可能按照模块进行划分以获得更细粒度的导出控制。</p>
+<p>不少成熟的三方库都得到了 CMake 的原生支持或者提供了可移植的 Find 脚本，例如 Protobuf 和 Boost 等。这些 Find 脚本通常被写成仅搜索系统级路径的形式，也就是原生支持了查找 systemwise 安装的第三方依赖的方法。换个角度看，也就是把 <code>/usr/</code> 和 <code>/usr/local/</code> 等经典安装路径等同于 Maven 当中的 <code>.m2</code> 路径来处理。</p>
+<p>然而，systemwise 的方式对运行环境的侵入性明显，很容易影响 PATH 环境变量和实际使用的三方库，同时容易产生难以解决的版本冲突问题。通常只在临时开发或者隔离性较强的容器环境中才考虑采用这种方法。</p>
+<p>为了避免 systemwise 的安装依赖，另一种方案是 vendor 方式携带依赖，也就是常说的 third party 或 contrib 或 submodule 等等。ClickHouse 重度使用了这种模式，几乎 vendor 了它的所有依赖。C &#x2F; C++ &#x2F; Scheme 广泛流行的库通常也是通过此种形式来组织的，Go 语言在 go mod 面世之前乃至现在都广泛使用了 vendor 的依赖引入模式。</p>
+<p>具体地说，vendor 的含义就是依赖库和根项目在源代码层面一起分发，从而在下载根项目源代码时同步就绪了所有依赖库的代码。前面提到原生的 Find 脚本通常只搜索系统级路径，因此 vendor 通常也需要手动编写 CMake 脚本引入依赖项的问题。</p>
+<p>最理想的情况是三方库已经充分考虑了作为子项目被外部引入的情况，例如 GoogleTest 或 gRPC 等。它们在项目的根目录下有 CMakeLists.txt 文件来定义和导出项目的构建目标和头文件、静态链接库等信息，只需要在父项目中通过 add_subdirectory 声明引入三方库，就可以在 CMake 的解析框架下导出所有需要的符号。</p>
+<p>然而，现实往往是更复杂的。有些三方库未曾想过跟其他项目协作，有些三方库并不支持 CMake 或者实现的 CMake 脚本有问题，例如典型的 Poco 项目的 ENABLE_TESTS 选项命名很容易冲突，又未启用相应的 CMake Policy 以允许上层临时屏蔽选项。诸如此类的细节问题常常引出难以排查的非预期构建结果，所以富余人力的项目研发团队倾向于撰写一个轻量级的 CMake 层来管理三方库。</p>
+<p>典型的例如 ClickHouse 项目，它几乎对所有的项目都配备了一组 CMake 脚本，并且精心裁剪了依赖库的文件，仅保留构建相关的文件。在根项目的 CMake 文件中，通过 include 执行来执行这组配置三方库依赖的 CMake 脚本，从而达到和 find_package 或者丝滑的 add_subdirectory 类似的符号导出效果。</p>
+<p>不过，上面提到的手写 CMake 脚本跟直接调用 find_package 的方式并不冲突，从导出符号的角度看，效果是一样的。但是，我们还能做得更加一致，即利用 find_package 提供的机制，将 vendor 的依赖作为 systemwise 依赖的前置或后置候选被挑选和导入。通过自定义 Find 脚本的逻辑，兼容 systemwise 的引入方法，再修改 CMake 查找 Find 脚本的配置，就可以实现 CMake 脚本里一致的使用 find_package 声明来引入三方库依赖了。</p>
+<p>最后讨论的引入三方库依赖的方式是与其他专门的依赖管理系统协作，例如 vcpkg 或 conan 等。这两者都有自己的中央仓库，类似于 Maven Central 或 JCenter 等，来管理三方库，包括版本、平台、名称和库的具体内容等。</p>
+<p>vcpkg 通过 CMake 原生的 TOOLCHAIN 机制 Hook 了 CMake 执行前的阶段，以配置好 CMake 随后 find_package 的环境从而能够正确的找到依赖。conan 则在 CMake 对构建系统的一层抽象的基础上再做一层抽象，支持生成 CMake 生成构建系统所需要的文件，加一层套娃，在生成 CMake Binary 路径的内容的时候把依赖库的内容也拷贝过去支持 CMake 索引到。</p>
+<p>可惜由于 C++ 的跨平台构建太过复杂，并且一直以来的习惯都是 vendor + 魔改三方库，因此这两种已经是最流行的专门的依赖管理系统并没有大范围的获得采用。</p>
+<p>顺带一提，CMake 本身还提供了 ExternalProject 和 FetchContent 等内容来支持 vendor 以外的模式，在生成构建系统期间拉取或者根据配置寻找三方库依赖并复制到构建路径下，最终以相对路径生成构建系统文件。不过这两个方案非常难用，而且没有类似于 <code>.m2</code> 或 <code>.ivy</code> 这样全局的依赖管理目录，其实每次构建的时候还是要每项目的重新拉依赖，比起 vendor 来说并不少多少力气，反而失去了 vendor 魔改的灵活性。实际采用的人少之又少。</p>
+<h2 id="CMake-新时代的最佳实践"><a href="#CMake-新时代的最佳实践" class="headerlink" title="CMake 新时代的最佳实践"></a>CMake 新时代的最佳实践</h2><p>上面只讨论了 CMake 的两个最为关键且值得的内容，其他诸如指定 CMake 版本、指定 C++ 标准兼容、设置 CMake Policy 开关、添加变量和定义宏及函数等等内容，要么非常显而易见，要么比较少见，需要的时候自然可以弄懂，不做过多展开。</p>
+<p>文字的讨论只是帮助厘清概念和建立感性认识，CMake 作为构建系统还有丰富的细节，熟悉实际系统也需要从实践出发。CMake 介绍的最后附上我在接触这个构建系统的过程中最受启发的几份最佳实践的材料。</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=bsXLMQ6WgIk">Effective CMake - a random seletion of best practices</a>(<a href="https://github.com/boostcon/cppnow_presentations_2017/blob/master/05-19-2017_friday/effective_cmake__daniel_pfeifer__cppnow_05-19-2017.pdf">slides</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=eC9-iRN2b04">Using Modern CMake Patterns to Enforce a Good Modular Design</a>(<a href="https://github.com/CppCon/CppCon2017/blob/master/Tutorials/Using%20Modern%20CMake%20Patterns%20to%20Enforce%20a%20Good%20Modular%20Design/Using%20Modern%20CMake%20Patterns%20to%20Enforce%20a%20Good%20Modular%20Design%20-%20Mathieu%20Ropert%20-%20CppCon%202017.pdf">slides</a>)</li>
+</ul>
+<p>这两个演讲和 Slides 是近年来比较有代表性的讲 Modern CMake 的材料。不多说，主要也是围绕构建目标和模块化项目来介绍的。</p>
+<ul>
+<li><a href="https://github.com/ttroy50/cmake-examples">CMake Examples</a></li>
+</ul>
+<p>简练又恰到好处的 CMake 实例，新手跟着实践一遍 01 和 02 就差不多了，其他的可以按需阅读。</p>
+<ul>
+<li><a href="http://www.aosabook.org/en/cmake.html">How CMake Is Implemented</a></li>
+</ul>
+<p>CMake 实现上的原理，包括解析声明和生成构建系统的步骤以及一些执行细节，富有黑客精神的同学可以看一看。</p>
+]]></content>
+      <categories>
+        <category>天工开物</category>
+      </categories>
+      <tags>
+        <tag>CMake</tag>
+        <tag>软件构建</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《信号》影评</title>
     <url>/2022/04/23/movie-review-signal/</url>
     <content><![CDATA[<p>晚上跟我家妹子一起又一次看完了<a href="https://movie.douban.com/subject/26310143/">《信号》</a>。回想起来上次看的时候京畿南部事件还没侦破，这次再去搜索的时候，已经有结论了。这部剧让我联想到同样在同一个时空里改变过去的<a href="https://movie.douban.com/subject/4925398/">《命运石之门》</a>，还有同样讲述公检法黑幕的<a href="https://movie.douban.com/subject/33447642/">《沉默的真相》</a>。</p>
@@ -579,77 +579,6 @@
       </categories>
       <tags>
         <tag>韩剧</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>NoSQL Revolution</title>
-    <url>/2022/06/13/nosql-revolution/</url>
-    <content><![CDATA[<p>从本世纪初谷歌的三篇论文发布以来，数据处理领域在大数据的方向上探索了将近二十年的时间。从三篇论文的开源实现 <a href="https://hadoop.apache.org/">Apache Hadoop</a> 和 <a href="https://hbase.apache.org/">Apache HBase</a> 开始，到打破传统关系型数据库的分布式数据处理系统如雨后春笋般接连诞生，NoSQL 系统回应了移动互联时代的数据爆发式增长的挑战。</p>
-<p>诚然，传统的数据库专家对 NoSQL 也有像 <a href="https://homes.cs.washington.edu/~billhowe/mapreduce_a_major_step_backwards.html">MapReduce: A major step backwards</a> 这样的批评，不过 NoSQL 系统本身也在向传统数据处理领域当中被证明有效的特性靠拢，向 Not Only SQL 系统转变。</p>
-<p>本文首先从移动互联时代数据增长和数据模型演进带来的实际问题出发，讨论 NoSQL 系统在现在企业数据处理生态当中的定位和价值，然后介绍 NoSQL 系统靠近 Not Only SQL 定位的过程中遇到的硬核诉求，最后分析新时代 NoSQL 的发展方向。</p>
-<span id="more"></span>
-
-<h2 id="数据量的增长带来的挑战"><a href="#数据量的增长带来的挑战" class="headerlink" title="数据量的增长带来的挑战"></a>数据量的增长带来的挑战</h2><p>NoSQL 系统崛起的主要原因就是移动互联时代数据的爆发式增长。</p>
-<p>起初，企业经营过程中产生且需要运维的数据并不多，单机数据库应对就绰绰有余。尤其是在摩尔定律尚未失效的硬件主导技术升级的年代，数据量级增长的速度未曾超过硬件升级的速度。关系数据库赢下单机数据库战争以后，几乎每家企业的数据处理生态都被 Oracle 数据库、IBM 的 DB2 数据库和微软的 SQL Server 数据库所占据。</p>
-<p>随着移动互联时代的到来，计算机全面进入到民用阶段。几乎人人手持一部甚至多部终端设备，这些设备逐渐占领了每个人生活的绝大部分时间。全域搜索、社交媒体、在线游戏、电商购物、网络直播……提供此类服务的企业所要处理的数据的量级，不再是商业场景下的 B2B 订单、客户关系管理和运维的量级，而是全民参与的 B2C 或 C2C 的用户行为的量级。换句话说，这时企业所要处理的数据，从一部分企业及其行为的量级增长到了全体民众及其行为的量级。</p>
-<p>另一方面，硬件的升级也遇到了摩尔定律的瓶颈，硬件的升级不再能够满足用户数量增长的需求。阿里巴巴在 2008 年前后开始的“去 IOE 运动”就是这一趋势的一个注脚。原本，阿里巴巴在应对用户数据快速增长的时候，采取的也是传统的硬件技术升级的手段，采购商业级 Oracle 数据库、特殊定制硬件的 IBM 小型机和 EMC 高级存储设备来支持。然而，一方面受到技术自主可控的驱动，另一方面也是出于企业经营成本控制的要求，阿里巴巴转向了 MySQL 数据库以及后续一系列开源或自研的分布式数据处理系统的解决方案。</p>
-<p>当然，单机 MySQL 也无法抗住全网用户每天源源不断产生的行为数据。因此，在阿里巴巴等互联网公司当中就诞生了以分库分表技术为核心的数据库中间件解决方案，即通过分拆业务到不同数据库实例中，同一业务选择分片键分拆到不同数据库实例中，再于业务和数据库实例集群之间设置一个解析查询和转发查询的中间件，来实现以多台廉价计算机和运行其上的 MySQL 数据库，抗下用户行为数据的解决方案。</p>
-<p>严格来说，这一方案产生的软件不是 NoSQL 系统。NoSQL 系统的一个重要特征是用户能够像对待单一系统那样与整个 NoSQL 分布式系统交互，而分库分表的数据库中间件往往要求用户知悉底下数据分片的模型，从而针对性的写出不会导致全表扫描的查询。另一方面，即使采用了分库分表的解决方案，系统所能处理的数据量仍然是有限的。目前主流的分库分表方案，最多能够应对 TB 级别的数据。这对于用户账户数据、商户和商品概要数据以及最近一段时间的订单数据或许是足够的，但是对于历史订单数据、商品详情数据、用户历史足迹和社交网络活动记录来说，则远远不够。或者说，即使能够扩容分库分表的数量来支撑更大的数据量级，底下运行的 MySQL 实例产生的开销，也不如 NoSQL 系统底下只是需要一个普通的数据节点更有性价比。</p>
-<p>NoSQL 系统当中，除去主打内存缓存的 <a href="https://redis.io/">Redis</a> 以外，诸如 HBase 和支持 Redis 协议的数据持久化 NoSQL 系统 <a href="github.com/apache/incubator-kvrocks">Apache Kvrocks (Incubating)</a> 都能支持 PB 级别甚至以上的数据存储和访问。这得益于从谷歌三篇论文一脉相承的 scale out 策略，藉由简化系统复杂度，以硬件技术的新增长点网络性能抵消单机处理的延时优势。这样，企业当中的数据处理系统可以用增加成本可控的节点数，而非对抗摩尔定律购买价格不支持商用的高端硬件的方式，在延时可接收的范围内应对更大的数据量。</p>
-<p>前面提到，NoSQL 系统对于用户来说是一个整体，而分库分表在扩缩容时却未必能够像传统数据库使用体验那样流畅。由于分片键与实例数相关，分库分表分出来多少个库表，这个知识会成为整个系统的一个固有限制。如果想要增加数据库实例，这个过程并非简单地上线新实例就可以开始服务，而是需要整个逻辑数据库在新的库表数下重新分片。我在某司操作过 32 库乘以 128 表到 128 库乘以 128 表的迁移过程，这个迁移的数据同步阶段总共花了两天半的时间，在线上几乎没有感知的情况下以深夜一分钟左右的闪断为代价切换成功。然而，这还是建立在公司有足够强的研发实力支持从头开发一套数据中间件以及数据迁移系统的前提下的开销。而无论是哪种典型的 NoSQL 系统，几乎都支持用户无感知的扩容和缩容动作。</p>
-<p>分库分表的数据库中间件实质上操作的是底下不同的数据库实例，传统数据库支持的事务一致性、多表联合操作和存储过程等功能，几乎都受限于实际上数据存在于多个数据库实例的物理限制而无法支持。NoSQL 系统可以认为是在这样的 baseline 上，基于整体考虑设计出一个能够最大化数据处理吞吐和尽可能降低数据延迟，并且尽可能使得用户像对待一个统一系统那样操作的解决方案。</p>
-<p>对于定位在支持传统数据库的语义和功能，同时又要满足数据增长需求的 <a href="https://www.cs.cmu.edu/~pavlo/slides/hydra-newsql2021.pdf">NewSQL</a> 系统，这些系统能够处理的数据量级上限，实际上也没有超过分库分表方案 TB 级别的水平。同时，在数据量超过一定水平时，这些系统会面临严重的功能挑战，例如大事务延迟不可接受，选择 TSO 作为中央授时的系统中心节点不堪重负，或者 Aurora 会提示用户关闭 Binary Log 以保证用户读写的时延。相比起 NoSQL 系统所能处理的数据量级，这些 NewSQL 系统还是不太够看。从它们支持的数据库功能来看，往往与传统数据库也有明显的差别，比如存在微妙差异的事务一致性，不支持存储过程，不支持外键，等等。</p>
-<h2 id="数据模型贴近业务的价值"><a href="#数据模型贴近业务的价值" class="headerlink" title="数据模型贴近业务的价值"></a>数据模型贴近业务的价值</h2><p>NoSQL 系统崛起的另一个主要原因是打破了关系模型对数据处理领域的垄断。</p>
-<p>严格来说，在业务逻辑开发这一块，关系模型并没有统治开发者的心智。虽然不少业务逻辑是写在存储过程或者触发器当中的，这些代码自然深深地被搭上了关系模型的印记，但是尤其在互联网业务开发的领域当中，开发人员并非直接面向数据库编程。在开发人员编写的业务代码到底下的数据库系统中间，经常有一层对象关系映射框架（ORM）的存在。</p>
-<p>这就是关系数据库始终绕不过的“<a href="https://en.wikipedia.org/wiki/Object%E2%80%93relational_impedance_mismatch">对象关系阻抗失配</a>”问题。</p>
-<p>现代程序设计语言的主流是面向对象的程序设计，即使并非“一切都是对象”的信徒，大部分语言也都支持数据结构的嵌套。而在关系模型当中，所有的数据都以元组的形式存储，想要表达列表或者嵌套数据结构，要么需要冗余数据，要么需要设置多张表并藉由外键关联来查询。</p>
-<p>前者不仅会造成空间的浪费，还会在数据结构趋于复杂，尤其是存在 option 和 either 这样的结构的时候，列的碾平生出非常难以查询和写入的表结构。后者更不必说，原本是同一个逻辑对象的数据，如今散落在多张表上，无论是更新时需要注意的级联变更和完整性约束，还是查询时需要依靠 JOIN 来聚合数据，都是非常麻烦的事情。</p>
-<p>反观 Redis 的主要特点之一就是支持丰富的数据结构，例如开发者熟悉的 List&#x2F;Hash&#x2F;Set&#x2F;ZSet 以及方便的 HyperLogLog&#x2F;GeoHash&#x2F;Bitmap 等等。对于接受经典数据结构培养的研发人员来说，Redis 这种丰富数据结构上手成本很低，开发者对于基本的数据结构都会使用。反观关系数据库的模型，要在其中实现 List Push&#x2F;Pop 这样的操作还是有些麻烦。</p>
-<p><a href="https://www.mongodb.com/docs/manual/core/data-modeling-introduction">MongoDB 的数据模型文档</a>将支持灵活的数据模型放在了第一位，<a href="https://cassandra.apache.org/doc/latest/cassandra/data_modeling/intro.html">Apache Cassandra 的数据模型文档</a>则进一步点明了这种数据模型价值观与关系数据库的不同——如果说关系数据库的数据模型是表驱动的，那么 NoSQL 系统的数据模型就是查询驱动的。</p>
-<p>传统的数据库开发流程，往往是由 DBA 或架构师定义出一系列的表及表的模式，藉由关系数据库系统支持的特性和约束来保证数据的完整性和一致性，以这些表及表的模式为基础，上线数据处理系统支持业务需求。如果业务迭代需要引入新的字段或者添加新表支持嵌套数据结构，这些改动都需要送交 DBA 和架构师审批，甚至对于核心数据表的改动，还需要送交研发高管审批。这一过程和认识直到今天仍然没有什么大的改变。基本上，关系数据库在企业当中的定位就是持久化数据资产。</p>
-<p>然而，移动互联时代业务的需求有着很强的时效性，需求经常变化，为了应对某个活动需要临时增加某个字段，过后即可废弃。这样的使用场景遇上层层审批的变更流程，必然激发出剧烈的矛盾。NoSQL 系统此时就扮演了一个在企业关键数据资产和业务经常变化且时效性强的需求之间的润滑剂。</p>
-<p>一方面，核心数据资产例如用户账户数据、用户信息数据、订单交易数据等等，仍然由关系数据库来支撑运转，保证数据的完整性、一致性和足以应对容灾的持久化，并且借助几十年来发展得相当成熟的数据平台生态进行冷数据归档，以及数据订阅、数据同步等等，作为业务系统的核心数据来源支撑。另一方面，NoSQL 系统存储非核心的经营数据或者衍生、冗余数据，用以支持业务高速迭代的需求。查询驱动的含义就在于此：业务查询是什么样的，底下的数据模式就可以是什么样的。例如使用 Redis 存储用户账户与手机号的对应关系，使用 HBase 存储全国地图上的兴趣点以支持基于位置的用户服务，将业务数据导入 <a href="https://github.com/elastic/elasticsearch">ElasticSearch</a> 当中提供搜索功能，使用 <a href="https://pulsar.apache.org/">Apache Pulsar</a> 接受采点上报数据。</p>
-<p>这种职责分层实践在过去十几年当中不断地被传播和应用，证明了 NoSQL 在企业当中足以赢得自己生存的空间。从数据模型的角度看，贴近业务的数据模型天然适合应对业务的经常性迭代。灵活的数据模式能够快速适应数据模型变更的需求；丰富的数据结构符合开发者的心智模型，能够更快的完成业务代码开发；而对于消息队列、倒排索引系统和图数据库，则是各自领域当中最贴合的建模方式。例如 XLab 分析 GitHub 全域开源协同数据的时候，就自然选择了图数据库来分析人与人、人与项目、项目与项目之间形如社交网络的关系和行为数据。</p>
-<p>随着 NoSQL 系统逐渐成熟，尤其是在数据一致性和存储可靠性上面的突破，越来越多的企业也结合自身业务的特性，尝试把核心业务及其数据也假设在 NoSQL 系统上。国外基于 MongoDB 发展出一套 <a href="https://en.wikipedia.org/wiki/MEAN_(solution_stack)">MEAN</a> 应用开发栈，就是这一实践的注脚。虽然业务稳定以后，数据模型变更减少，表驱动的关系数据库能够带来多年积累的软件成熟度和生态繁荣度的优势，但是对于创业公司或者新团队新业务来说，采用 NoSQL 来快速启动自己的业务，并且能够灵活地调整数据模型，或许是个更好的选择。</p>
-<h2 id="Not-Only-SQL-的诉求"><a href="#Not-Only-SQL-的诉求" class="headerlink" title="Not Only SQL 的诉求"></a>Not Only SQL 的诉求</h2><p>NoSQL 系统一开始得名就是因为它的设计理念和数据模型都是反（NO）关系数据库（SQL）的。</p>
-<p>这种反叛的极致体现在谷歌的三篇论文当中完全无视数据库领域二三十年的积累，以一种非常土味的方式用廉价机器拼凑起来一个分布式存储系统 <a href="https://static.googleusercontent.com/media/research.google.com/en//archive/gfs-sosp2003.pdf">GFS</a> 和仅仅支持 <a href="https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf">MapReduce</a> 这样简单算子的计算引擎。<a href="https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf">Bigtable</a> 作为初代 NoSQL 引擎，不支持跨行跨表事务，不支持严格的表模式，没有关联查询，没有索引，没有存储过程。</p>
-<p>这些“离经叛道”的创举自然引来了数据库大佬们的批评，比如本文开篇引用的 MapReduce: A major step backwards 博客文章。这些批评主要就集中在上面提到的这些“不支持”和“没有”上，以及与数据库生态的不兼容。</p>
-<p>一开始，尝到了堆砌大量廉价机器就能解决业务问题甜头的开发者和公司对这些批评自然是不屑一顾的。只是随着业务越长越大，复杂性越来越高，人们面临着数据杂乱无章的失序的风险，以及缺乏传统数据库约束和索引带来的性能退化的痛点，逐渐开始认真考虑数据库领域一直以来的研究的价值。</p>
-<h3 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h3><p>第一个被提出的议题就是事务，或者说其所代表的数据一致性问题。单机数据库能够保证简写为 ACID 的事务一致性，而分布式系统受到 CAP 理论的限制，往往无法实现单机关系数据库能达到的数据一致性。</p>
-<p>关于 CAP 理论的理解，在实际业务取舍的过程中，并不是简单的一致性、可用性和分区容忍性三选二，而是在分布式系统本来就需要能够做到分区容忍，以及业务必须保证服务可用的前提下，看看能够做到多少一致性。当然，有些一致性是以服务短暂不可用或者时延升高为代价的，但是业务绝对不会接受服务一直不可用。</p>
-<p>这种情况下首先被提出的解决方案是所谓的 BASE 性质，即基本可用、柔性状态和最终一致，或者我喜欢借用一个说法，叫做啥也不保证。BASE 性质基本已经被扫进历史的垃圾堆里了，不会再有系统标榜自己符合所谓的 BASE 性质。但是它确实提供了数据一致性上的一条基线，即最终一致性。也就是说，对于给定的有限的输入集合，NoSQL 系统当中的数据最终会收敛一个稳定状态，但是这个稳定状态下数据的值是否还有业务意义，不保证。</p>
-<p>一般来说，NoSQL 系统在此之上能够做到对自己数据模型下单个数据单元的基本操作是原子性的。比如说，KV NoSQL 系统当中 Put 一个字符串是原子的，不会出现两个 Put 操作的结果是值一部分由第一个操作提供，一部分由第二个操作提供的情况。不过，业务要求显然远远不止这点。对于业务来说，常见的一致性或者叫事务需求，是保证对一行数据的多个操作的原子性，乃至多行数据多个操作的原子性。例如单行数据的 CAS 操作，或者多行数据原子写乃至事务性的读后写的支持。</p>
-<p>HBase 和 Bigtable 都支持单行事务，这是因为它们的数据模型里单行数据一定存在单台机器上，保证同一台机器上操作的原子性是比较简单的。大部分系统根据自己物理数据分布的特性，也会向用户保证这类数据存储在同一台机器上的情况下事务能力的支持。</p>
-<p>对于跨多台机器的事务支持，则要牵扯到分布式事务的话题。对于 Pulsar 这样数据仅追加的消息系统来说，可以通过批量提交及该操作的幂等性来实现生产消息的事务支持。对于存在删改的系统来说，要么选择放弃隔离性，实现复杂的数据补偿逻辑来支持 Sagas 式的分布式“事务”，要么是采用 <a href="https://raft.github.io/">Raft</a> 这样的共识算法加上某种形式的两阶段提交算法来支持分布式事务。例如 <a href="https://tikv.org/">TiKV</a> 采用了 Raft + <a href="https://tikv.org/deep-dive/distributed-transaction/percolator/">Percolator</a> 算法来实现分布式事务，Percolator 本质上还是两阶段提交，但是在生产上会有一系列的优化，并且在某些特定条件满足的情况下可以简化成一阶段提交。</p>
-<p>一般来说，启用分布式事务会导致数据吞吐的下降和其他性能影响，因此大部分 NoSQL 系统都提供了用户自己调节数据一致性的选项，来保证只在需要对应级别的数据一致性的情况下，才付出相应的开销。</p>
-<h3 id="模式"><a href="#模式" class="headerlink" title="模式"></a>模式</h3><p>前文提到，NoSQL 的一个优势是灵活的数据模式能够响应业务的高速迭代。不过，随着业务日渐复杂，开发团队人员更迭，维护 NoSQL 系统上存储的数据的质量就成为了一个难题。</p>
-<p>如果所有的数据都是无模式的，或者数据模式没有被良好的记录和检验，那么杂乱无章的数据就可能带来极大的存储空间浪费并阻碍业务开发。</p>
-<p>关系数据库和 SQL 当中有专门的数据定义语言（DDL）来描述表模式，通过定义清楚字段的类型和约束来保证数据是结构化的。虽然一旦这种约束过于繁琐和严格，且由于企业流程难于变更时，会影响业务开发的效率，但是清晰的类型约束和唯一性约束是有助于开发人员理解字段的属性和检验业务逻辑正确性的。</p>
-<p>这种思路体现在 NoSQL 的演进之路上就是渐进式模式定义。</p>
-<p>例如，MongoDB 就支持<a href="https://www.mongodb.com/docs/manual/core/schema-validation/">数据模式校验</a>，Pulsar 也支持<a href="https://pulsar.apache.org/docs/schema-get-started">定义消息的模式</a>。</p>
-<p>再以 Cassandra 为例，虽然一开始它对外暴露的是稀疏列簇式大宽表的接口，但是也逐渐地转向建议用户以 CQL 和 Cassandra 交互，同时也保留直接操作底下稀疏列簇式大宽表的手段。</p>
-<p>对于现有系统本身不支持数据模式定义的，也有其他系统来支持。例如 <a href="https://hive.apache.org/">Apache Hive</a> 支持为 Hadoop 上的数据定义模式，<a href="https://phoenix.apache.org/">Apache Phoenix</a> 支持为 HBase 定义数据模式。</p>
-<h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><p>对于直截了当的查询来说，NoSQL 的性能优势是明显的。例如 HBase 上已知 rowkey 查询值，这样的操作是系统设计之初就考虑到的情况，属于舒适区。</p>
-<p>然而，随着业务发展逐渐复杂，各种新的查询维度也纷至沓来。例如，不再是以 rowkey 查询值，而是以某一列的值为筛选条件来查询匹配的所有行。比如一个用户表，一开始将用户 ID 作为主键存储，现在要根据用户所在地筛选出所有在某地的用户。由于 HBase 没有索引，这种查询只能扫全表后过滤。可想而知，每次查询都需要遍历全表数据，查询的性能肯定好不到哪去。</p>
-<p>关系数据库当中也有一样的问题，MySQL 每一行的主键是固定的，要么是创建表模式时指定，要么由插入行时自动生成的 rowid 取代。关系数据库当中可以针对某张表创建索引。一方面，唯一键索引可以施加键值唯一的约束；另一方面，创建索引通常会在存储系统当中额外创建出一个从索引列到主键的映射。实际以索引列为过滤条件查询的时候，会先从索引映射当中找到对应主键的集合，然后直接挑选出小部分相关行做后续操作。</p>
-<p>基本上现在的 NoSQL 系统都会实现一定的索引机制。例如业内前沿的数据湖存储 <a href="https://hudi.apache.org/">Apache Hudi</a> 系统，一开始只是一个按照直觉写出的读取 Hadoop 上的文件，应用对给定记录的变更并写回 Hadoop 的 Apache Spark 程序。但是在后来投入生产之后，越来越多的开发人力加入和生产环境对性能无止境的追求，为 Hudi 添加了基于元数据文件的、基于 HBase 外存的，以及在选择 Apache Flink 处理引擎的情况下基于 Flink 内置 State 存储的多种索引方案。</p>
-<p>上一节提到的能为 HBase 定义数据模式的 Phoenix 项目，也支持为 HBase 创建索引。</p>
-<p>从这一系列 NoSQL 系统的转变来看，索引确实是其走向 Not Only SQL 的一个性能上的硬核需求。</p>
-<h2 id="新时代-NoSQL-的发展方向"><a href="#新时代-NoSQL-的发展方向" class="headerlink" title="新时代 NoSQL 的发展方向"></a>新时代 NoSQL 的发展方向</h2><p>NoSQL 系统的范畴非常广，具体到每个细分领域面临的业务环境演化和技术需求都不尽相同。</p>
-<p>对于整个 NoSQL 生态发展的角度来说，未来的发展方向是发挥在应对大数据量上无需全面兼容传统数据库约束的优势，直面海量数据和全球分布式系统的挑战，并且结合具体业务领域对数据模型的要求，根据对应假设设计出在不同业务场景下最优化的数据处理系统。</p>
-<p>对于具体的 NoSQL 系统来说，我想 KV NoSQL 这个细分领域值得关注。字典映射是构建复杂数据结构的基础构建块，无论是应对什么场景特化的 NoSQL 系统，最终映射到持久化存储的数据结构，几乎都是某种 KV 的形式。如果 KV 引擎能够从现在 RocksDB 占据单机引擎半壁江山的状况，发展到有一个分布式 KV NoSQL 系统能够支持其他特化的 NoSQL 系统基础的存储需求，那么这或许会是分布式数据处理系统下一次革命的开端。</p>
-<p>对于有望成为这个方向解决方案的系统，它至少能够可选地支持上面提到的 Not Only SQL 所需要的硬核特性，也就是事务、模式和索引。在此基础上，如果能够在低延迟、可扩展性和稳定性上实现突破，比如引擎的创新带来的性能提升，利用云原生时代的基础设施和硬件的迭代支持全球规模的集群管理，工程打磨实现生产可靠的稳定且方便运维的系统，那么这样的一个软件将是有价值的。</p>
-<p>对于现有系统来说，实现这样的转型并不容易，但也绝非不可能。例如 Datastax 公司全力投入支持以 Cassandra 为基础的 Astra DB 在云上的应用，HBase 社群也在投入存储上云的开发。对于新系统来说，历史包袱会轻松一些，能够基于现在的情况做针对性的设计。但是在增量市场逐渐萎缩的环境下，做好现有系统 API 的兼容让就是生产系统采用的一个关键考量了。例如，<a href="https://github.com/scylladb/scylla">ScyllaDB</a> 采用了 thread-per-code 的线程模型来试图革新 KV NoSQL 的性能，但是在面向用户的接口上选择兼容 Cassandra 的 API 以帮助存量用户平滑过渡。</p>
-<p>进一步地，如果某个 KV NoSQL 系统在 KV 领域打开了局面，那么它就可以借助协议层抽象来支持不同场景的数据存储需求。</p>
-<p>例如，TiKV 是一个支持分布式事务的 KV NoSQL 系统，<a href="https://github.com/distributedio/titan">Titan</a> 通过实现 Redis 协议层来支持 redis-cli 对 TiKV 系统的访问；<a href="https://github.com/pingcap/tidb">TiDB</a> 可以认为是在 TiKV 之上实现了一个支持 SQL 访问的协议层。</p>
-<p>总结一下，新时代 KV NoSQL 的发展方向，一方面是需要支持前面提到的 Not Only SQL 的硬核诉求，并且需要和现存的数据处理生态保持良好的兼容性。另一方面，这些系统可以在低延迟、可扩展性和稳定性等方向上寻求突破。最后，如果某个 KV NoSQL 系统足够成熟，那么它可以借助协议层了解 KV 之上具体场景下的数据结构信息，知道用户想要存的是什么数据，从而在复杂场景下允许用户直观的表达自己的业务数据，同时让数据处理系统理解相应场景的的语义，帮用户做场景优化。</p>
-]]></content>
-      <categories>
-        <category>天工开物</category>
-      </categories>
-      <tags>
-        <tag>NoSQL</tag>
-        <tag>数据库</tag>
       </tags>
   </entry>
   <entry>
@@ -721,6 +650,77 @@
       <tags>
         <tag>开源</tag>
         <tag>组织管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>NoSQL Revolution</title>
+    <url>/2022/06/13/nosql-revolution/</url>
+    <content><![CDATA[<p>从本世纪初谷歌的三篇论文发布以来，数据处理领域在大数据的方向上探索了将近二十年的时间。从三篇论文的开源实现 <a href="https://hadoop.apache.org/">Apache Hadoop</a> 和 <a href="https://hbase.apache.org/">Apache HBase</a> 开始，到打破传统关系型数据库的分布式数据处理系统如雨后春笋般接连诞生，NoSQL 系统回应了移动互联时代的数据爆发式增长的挑战。</p>
+<p>诚然，传统的数据库专家对 NoSQL 也有像 <a href="https://homes.cs.washington.edu/~billhowe/mapreduce_a_major_step_backwards.html">MapReduce: A major step backwards</a> 这样的批评，不过 NoSQL 系统本身也在向传统数据处理领域当中被证明有效的特性靠拢，向 Not Only SQL 系统转变。</p>
+<p>本文首先从移动互联时代数据增长和数据模型演进带来的实际问题出发，讨论 NoSQL 系统在现在企业数据处理生态当中的定位和价值，然后介绍 NoSQL 系统靠近 Not Only SQL 定位的过程中遇到的硬核诉求，最后分析新时代 NoSQL 的发展方向。</p>
+<span id="more"></span>
+
+<h2 id="数据量的增长带来的挑战"><a href="#数据量的增长带来的挑战" class="headerlink" title="数据量的增长带来的挑战"></a>数据量的增长带来的挑战</h2><p>NoSQL 系统崛起的主要原因就是移动互联时代数据的爆发式增长。</p>
+<p>起初，企业经营过程中产生且需要运维的数据并不多，单机数据库应对就绰绰有余。尤其是在摩尔定律尚未失效的硬件主导技术升级的年代，数据量级增长的速度未曾超过硬件升级的速度。关系数据库赢下单机数据库战争以后，几乎每家企业的数据处理生态都被 Oracle 数据库、IBM 的 DB2 数据库和微软的 SQL Server 数据库所占据。</p>
+<p>随着移动互联时代的到来，计算机全面进入到民用阶段。几乎人人手持一部甚至多部终端设备，这些设备逐渐占领了每个人生活的绝大部分时间。全域搜索、社交媒体、在线游戏、电商购物、网络直播……提供此类服务的企业所要处理的数据的量级，不再是商业场景下的 B2B 订单、客户关系管理和运维的量级，而是全民参与的 B2C 或 C2C 的用户行为的量级。换句话说，这时企业所要处理的数据，从一部分企业及其行为的量级增长到了全体民众及其行为的量级。</p>
+<p>另一方面，硬件的升级也遇到了摩尔定律的瓶颈，硬件的升级不再能够满足用户数量增长的需求。阿里巴巴在 2008 年前后开始的“去 IOE 运动”就是这一趋势的一个注脚。原本，阿里巴巴在应对用户数据快速增长的时候，采取的也是传统的硬件技术升级的手段，采购商业级 Oracle 数据库、特殊定制硬件的 IBM 小型机和 EMC 高级存储设备来支持。然而，一方面受到技术自主可控的驱动，另一方面也是出于企业经营成本控制的要求，阿里巴巴转向了 MySQL 数据库以及后续一系列开源或自研的分布式数据处理系统的解决方案。</p>
+<p>当然，单机 MySQL 也无法抗住全网用户每天源源不断产生的行为数据。因此，在阿里巴巴等互联网公司当中就诞生了以分库分表技术为核心的数据库中间件解决方案，即通过分拆业务到不同数据库实例中，同一业务选择分片键分拆到不同数据库实例中，再于业务和数据库实例集群之间设置一个解析查询和转发查询的中间件，来实现以多台廉价计算机和运行其上的 MySQL 数据库，抗下用户行为数据的解决方案。</p>
+<p>严格来说，这一方案产生的软件不是 NoSQL 系统。NoSQL 系统的一个重要特征是用户能够像对待单一系统那样与整个 NoSQL 分布式系统交互，而分库分表的数据库中间件往往要求用户知悉底下数据分片的模型，从而针对性的写出不会导致全表扫描的查询。另一方面，即使采用了分库分表的解决方案，系统所能处理的数据量仍然是有限的。目前主流的分库分表方案，最多能够应对 TB 级别的数据。这对于用户账户数据、商户和商品概要数据以及最近一段时间的订单数据或许是足够的，但是对于历史订单数据、商品详情数据、用户历史足迹和社交网络活动记录来说，则远远不够。或者说，即使能够扩容分库分表的数量来支撑更大的数据量级，底下运行的 MySQL 实例产生的开销，也不如 NoSQL 系统底下只是需要一个普通的数据节点更有性价比。</p>
+<p>NoSQL 系统当中，除去主打内存缓存的 <a href="https://redis.io/">Redis</a> 以外，诸如 HBase 和支持 Redis 协议的数据持久化 NoSQL 系统 <a href="github.com/apache/incubator-kvrocks">Apache Kvrocks (Incubating)</a> 都能支持 PB 级别甚至以上的数据存储和访问。这得益于从谷歌三篇论文一脉相承的 scale out 策略，藉由简化系统复杂度，以硬件技术的新增长点网络性能抵消单机处理的延时优势。这样，企业当中的数据处理系统可以用增加成本可控的节点数，而非对抗摩尔定律购买价格不支持商用的高端硬件的方式，在延时可接收的范围内应对更大的数据量。</p>
+<p>前面提到，NoSQL 系统对于用户来说是一个整体，而分库分表在扩缩容时却未必能够像传统数据库使用体验那样流畅。由于分片键与实例数相关，分库分表分出来多少个库表，这个知识会成为整个系统的一个固有限制。如果想要增加数据库实例，这个过程并非简单地上线新实例就可以开始服务，而是需要整个逻辑数据库在新的库表数下重新分片。我在某司操作过 32 库乘以 128 表到 128 库乘以 128 表的迁移过程，这个迁移的数据同步阶段总共花了两天半的时间，在线上几乎没有感知的情况下以深夜一分钟左右的闪断为代价切换成功。然而，这还是建立在公司有足够强的研发实力支持从头开发一套数据中间件以及数据迁移系统的前提下的开销。而无论是哪种典型的 NoSQL 系统，几乎都支持用户无感知的扩容和缩容动作。</p>
+<p>分库分表的数据库中间件实质上操作的是底下不同的数据库实例，传统数据库支持的事务一致性、多表联合操作和存储过程等功能，几乎都受限于实际上数据存在于多个数据库实例的物理限制而无法支持。NoSQL 系统可以认为是在这样的 baseline 上，基于整体考虑设计出一个能够最大化数据处理吞吐和尽可能降低数据延迟，并且尽可能使得用户像对待一个统一系统那样操作的解决方案。</p>
+<p>对于定位在支持传统数据库的语义和功能，同时又要满足数据增长需求的 <a href="https://www.cs.cmu.edu/~pavlo/slides/hydra-newsql2021.pdf">NewSQL</a> 系统，这些系统能够处理的数据量级上限，实际上也没有超过分库分表方案 TB 级别的水平。同时，在数据量超过一定水平时，这些系统会面临严重的功能挑战，例如大事务延迟不可接受，选择 TSO 作为中央授时的系统中心节点不堪重负，或者 Aurora 会提示用户关闭 Binary Log 以保证用户读写的时延。相比起 NoSQL 系统所能处理的数据量级，这些 NewSQL 系统还是不太够看。从它们支持的数据库功能来看，往往与传统数据库也有明显的差别，比如存在微妙差异的事务一致性，不支持存储过程，不支持外键，等等。</p>
+<h2 id="数据模型贴近业务的价值"><a href="#数据模型贴近业务的价值" class="headerlink" title="数据模型贴近业务的价值"></a>数据模型贴近业务的价值</h2><p>NoSQL 系统崛起的另一个主要原因是打破了关系模型对数据处理领域的垄断。</p>
+<p>严格来说，在业务逻辑开发这一块，关系模型并没有统治开发者的心智。虽然不少业务逻辑是写在存储过程或者触发器当中的，这些代码自然深深地被搭上了关系模型的印记，但是尤其在互联网业务开发的领域当中，开发人员并非直接面向数据库编程。在开发人员编写的业务代码到底下的数据库系统中间，经常有一层对象关系映射框架（ORM）的存在。</p>
+<p>这就是关系数据库始终绕不过的“<a href="https://en.wikipedia.org/wiki/Object%E2%80%93relational_impedance_mismatch">对象关系阻抗失配</a>”问题。</p>
+<p>现代程序设计语言的主流是面向对象的程序设计，即使并非“一切都是对象”的信徒，大部分语言也都支持数据结构的嵌套。而在关系模型当中，所有的数据都以元组的形式存储，想要表达列表或者嵌套数据结构，要么需要冗余数据，要么需要设置多张表并藉由外键关联来查询。</p>
+<p>前者不仅会造成空间的浪费，还会在数据结构趋于复杂，尤其是存在 option 和 either 这样的结构的时候，列的碾平生出非常难以查询和写入的表结构。后者更不必说，原本是同一个逻辑对象的数据，如今散落在多张表上，无论是更新时需要注意的级联变更和完整性约束，还是查询时需要依靠 JOIN 来聚合数据，都是非常麻烦的事情。</p>
+<p>反观 Redis 的主要特点之一就是支持丰富的数据结构，例如开发者熟悉的 List&#x2F;Hash&#x2F;Set&#x2F;ZSet 以及方便的 HyperLogLog&#x2F;GeoHash&#x2F;Bitmap 等等。对于接受经典数据结构培养的研发人员来说，Redis 这种丰富数据结构上手成本很低，开发者对于基本的数据结构都会使用。反观关系数据库的模型，要在其中实现 List Push&#x2F;Pop 这样的操作还是有些麻烦。</p>
+<p><a href="https://www.mongodb.com/docs/manual/core/data-modeling-introduction">MongoDB 的数据模型文档</a>将支持灵活的数据模型放在了第一位，<a href="https://cassandra.apache.org/doc/latest/cassandra/data_modeling/intro.html">Apache Cassandra 的数据模型文档</a>则进一步点明了这种数据模型价值观与关系数据库的不同——如果说关系数据库的数据模型是表驱动的，那么 NoSQL 系统的数据模型就是查询驱动的。</p>
+<p>传统的数据库开发流程，往往是由 DBA 或架构师定义出一系列的表及表的模式，藉由关系数据库系统支持的特性和约束来保证数据的完整性和一致性，以这些表及表的模式为基础，上线数据处理系统支持业务需求。如果业务迭代需要引入新的字段或者添加新表支持嵌套数据结构，这些改动都需要送交 DBA 和架构师审批，甚至对于核心数据表的改动，还需要送交研发高管审批。这一过程和认识直到今天仍然没有什么大的改变。基本上，关系数据库在企业当中的定位就是持久化数据资产。</p>
+<p>然而，移动互联时代业务的需求有着很强的时效性，需求经常变化，为了应对某个活动需要临时增加某个字段，过后即可废弃。这样的使用场景遇上层层审批的变更流程，必然激发出剧烈的矛盾。NoSQL 系统此时就扮演了一个在企业关键数据资产和业务经常变化且时效性强的需求之间的润滑剂。</p>
+<p>一方面，核心数据资产例如用户账户数据、用户信息数据、订单交易数据等等，仍然由关系数据库来支撑运转，保证数据的完整性、一致性和足以应对容灾的持久化，并且借助几十年来发展得相当成熟的数据平台生态进行冷数据归档，以及数据订阅、数据同步等等，作为业务系统的核心数据来源支撑。另一方面，NoSQL 系统存储非核心的经营数据或者衍生、冗余数据，用以支持业务高速迭代的需求。查询驱动的含义就在于此：业务查询是什么样的，底下的数据模式就可以是什么样的。例如使用 Redis 存储用户账户与手机号的对应关系，使用 HBase 存储全国地图上的兴趣点以支持基于位置的用户服务，将业务数据导入 <a href="https://github.com/elastic/elasticsearch">ElasticSearch</a> 当中提供搜索功能，使用 <a href="https://pulsar.apache.org/">Apache Pulsar</a> 接受采点上报数据。</p>
+<p>这种职责分层实践在过去十几年当中不断地被传播和应用，证明了 NoSQL 在企业当中足以赢得自己生存的空间。从数据模型的角度看，贴近业务的数据模型天然适合应对业务的经常性迭代。灵活的数据模式能够快速适应数据模型变更的需求；丰富的数据结构符合开发者的心智模型，能够更快的完成业务代码开发；而对于消息队列、倒排索引系统和图数据库，则是各自领域当中最贴合的建模方式。例如 XLab 分析 GitHub 全域开源协同数据的时候，就自然选择了图数据库来分析人与人、人与项目、项目与项目之间形如社交网络的关系和行为数据。</p>
+<p>随着 NoSQL 系统逐渐成熟，尤其是在数据一致性和存储可靠性上面的突破，越来越多的企业也结合自身业务的特性，尝试把核心业务及其数据也假设在 NoSQL 系统上。国外基于 MongoDB 发展出一套 <a href="https://en.wikipedia.org/wiki/MEAN_(solution_stack)">MEAN</a> 应用开发栈，就是这一实践的注脚。虽然业务稳定以后，数据模型变更减少，表驱动的关系数据库能够带来多年积累的软件成熟度和生态繁荣度的优势，但是对于创业公司或者新团队新业务来说，采用 NoSQL 来快速启动自己的业务，并且能够灵活地调整数据模型，或许是个更好的选择。</p>
+<h2 id="Not-Only-SQL-的诉求"><a href="#Not-Only-SQL-的诉求" class="headerlink" title="Not Only SQL 的诉求"></a>Not Only SQL 的诉求</h2><p>NoSQL 系统一开始得名就是因为它的设计理念和数据模型都是反（NO）关系数据库（SQL）的。</p>
+<p>这种反叛的极致体现在谷歌的三篇论文当中完全无视数据库领域二三十年的积累，以一种非常土味的方式用廉价机器拼凑起来一个分布式存储系统 <a href="https://static.googleusercontent.com/media/research.google.com/en//archive/gfs-sosp2003.pdf">GFS</a> 和仅仅支持 <a href="https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf">MapReduce</a> 这样简单算子的计算引擎。<a href="https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf">Bigtable</a> 作为初代 NoSQL 引擎，不支持跨行跨表事务，不支持严格的表模式，没有关联查询，没有索引，没有存储过程。</p>
+<p>这些“离经叛道”的创举自然引来了数据库大佬们的批评，比如本文开篇引用的 MapReduce: A major step backwards 博客文章。这些批评主要就集中在上面提到的这些“不支持”和“没有”上，以及与数据库生态的不兼容。</p>
+<p>一开始，尝到了堆砌大量廉价机器就能解决业务问题甜头的开发者和公司对这些批评自然是不屑一顾的。只是随着业务越长越大，复杂性越来越高，人们面临着数据杂乱无章的失序的风险，以及缺乏传统数据库约束和索引带来的性能退化的痛点，逐渐开始认真考虑数据库领域一直以来的研究的价值。</p>
+<h3 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h3><p>第一个被提出的议题就是事务，或者说其所代表的数据一致性问题。单机数据库能够保证简写为 ACID 的事务一致性，而分布式系统受到 CAP 理论的限制，往往无法实现单机关系数据库能达到的数据一致性。</p>
+<p>关于 CAP 理论的理解，在实际业务取舍的过程中，并不是简单的一致性、可用性和分区容忍性三选二，而是在分布式系统本来就需要能够做到分区容忍，以及业务必须保证服务可用的前提下，看看能够做到多少一致性。当然，有些一致性是以服务短暂不可用或者时延升高为代价的，但是业务绝对不会接受服务一直不可用。</p>
+<p>这种情况下首先被提出的解决方案是所谓的 BASE 性质，即基本可用、柔性状态和最终一致，或者我喜欢借用一个说法，叫做啥也不保证。BASE 性质基本已经被扫进历史的垃圾堆里了，不会再有系统标榜自己符合所谓的 BASE 性质。但是它确实提供了数据一致性上的一条基线，即最终一致性。也就是说，对于给定的有限的输入集合，NoSQL 系统当中的数据最终会收敛一个稳定状态，但是这个稳定状态下数据的值是否还有业务意义，不保证。</p>
+<p>一般来说，NoSQL 系统在此之上能够做到对自己数据模型下单个数据单元的基本操作是原子性的。比如说，KV NoSQL 系统当中 Put 一个字符串是原子的，不会出现两个 Put 操作的结果是值一部分由第一个操作提供，一部分由第二个操作提供的情况。不过，业务要求显然远远不止这点。对于业务来说，常见的一致性或者叫事务需求，是保证对一行数据的多个操作的原子性，乃至多行数据多个操作的原子性。例如单行数据的 CAS 操作，或者多行数据原子写乃至事务性的读后写的支持。</p>
+<p>HBase 和 Bigtable 都支持单行事务，这是因为它们的数据模型里单行数据一定存在单台机器上，保证同一台机器上操作的原子性是比较简单的。大部分系统根据自己物理数据分布的特性，也会向用户保证这类数据存储在同一台机器上的情况下事务能力的支持。</p>
+<p>对于跨多台机器的事务支持，则要牵扯到分布式事务的话题。对于 Pulsar 这样数据仅追加的消息系统来说，可以通过批量提交及该操作的幂等性来实现生产消息的事务支持。对于存在删改的系统来说，要么选择放弃隔离性，实现复杂的数据补偿逻辑来支持 Sagas 式的分布式“事务”，要么是采用 <a href="https://raft.github.io/">Raft</a> 这样的共识算法加上某种形式的两阶段提交算法来支持分布式事务。例如 <a href="https://tikv.org/">TiKV</a> 采用了 Raft + <a href="https://tikv.org/deep-dive/distributed-transaction/percolator/">Percolator</a> 算法来实现分布式事务，Percolator 本质上还是两阶段提交，但是在生产上会有一系列的优化，并且在某些特定条件满足的情况下可以简化成一阶段提交。</p>
+<p>一般来说，启用分布式事务会导致数据吞吐的下降和其他性能影响，因此大部分 NoSQL 系统都提供了用户自己调节数据一致性的选项，来保证只在需要对应级别的数据一致性的情况下，才付出相应的开销。</p>
+<h3 id="模式"><a href="#模式" class="headerlink" title="模式"></a>模式</h3><p>前文提到，NoSQL 的一个优势是灵活的数据模式能够响应业务的高速迭代。不过，随着业务日渐复杂，开发团队人员更迭，维护 NoSQL 系统上存储的数据的质量就成为了一个难题。</p>
+<p>如果所有的数据都是无模式的，或者数据模式没有被良好的记录和检验，那么杂乱无章的数据就可能带来极大的存储空间浪费并阻碍业务开发。</p>
+<p>关系数据库和 SQL 当中有专门的数据定义语言（DDL）来描述表模式，通过定义清楚字段的类型和约束来保证数据是结构化的。虽然一旦这种约束过于繁琐和严格，且由于企业流程难于变更时，会影响业务开发的效率，但是清晰的类型约束和唯一性约束是有助于开发人员理解字段的属性和检验业务逻辑正确性的。</p>
+<p>这种思路体现在 NoSQL 的演进之路上就是渐进式模式定义。</p>
+<p>例如，MongoDB 就支持<a href="https://www.mongodb.com/docs/manual/core/schema-validation/">数据模式校验</a>，Pulsar 也支持<a href="https://pulsar.apache.org/docs/schema-get-started">定义消息的模式</a>。</p>
+<p>再以 Cassandra 为例，虽然一开始它对外暴露的是稀疏列簇式大宽表的接口，但是也逐渐地转向建议用户以 CQL 和 Cassandra 交互，同时也保留直接操作底下稀疏列簇式大宽表的手段。</p>
+<p>对于现有系统本身不支持数据模式定义的，也有其他系统来支持。例如 <a href="https://hive.apache.org/">Apache Hive</a> 支持为 Hadoop 上的数据定义模式，<a href="https://phoenix.apache.org/">Apache Phoenix</a> 支持为 HBase 定义数据模式。</p>
+<h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><p>对于直截了当的查询来说，NoSQL 的性能优势是明显的。例如 HBase 上已知 rowkey 查询值，这样的操作是系统设计之初就考虑到的情况，属于舒适区。</p>
+<p>然而，随着业务发展逐渐复杂，各种新的查询维度也纷至沓来。例如，不再是以 rowkey 查询值，而是以某一列的值为筛选条件来查询匹配的所有行。比如一个用户表，一开始将用户 ID 作为主键存储，现在要根据用户所在地筛选出所有在某地的用户。由于 HBase 没有索引，这种查询只能扫全表后过滤。可想而知，每次查询都需要遍历全表数据，查询的性能肯定好不到哪去。</p>
+<p>关系数据库当中也有一样的问题，MySQL 每一行的主键是固定的，要么是创建表模式时指定，要么由插入行时自动生成的 rowid 取代。关系数据库当中可以针对某张表创建索引。一方面，唯一键索引可以施加键值唯一的约束；另一方面，创建索引通常会在存储系统当中额外创建出一个从索引列到主键的映射。实际以索引列为过滤条件查询的时候，会先从索引映射当中找到对应主键的集合，然后直接挑选出小部分相关行做后续操作。</p>
+<p>基本上现在的 NoSQL 系统都会实现一定的索引机制。例如业内前沿的数据湖存储 <a href="https://hudi.apache.org/">Apache Hudi</a> 系统，一开始只是一个按照直觉写出的读取 Hadoop 上的文件，应用对给定记录的变更并写回 Hadoop 的 Apache Spark 程序。但是在后来投入生产之后，越来越多的开发人力加入和生产环境对性能无止境的追求，为 Hudi 添加了基于元数据文件的、基于 HBase 外存的，以及在选择 Apache Flink 处理引擎的情况下基于 Flink 内置 State 存储的多种索引方案。</p>
+<p>上一节提到的能为 HBase 定义数据模式的 Phoenix 项目，也支持为 HBase 创建索引。</p>
+<p>从这一系列 NoSQL 系统的转变来看，索引确实是其走向 Not Only SQL 的一个性能上的硬核需求。</p>
+<h2 id="新时代-NoSQL-的发展方向"><a href="#新时代-NoSQL-的发展方向" class="headerlink" title="新时代 NoSQL 的发展方向"></a>新时代 NoSQL 的发展方向</h2><p>NoSQL 系统的范畴非常广，具体到每个细分领域面临的业务环境演化和技术需求都不尽相同。</p>
+<p>对于整个 NoSQL 生态发展的角度来说，未来的发展方向是发挥在应对大数据量上无需全面兼容传统数据库约束的优势，直面海量数据和全球分布式系统的挑战，并且结合具体业务领域对数据模型的要求，根据对应假设设计出在不同业务场景下最优化的数据处理系统。</p>
+<p>对于具体的 NoSQL 系统来说，我想 KV NoSQL 这个细分领域值得关注。字典映射是构建复杂数据结构的基础构建块，无论是应对什么场景特化的 NoSQL 系统，最终映射到持久化存储的数据结构，几乎都是某种 KV 的形式。如果 KV 引擎能够从现在 RocksDB 占据单机引擎半壁江山的状况，发展到有一个分布式 KV NoSQL 系统能够支持其他特化的 NoSQL 系统基础的存储需求，那么这或许会是分布式数据处理系统下一次革命的开端。</p>
+<p>对于有望成为这个方向解决方案的系统，它至少能够可选地支持上面提到的 Not Only SQL 所需要的硬核特性，也就是事务、模式和索引。在此基础上，如果能够在低延迟、可扩展性和稳定性上实现突破，比如引擎的创新带来的性能提升，利用云原生时代的基础设施和硬件的迭代支持全球规模的集群管理，工程打磨实现生产可靠的稳定且方便运维的系统，那么这样的一个软件将是有价值的。</p>
+<p>对于现有系统来说，实现这样的转型并不容易，但也绝非不可能。例如 Datastax 公司全力投入支持以 Cassandra 为基础的 Astra DB 在云上的应用，HBase 社群也在投入存储上云的开发。对于新系统来说，历史包袱会轻松一些，能够基于现在的情况做针对性的设计。但是在增量市场逐渐萎缩的环境下，做好现有系统 API 的兼容让就是生产系统采用的一个关键考量了。例如，<a href="https://github.com/scylladb/scylla">ScyllaDB</a> 采用了 thread-per-code 的线程模型来试图革新 KV NoSQL 的性能，但是在面向用户的接口上选择兼容 Cassandra 的 API 以帮助存量用户平滑过渡。</p>
+<p>进一步地，如果某个 KV NoSQL 系统在 KV 领域打开了局面，那么它就可以借助协议层抽象来支持不同场景的数据存储需求。</p>
+<p>例如，TiKV 是一个支持分布式事务的 KV NoSQL 系统，<a href="https://github.com/distributedio/titan">Titan</a> 通过实现 Redis 协议层来支持 redis-cli 对 TiKV 系统的访问；<a href="https://github.com/pingcap/tidb">TiDB</a> 可以认为是在 TiKV 之上实现了一个支持 SQL 访问的协议层。</p>
+<p>总结一下，新时代 KV NoSQL 的发展方向，一方面是需要支持前面提到的 Not Only SQL 的硬核诉求，并且需要和现存的数据处理生态保持良好的兼容性。另一方面，这些系统可以在低延迟、可扩展性和稳定性等方向上寻求突破。最后，如果某个 KV NoSQL 系统足够成熟，那么它可以借助协议层了解 KV 之上具体场景下的数据结构信息，知道用户想要存的是什么数据，从而在复杂场景下允许用户直观的表达自己的业务数据，同时让数据处理系统理解相应场景的的语义，帮用户做场景优化。</p>
+]]></content>
+      <categories>
+        <category>天工开物</category>
+      </categories>
+      <tags>
+        <tag>NoSQL</tag>
+        <tag>数据库</tag>
       </tags>
   </entry>
   <entry>
@@ -1305,6 +1305,78 @@
       </tags>
   </entry>
   <entry>
+    <title>Apache 开源社群的“石头汤”</title>
+    <url>/2022/06/15/stone-soup-apache/</url>
+    <content><![CDATA[<p><a href="https://book.douban.com/subject/35006892/">《程序员修炼之道》</a>讲了一个有趣的“石头汤”寓言。这个寓言里，饿着肚子的外来人在村子里烧了一锅水，放了三块石头，开始煮“石头汤”。这样的行为引来好奇的村民围观，外来人顺势在“石头汤”的基础上引导村民们添加食材以改善这锅料理。最后，村民和外来人一起煮出了一锅靓汤，外来人于是把石头从汤里扔掉，所有人分享了这顿美餐。</p>
+<p>开源协同的工作方式与制作“石头汤”的方式有些相似。开源社群的核心成员与寓言中的外来人一样，充当了催化剂的角色，将这些各自拥有不同背景的人群组织起来。这样，社群成员才能聚在一起做出他们单独无法做到的事情。最后，所有人都是赢家。</p>
+<p>当然，在这个版本的“石头汤”寓言里，村民被外来人骗了，石头并没有为最终的美味产生直接价值。<a href="https://book.douban.com/subject/26894636">《开放式组织》</a>指出这种行为是一次性的，并且价值仅仅单向地从村民一方流向外来人一方，以至于它被冠以“汤姆·索亚合作模式”的恶名。</p>
+<p>开源协同的模式保留了“石头汤”寓言当中催化剂的内核，但是这一次，外来人提供的不是水煮石头，而是初具规模的汤底和食材。<a href="https://book.douban.com/subject/25881855/">《大教堂与集市》</a>在揭示集市模式的必要条件时阐述了这一点，这个隐喻意味着一个能运行的软件，并且让潜在的合作开发者相信，这个软件在可以预见的未来，能够演变成一个非常棒的东西。</p>
+<p>Apache 开源社群由三百多个项目组成，其中不乏开源版本“石头汤”的现实案例。</p>
+<span id="more"></span>
+
+<h2 id="Apache-Hudi"><a href="#Apache-Hudi" class="headerlink" title="Apache Hudi"></a>Apache Hudi</h2><p><a href="https://hudi.apache.org/">Apache Hudi</a> 就是这样的一个例子。实际上，就是近期几次引用 Hudi 的例子说明开源协同的工作机制的经历才促使我写这篇文章。</p>
+<p>如果用一句话介绍 Hudi 的第一个版本做的事情，那就是写一个 Spark 程序，把数据从 HDFS 读出来，根据用户通过 upsert 接口传入的数据更新请求修改数据，然后写回到 HDFS 上。</p>
+<p>就这么简单？</p>
+<p>就这么简单。</p>
+<p>众所周知，HDFS 的文件不支持随机读写，而数据分析的流水线上需要更新历史数据是个客观存在的需求，各个公司里同类型的 Spark 程序或者不用 Spark 实现相同功能的程序实现过许多遍了。这样的功能做一个平凡的实现，甚至有经验的工程师不出数日就可以写出来。</p>
+<p>那么是什么让 Hudi 与众不同呢？答案就在“石头汤”的寓言里。</p>
+<p>Hudi 的主要作者，也是现在项目的 PMC Chair Vinoth 敏锐地察觉到了这个需求的普遍性，并且相信跳出公司的局限，集合整个开源共同体的力量开发这样一个公共的需求对项目而言是最好的选择。因此，他推动 Hudi 项目从 Uber 公司的内部作品捐赠给 Apache 软件基金会，借助 Apache 的平台向每一个实现同类功能的开发者发出邀请参与协同。</p>
+<p>虽然前面介绍 Hudi 的功能非常简单，但是其实从 <a href="https://cwiki.apache.org/confluence/display/INCUBATOR/HudiProposal">Hudi 进入孵化器的提案</a>当中可以看到，它在一个平凡的 Spark 程序以外，还实现了和当时的大数据生态的初步整合，可以通过 Hive 等现成方案和 Hudi 生产的数据进行交互，这就意味成熟的大数据生态和各种工具可以迁移到 Hudi 的用例上。</p>
+<p>这两点对于一个新项目来说是至关重要的。如果没有可行的软件，只是一个想法，那么相比那么多公司内部实现的同类型程序，一个大家都能想到的想法毫无价值。如果作为一个大数据领域的解决方案，不能和大数据生态融合，那么没人会相信它能拥有光明的未来，大部分开发者会持观望态度而不是花费自己宝贵的时间参与协同，因为有这时间还不如改善自己已经实现的同类型程序。</p>
+<p>然而 Hudi 做到了起步阶段这个小小的身位领先，并且紧紧围绕着用户需求开发功能、打磨产品和吸纳贡献。既然 Hudi 已经做好的工作我要花费数月才能追上，尤其是其中还包括了许多我不愿意做的“脏活”，那么我为什么不把自己想要实现而 Hudi 尚未支持的功能直接在上游实现呢？反正 Hudi 是 Apache 社群的项目，向上游做出的贡献我自己仍然能够随时用于任何目的。</p>
+<p>这样的想法在 Hudi 项目孵化早期推动了诸如 <a href="https://github.com/yanghua">@vinoyang</a> 和 <a href="https://github.com/leesf">@leesf</a> 这样的开发者的参与。他们在 Hudi 的稳定性和可用性上做出了显著的贡献，而秉承开放和合作的理念的 Hudi 社群也很快吸纳他们成为项目 <a href="https://incubator.apache.org/guides/ppmc.html">PPMC</a> 的成员。</p>
+<p>Hudi 相对于其他方案的小小优势，加上社群做出这样的表态，以实际行动实践开源社群 Meritocracy 的原则，很快聚拢起来一批有实力的开发者参与其中。这样的正向循环让一开始的小小优势逐渐扩展成今天数据湖领域相对于大部分其他解决方案明显的领先，这也进一步地让领域中潜在的用户和开发者被吸引到 Hudi 社群当中来。</p>
+<img src="/2022/06/15/stone-soup-apache/hudi-commit-graph.png" class="" title="2019 年开始孵化以后，开发活动与日俱增，甚至原始作者都不是最活跃的提交者">
+
+<img src="/2022/06/15/stone-soup-apache/hudi-star-history.png" class="" title="自然增长的 Star 代表的声量曲线近似二次函数">
+
+<img src="/2022/06/15/stone-soup-apache/hudi-contributor-graph.svg" class="" title="参与开发的人数近似一次函数">
+
+<p>来自 T3 出行的开发者写出了 Flink on Hudi 的方案与最初实现，来自阿里巴巴的开发者将其完善到生产可用并且具有竞争力。新的 RFC 正在路上，实现一个 Hudi Server 来以内存状态读写取代目前开销显著的元数据文件读写，实现 Record 级别的 CDC 服务等等。数百个将自己的聪明才智和宝贵的时间投入到让 Hudi 变成一个更好的开源软件的参与者，组成了 Hudi 3000 个提交里一点一滴的改善。这正是“石头汤”里村民们从家中带来各自的食材，最终做出一锅美味的翻版。</p>
+<p>这样的案例在 Apache 当中并不是唯一的。</p>
+<h2 id="Apache-BookKeeper"><a href="#Apache-BookKeeper" class="headerlink" title="Apache BookKeeper"></a>Apache BookKeeper</h2><p><a href="https://bookkeeper.apache.org/">Apache BookKeeper</a>(BK) 从代码角度最早可追溯到 2008 年，当时的它是 Yahoo! 巴萨罗那研究院的研究项目。起初，其首要目的是解决 HDFS NameNode 的可用性问题，后来成为 Apache ZooKeeper 的子项目。2014 年年底从 ZooKeeper 社群孵化成为顶级项目。</p>
+<p>BK 完全对等节点的设计使得它被许多寻找分布式日志存储系统的团队所青睐，进而被广泛使用在多个公司的不同场景当中。</p>
+<ul>
+<li>Diennea 的工程师在开发 <a href="https://github.com/diennea/herddb">HerdDB</a> 时使用 BK 存储预写日志。</li>
+<li>Twitter 的工程师基于 BK 创建了 <a href="https://bookkeeper.apache.org/docs/api/distributedlog-api">DistributedLog</a> 项目，后者在 BK 上层封装了面向终端用户的分布式日志接口。后来，这个项目被合并回 BK 社群成为一个子项目。</li>
+<li>Dell EMC 的工程师基于 BK 创建了 <a href="https://github.com/pravega/pravega">Pravega</a> 项目，旨在提供流式数据的存储。目前是 CNCF 的沙箱项目。</li>
+<li>Yahoo! 的工程师基于 BK 创建了 <a href="https://pulsar.apache.org/">Apache Pulsar</a> 项目，它是一个能够同时支持 RabbitMQ 式的消息队列语义和 Apache Kafka 式的消息流语义的云原生消息平台。<ul>
+<li>后来，这个项目的创始成员成立了 StreamNative 公司来提供企业级的 Pulsar 服务。</li>
+<li>另外一家企业服务公司 DataStax 使用 Pulsar 来补齐其商业产品 AstraDB 在数据同步和数据变更订阅上的短板。</li>
+<li>StreamNative 围绕 Pulsar 发起的 Kafka on Pulsar 项目吸引了来自腾讯和 DataStax 等公司的开发者的参与。</li>
+</ul>
+</li>
+</ul>
+<p>围绕着 BK 形成的庞大生态持续反哺着 BK 社区，使其在十多年后仍然能够保持强大的生命力和迭代活力。同时，虽然社群当中存在着不同公司背景的参与者，但是 Apache 的开源之道将所有参与者都认为是个体参与者，并且强调社群独立于其他组织影响的中立性。BK 社群和 Pulsar 社群都坚持了这样的原则，因此社群成员无论是什么背景，大都能够和谐友好地相处。</p>
+<p>“石头汤”的寓言不只有开始的石头与结尾的美味，重要的是如何促使这个变化发生的过程。BK 和 Hudi 相同的地方，在于社群维护者都在初始项目解决了一个特定问题的基础上，向社群抛出自己合理的请求，然后不断完善。无论是来自用户需求的反馈，还是工程师设计的方案，一旦有成果产出，社群维护者会及时发布新版本以鼓励做出贡献的参与者并向全体社群成员展示最新的进展。</p>
+<p>在这之后，社群维护者引导或者社群成员自发地提出“这个软件还可以更好，只要我们再完成……”的想法，就能清晰地在开发者当中传达出下一步可以做什么的信息。具体的待办事项好过一个模糊的愿景，开源共同体的开发者几乎总是倾向于加入到一个推进中的成功项目，而不是一个刚有设计的项目。架构设计和第一个版本是项目创始团队的责任，这也是开源协同与原版“石头汤”寓言的重要不同：如果你只是丢出两块石头，不会有参与者能够从无到有开发出整个开源软件。</p>
+<h2 id="Apache-Kvrocks"><a href="#Apache-Kvrocks" class="headerlink" title="Apache Kvrocks"></a>Apache Kvrocks</h2><p><a href="https://kvrocks.apache.org/">Apache Kvrocks</a> 是今年四月份进入 Apache 孵化器的项目，我是这个项目孵化期导师的一员。最后我想从这个项目出发，具体讲一个引导“村民”向“石头汤”当中添加“佐料”的例子。</p>
+<p>Kvrocks 是一个 Redis 协议兼容的分布式 KV NoSQL 数据库，不同于 Redis 采用全内存存储，Kvrocks 的存储是基于磁盘的。不同于企业放弃维护后捐赠给开源社群的项目，2019 年发起自美图基础架构团队开发的 Kvrocks 早在 2020 年就开始以开源项目的形式运作，历经一年多的发展吸引到了来自百度和携程等公司的开发者的参与，并在国内外多家公司的生产环境上线部署。</p>
+<p><a href="https://mp.weixin.qq.com/s/2UlajoLdA54scgWP8VS0lg">恭喜Kvrocks 加入 Apache 软件基金会孵化器</a></p>
+<p>上面这篇 Kvrocks 发布的加入 Apache 孵化器的文章当中几次提到，社群维护团队选择加入 Apache 的核心原因是“建立更大和多样化的开发者社区”。事实上，Apache 开源之道的指导和 Apache 品牌的帮助确实为 Kvrocks 打开了一个新的大门。</p>
+<p>我在成为 Kvrocks 项目的导师之后，自然而然地参与到项目社群当中。如同<a href="https://twitter.com/stephenzhang233/status/1541025802191765505">这条推文</a>提到的，接触一个新的开源项目，第一步就是克隆代码并尝试构建。我在构建过程 Kvrocks binary 当中发现了项目 CMake 脚本存在优化空间。这个时候，我想起来在<a href="how-cmake-works.md">《CMake 是怎样工作的》</a>文章评论区里 <a href="https://github.com/PragmaTwice">@PragmaTwice</a> 分享了他使用 CMake 的一些经验，正好跟我想做的改进相符合。因此，我邀请他把他的经验实践在 Kvrocks 项目上。</p>
+<p>很快，Twice 在我和 Kvrocks 的主要作者 <a href="https://github.com/git-hulk">@git-hulk</a> 等人的帮助下系统地改造了基于 CMake 的构建逻辑，取代了此前 Git Submodule + Makefile 的方案。此外，Twice 出于自己对 C++ 编码实践的理解，在阅读源码的过程中发现了许多“这个软件还可以更好，只要我们再完成……”的点子。遵循开源社群一直以来的协同惯例，他把这些想法发布成若干个 issue 并自己开始实现。就在最近几周，他所发起的工作吸引到了更多开发者的参与。</p>
+<ul>
+<li><a href="https://github.com/apache/incubator-kvrocks/issues/575">Tracking issue for build system enhancements</a></li>
+<li><a href="https://github.com/apache/incubator-kvrocks/issues/581">Proposal: Just return values instead of passing pointers if possible</a></li>
+<li><a href="https://github.com/apache/incubator-kvrocks/issues/663">Use unique_ptr to eliminate some trivial manual deallocation</a></li>
+</ul>
+<p>Apache 孵化器的主席 Justin Mclean 总是建议孵化期项目在参与者做出具体贡献之后尽快授予他们 Committer 身份，以鼓励人们持续做出贡献。他所理解的 Apache 之道应该关注到绝大部分参与者的情况，出于时区、本职工作和陪伴家人等等原因，参与者并不总是全力为某个开源项目工作。</p>
+<p>Kvrocks 的 PMC 成员基于这样的认识，结合 Twice 在六月上旬时已经完成的工作和表现出来的能力水平，经过 Apache 社群议事的标准流程投票通过邀请 Twice 成为 Kvrocks Committer 的一员。成为 Kvrocks Committer 之后至今的两周里，Twice 在保持原本的参与水准之外，更加积极地 review 其他社群成员的补丁，并协调不同 pull request 和合并参与者贡献的代码。</p>
+<p>可以看到，Apache 开源社群激励参与者共同制作“石头汤”的具体方式，就是以参与程度和具体贡献回馈参与者相应的声誉和权威。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>软件行业的经典著作《程序员修炼之道》描述了一个“石头汤”的寓言，在开源社群当中也存在着类似“石头汤”的协作流程。不同于原始版本多少带点欺骗的味道，开源协同的模式强调最初的软件本身即是一个可用的软件。而与原始版本相同的是，开源协同与外来人制作“石头汤”时采取的策略重点都在于做推动变革的催化剂。</p>
+<p>开源软件的维护者们也可以借鉴“石头汤”的魔法，在一个基本可用的软件的基础上，抛出可以做的更好的可能性，身体力行并团结潜在的开发者一起不断实现做出的预言，最终为行业制造出一个高质量的开源软件。</p>
+]]></content>
+      <categories>
+        <category>夜天之书</category>
+      </categories>
+      <tags>
+        <tag>开源</tag>
+        <tag>开源协同</tag>
+        <tag>Apache</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《纳瓦尔宝典》书评</title>
     <url>/2022/06/09/the-almanack-of-naval-ravikant/</url>
     <content><![CDATA[<p>近日在《大教堂与集市》的译者卫剑钒的推荐下阅读了这本被评价为新时代《穷查理宝典》的《纳瓦尔宝典》，其中有部分观点确实很有启发。卫 Sir 给这本《纳瓦尔宝典》专门写了两篇书评，已经把书中的精华几乎都介绍完全了。我在这里出于自己的理解和感悟，做一点微小的补充。</p>
@@ -1442,6 +1514,51 @@
       </tags>
   </entry>
   <entry>
+    <title>《开源之迷》书评</title>
+    <url>/2022/04/21/the-fascination-of-open-source/</url>
+    <content><![CDATA[<p><a href="https://book.douban.com/subject/35716759/">《开源之迷》</a>是<a href="https://opensourceway.community/">“开源之道”</a>主创适兕所著“开源之道三部曲”的第一部。本书的“迷”是着迷的“迷”，旨在向读者介绍什么是开源，以及开源令人欲罢不能的优势。适兕在<a href="https://opensourceway.community/posts/the_way_of_open_source/how-to-make-money-of-open-source-way/">《适兕是如何生存的？》</a>提到，自己从 2015 开始运行“开源之道”，2018 年辞去全职工作，一心发展开源之道。开源之迷，一至于此。</p>
+<p>本书发售前，我曾经应邀写了一小段推荐词，不过最后因为出版的原因没有随书印刷。这里附上原文内容，也可以对比只读样章跟读完全书以后体感的差别。</p>
+<blockquote>
+<p>适兕老师将他多年关注、学习和参与开源世界的理解灌注在开源之道三部曲当中。这本《开源之谜》里，我最期待的内容莫过于“在所有人看见的地方工作”。这一章的名字取自适兕老师推荐的三十多本开源之书其中一本，开源运动之所以冠上这个名字，就有强调源代码及其研发协作活动的公开性的原因。如果你想知道开源协同为什么是软件开发模式的必然方向，开源协同的价值和做法，阅读这本《开源之谜》一定不会错。</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="在所有人看得见的地方工作"><a href="#在所有人看得见的地方工作" class="headerlink" title="在所有人看得见的地方工作"></a>在所有人看得见的地方工作</h2><p>实际拿到本书以后，才发现《在所有人看得见的地方工作》一章非常单薄，前后仅十页的篇幅。除了引用 Linus 对外公开 Linux 项目的邮件以外，就是对想法公开、交流公开且归档以及流程公开几个点做了少数几句议论。姑且不说与同名开源书籍《WORKING IN PUBLIC》相比，例证详实程度和议论深度都难以望其项背，单是读完这十页的内容，留下的印象也不过是做什么都要公开，而对于为什么要这么做，具体可参考的案例和可能遇到的问题，则只字未提。</p>
+<p>不过，后一篇《开源世界的日常》花了五十页的篇幅从源码到 DevOps 系统，从沟通渠道到市场营销，讨论了一些典型的用例，还算做了一点补救，但是还是没有讲清楚为什么要这么做，以及可能遇到的问题。</p>
+<p>除去补充前一章的部分，《开源世界的日常》一章讨论市场营销的部分质量是不错的。开源社群的运营和发展不仅无需刻意避开市场营销，甚至应该主动思考如何让开源软件在市场形成强大的影响力。</p>
+<p>Perl 社群当中的相当部分成员会在 IRC 或邮件列表上讨论新功能和 CPAN 上新的软件库，目标用户是谁，如何高效地推广到目标用户群体当中。Apache 社群在项目<a href="https://tisonkun.org/open-source-guides/apache-maturity-model/">成熟衡量模型</a>当中，明确指出市场营销是参与贡献的一类。</p>
+<p>适兕在书中提及了网站、博客和论坛等等渠道，并介绍了运作这些渠道所需的基本知识。我想这跟他多年以来运营“开源之道”项目密不可分。除了线上渠道，适兕在书中还强调了线下活动的价值和典型线下活动的案例。我在分享<a href="https://www.bilibili.com/video/BV1ya411i7qr">《How the ASF builds communities》</a>的时候也专门讨论了 Apache 社群当中的线下活动，就是在赛博朋克化和个人原子化的环境下，强调人与人面对面的连结的重要性。</p>
+<h2 id="开源的范畴非常广泛"><a href="#开源的范畴非常广泛" class="headerlink" title="开源的范畴非常广泛"></a>开源的范畴非常广泛</h2><p>从适兕在本章和全书的举例当中，我也发现了一件有趣的事情，那就是开源的范畴是非常广泛的。</p>
+<p>《开源之迷》一书中，适兕举例往往选择 Linux Kernel 及其相关的项目，这是因为他开发软件的时间里大部分是在和 Linux 发行版打交道。我自己撰文举例的时候，往往也举的是 Apache 项目尤其是大数据项目的例子，还有参与过的 Perl 社群和 TiDB 社群的例子。</p>
+<p>除此以外，开源还有非常多的类别。</p>
+<ul>
+<li>区块链技术最初的论文是公开的，<a href="https://github.com/ethereum">以太坊</a>是开源软件，<a href="https://github.com/hyperledger">HyperLedger</a> 也是开源软件。</li>
+<li>应用监控系统 <a href="https://skywalking.apache.org/">Apache SkyWalking</a> 是开源软件。</li>
+<li>角色扮演游戏的开发框架 <a href="https://github.com/EasyRPG">EasyRPG</a> 是开源软件。</li>
+<li>Linux 发行版上广泛使用的办公软件 <a href="https://github.com/LibreOffice">LibreOffice</a> 也是开源软件。</li>
+<li>绝大多数编程语言要投入实际使用所需的编译器、解释器、运行环境、标准库和实用工具，几乎也都是开源软件。</li>
+</ul>
+<p>可以说，现代软件开发，基本不可能离开开源软件。</p>
+<p>不同项目的风格是不一样的，受到目标人群、技术领域和利益多寡的影响，在一个社群当中合理的规则或惯例，照搬到另一个开源社群当中，可能会面临水土不服的情况。这是我在<a href="https://zhuanlan.zhihu.com/p/397682701">《开源社区的治理模型应当因地制宜》</a>以 TiDB 社群为例讨论过的问题。</p>
+<h2 id="开源世界的人物"><a href="#开源世界的人物" class="headerlink" title="开源世界的人物"></a>开源世界的人物</h2><p>要说《开源之迷》当中我最喜欢的章节，非《开源世界的人物》莫属。在这个篇章里，适兕充分发挥了向导的定位，从参与的普罗大众，到计算机科学家、程序员，再到律师、布道师、学者和商人，一口气从自由软件运动到开源运动再到今天，横跨多个领域介绍了与开源有关的关键人物以及他们的贡献。</p>
+<p>本书定位就在揭示开源的迷人之处，适兕作为向导带领读者领略开源的魅力。我必须承认在阅读这一章节的时候，好几次我都为开源历史上出现过这样的人，他们做了这样的事而感慨不已。</p>
+<p>其中印象最深的是适兕放在最初提及的“不起眼的推动者：大众驱动的开源”。在关注到开源世界的明星之前，在看到一个一个成功的项目之前，首先要强调的是开源软件乃至整个开源生态，能有今天的成就，包含了每一个参与者的努力。开源软件是每一个参与者添砖加瓦堆砌而成的，Linux 的贡献者已经超过了一万人，提交数超过了一百万个，这不只是一两个明星开发者的功劳，而是开源的胜利。</p>
+<p>其他人物介绍也很出彩，这里不做展开复述，只讲几个名字。</p>
+<p><a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee">Tim Berners-Lee</a> 和他发明的万维网构成了开源的平台基础，其代码本身是公共领域的，即任何人可以随意使用，其协作方式是日后有名的 RFC 模式，时至今日仍然有大量的开源项目采用。</p>
+<p>GNU 工程的创始人 <a href="https://en.wikipedia.org/wiki/Richard_Stallman">Richard Stallman</a> 和 Linux 的作者 <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a> 还有<a href="https://book.douban.com/subject/25881855/">《大教堂与集市》</a>的作者 <a href="https://en.wikipedia.org/wiki/Eric_S._Raymond">Eric S. Raymond</a> 自然也在其中。其实，如果你把他们三人的传记或著作放在一起，《若为自由故》、《只是为了好玩》和《大教堂与集市》，就能发现开源的包罗万象。每个人参与开源的理由可能是各不相同的，但却不妨碍他们在一个以分享精神为核心的模糊共识下共同创造价值。</p>
+<p>除此之外，还有 FFmpeg 和 QEMU 的作者 <a href="https://en.wikipedia.org/wiki/Fabrice_Bellard">Fabrice Bellard</a> 和著名技术书籍出版商 O’Reilly 的创始人 <a href="https://en.wikipedia.org/wiki/Tim_O%27Reilly">Tim O’Reilly</a> 等等，他们的故事都很有趣。</p>
+<p>最后，在写成这篇书评之前，我常引用本书对于“搭便车者”的论述，即如果只是作为消费者使用开源软件，缺乏上游思维，孤僻地认为可以和开源社群隔绝开来，其结果必然是“任由投喂，失去创新能力”。</p>
+<p>总的来说，这本书对想要了解“开源”这个话题的读者来说，还是值得一读的。它可以是带领你探索开源世界的方方面面的一本介绍性书籍，适兕也是一名不错的向导。期待“开源之道”三部曲的后续两作发布，如同适兕所计划的一样，讨论清楚如何实践开源，以及为什么要做开源。</p>
+]]></content>
+      <categories>
+        <category>大图书馆</category>
+      </categories>
+      <tags>
+        <tag>开源</tag>
+        <tag>开源布道</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《大教堂与集市》书评</title>
     <url>/2021/12/14/the-cathedral-and-the-bazaar/</url>
     <content><![CDATA[<p>历时五天，我总算把<a href="https://book.douban.com/subject/25881855/">《大教堂与集市》</a>这本经典的开源文化著作认真读了一遍，真是酣畅淋漓。</p>
@@ -1574,51 +1691,6 @@
       <tags>
         <tag>开源</tag>
         <tag>开源协同</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《开源之迷》书评</title>
-    <url>/2022/04/21/the-fascination-of-open-source/</url>
-    <content><![CDATA[<p><a href="https://book.douban.com/subject/35716759/">《开源之迷》</a>是<a href="https://opensourceway.community/">“开源之道”</a>主创适兕所著“开源之道三部曲”的第一部。本书的“迷”是着迷的“迷”，旨在向读者介绍什么是开源，以及开源令人欲罢不能的优势。适兕在<a href="https://opensourceway.community/posts/the_way_of_open_source/how-to-make-money-of-open-source-way/">《适兕是如何生存的？》</a>提到，自己从 2015 开始运行“开源之道”，2018 年辞去全职工作，一心发展开源之道。开源之迷，一至于此。</p>
-<p>本书发售前，我曾经应邀写了一小段推荐词，不过最后因为出版的原因没有随书印刷。这里附上原文内容，也可以对比只读样章跟读完全书以后体感的差别。</p>
-<blockquote>
-<p>适兕老师将他多年关注、学习和参与开源世界的理解灌注在开源之道三部曲当中。这本《开源之谜》里，我最期待的内容莫过于“在所有人看见的地方工作”。这一章的名字取自适兕老师推荐的三十多本开源之书其中一本，开源运动之所以冠上这个名字，就有强调源代码及其研发协作活动的公开性的原因。如果你想知道开源协同为什么是软件开发模式的必然方向，开源协同的价值和做法，阅读这本《开源之谜》一定不会错。</p>
-</blockquote>
-<span id="more"></span>
-
-<h2 id="在所有人看得见的地方工作"><a href="#在所有人看得见的地方工作" class="headerlink" title="在所有人看得见的地方工作"></a>在所有人看得见的地方工作</h2><p>实际拿到本书以后，才发现《在所有人看得见的地方工作》一章非常单薄，前后仅十页的篇幅。除了引用 Linus 对外公开 Linux 项目的邮件以外，就是对想法公开、交流公开且归档以及流程公开几个点做了少数几句议论。姑且不说与同名开源书籍《WORKING IN PUBLIC》相比，例证详实程度和议论深度都难以望其项背，单是读完这十页的内容，留下的印象也不过是做什么都要公开，而对于为什么要这么做，具体可参考的案例和可能遇到的问题，则只字未提。</p>
-<p>不过，后一篇《开源世界的日常》花了五十页的篇幅从源码到 DevOps 系统，从沟通渠道到市场营销，讨论了一些典型的用例，还算做了一点补救，但是还是没有讲清楚为什么要这么做，以及可能遇到的问题。</p>
-<p>除去补充前一章的部分，《开源世界的日常》一章讨论市场营销的部分质量是不错的。开源社群的运营和发展不仅无需刻意避开市场营销，甚至应该主动思考如何让开源软件在市场形成强大的影响力。</p>
-<p>Perl 社群当中的相当部分成员会在 IRC 或邮件列表上讨论新功能和 CPAN 上新的软件库，目标用户是谁，如何高效地推广到目标用户群体当中。Apache 社群在项目<a href="https://tisonkun.org/open-source-guides/apache-maturity-model/">成熟衡量模型</a>当中，明确指出市场营销是参与贡献的一类。</p>
-<p>适兕在书中提及了网站、博客和论坛等等渠道，并介绍了运作这些渠道所需的基本知识。我想这跟他多年以来运营“开源之道”项目密不可分。除了线上渠道，适兕在书中还强调了线下活动的价值和典型线下活动的案例。我在分享<a href="https://www.bilibili.com/video/BV1ya411i7qr">《How the ASF builds communities》</a>的时候也专门讨论了 Apache 社群当中的线下活动，就是在赛博朋克化和个人原子化的环境下，强调人与人面对面的连结的重要性。</p>
-<h2 id="开源的范畴非常广泛"><a href="#开源的范畴非常广泛" class="headerlink" title="开源的范畴非常广泛"></a>开源的范畴非常广泛</h2><p>从适兕在本章和全书的举例当中，我也发现了一件有趣的事情，那就是开源的范畴是非常广泛的。</p>
-<p>《开源之迷》一书中，适兕举例往往选择 Linux Kernel 及其相关的项目，这是因为他开发软件的时间里大部分是在和 Linux 发行版打交道。我自己撰文举例的时候，往往也举的是 Apache 项目尤其是大数据项目的例子，还有参与过的 Perl 社群和 TiDB 社群的例子。</p>
-<p>除此以外，开源还有非常多的类别。</p>
-<ul>
-<li>区块链技术最初的论文是公开的，<a href="https://github.com/ethereum">以太坊</a>是开源软件，<a href="https://github.com/hyperledger">HyperLedger</a> 也是开源软件。</li>
-<li>应用监控系统 <a href="https://skywalking.apache.org/">Apache SkyWalking</a> 是开源软件。</li>
-<li>角色扮演游戏的开发框架 <a href="https://github.com/EasyRPG">EasyRPG</a> 是开源软件。</li>
-<li>Linux 发行版上广泛使用的办公软件 <a href="https://github.com/LibreOffice">LibreOffice</a> 也是开源软件。</li>
-<li>绝大多数编程语言要投入实际使用所需的编译器、解释器、运行环境、标准库和实用工具，几乎也都是开源软件。</li>
-</ul>
-<p>可以说，现代软件开发，基本不可能离开开源软件。</p>
-<p>不同项目的风格是不一样的，受到目标人群、技术领域和利益多寡的影响，在一个社群当中合理的规则或惯例，照搬到另一个开源社群当中，可能会面临水土不服的情况。这是我在<a href="https://zhuanlan.zhihu.com/p/397682701">《开源社区的治理模型应当因地制宜》</a>以 TiDB 社群为例讨论过的问题。</p>
-<h2 id="开源世界的人物"><a href="#开源世界的人物" class="headerlink" title="开源世界的人物"></a>开源世界的人物</h2><p>要说《开源之迷》当中我最喜欢的章节，非《开源世界的人物》莫属。在这个篇章里，适兕充分发挥了向导的定位，从参与的普罗大众，到计算机科学家、程序员，再到律师、布道师、学者和商人，一口气从自由软件运动到开源运动再到今天，横跨多个领域介绍了与开源有关的关键人物以及他们的贡献。</p>
-<p>本书定位就在揭示开源的迷人之处，适兕作为向导带领读者领略开源的魅力。我必须承认在阅读这一章节的时候，好几次我都为开源历史上出现过这样的人，他们做了这样的事而感慨不已。</p>
-<p>其中印象最深的是适兕放在最初提及的“不起眼的推动者：大众驱动的开源”。在关注到开源世界的明星之前，在看到一个一个成功的项目之前，首先要强调的是开源软件乃至整个开源生态，能有今天的成就，包含了每一个参与者的努力。开源软件是每一个参与者添砖加瓦堆砌而成的，Linux 的贡献者已经超过了一万人，提交数超过了一百万个，这不只是一两个明星开发者的功劳，而是开源的胜利。</p>
-<p>其他人物介绍也很出彩，这里不做展开复述，只讲几个名字。</p>
-<p><a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee">Tim Berners-Lee</a> 和他发明的万维网构成了开源的平台基础，其代码本身是公共领域的，即任何人可以随意使用，其协作方式是日后有名的 RFC 模式，时至今日仍然有大量的开源项目采用。</p>
-<p>GNU 工程的创始人 <a href="https://en.wikipedia.org/wiki/Richard_Stallman">Richard Stallman</a> 和 Linux 的作者 <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a> 还有<a href="https://book.douban.com/subject/25881855/">《大教堂与集市》</a>的作者 <a href="https://en.wikipedia.org/wiki/Eric_S._Raymond">Eric S. Raymond</a> 自然也在其中。其实，如果你把他们三人的传记或著作放在一起，《若为自由故》、《只是为了好玩》和《大教堂与集市》，就能发现开源的包罗万象。每个人参与开源的理由可能是各不相同的，但却不妨碍他们在一个以分享精神为核心的模糊共识下共同创造价值。</p>
-<p>除此之外，还有 FFmpeg 和 QEMU 的作者 <a href="https://en.wikipedia.org/wiki/Fabrice_Bellard">Fabrice Bellard</a> 和著名技术书籍出版商 O’Reilly 的创始人 <a href="https://en.wikipedia.org/wiki/Tim_O%27Reilly">Tim O’Reilly</a> 等等，他们的故事都很有趣。</p>
-<p>最后，在写成这篇书评之前，我常引用本书对于“搭便车者”的论述，即如果只是作为消费者使用开源软件，缺乏上游思维，孤僻地认为可以和开源社群隔绝开来，其结果必然是“任由投喂，失去创新能力”。</p>
-<p>总的来说，这本书对想要了解“开源”这个话题的读者来说，还是值得一读的。它可以是带领你探索开源世界的方方面面的一本介绍性书籍，适兕也是一名不错的向导。期待“开源之道”三部曲的后续两作发布，如同适兕所计划的一样，讨论清楚如何实践开源，以及为什么要做开源。</p>
-]]></content>
-      <categories>
-        <category>大图书馆</category>
-      </categories>
-      <tags>
-        <tag>开源</tag>
-        <tag>开源布道</tag>
       </tags>
   </entry>
   <entry>
