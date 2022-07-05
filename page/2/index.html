@@ -159,7 +159,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-count">21</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -170,7 +170,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">23</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -221,6 +221,119 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://tisonkun.org/2022/04/15/how-cmake-works/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/media/eugeo.jpg">
+      <meta itemprop="name" content="tison">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夜天之书">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 夜天之书">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/15/how-cmake-works/" class="post-title-link" itemprop="url">CMake 是怎么工作的？</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-04-15 00:00:00" itemprop="dateCreated datePublished" datetime="2022-04-15T00:00:00+00:00">2022-04-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-07-05 07:58:38" itemprop="dateModified" datetime="2022-07-05T07:58:38+00:00">2022-07-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%A4%A9%E5%B7%A5%E5%BC%80%E7%89%A9/" itemprop="url" rel="index"><span itemprop="name">天工开物</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>5.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>关于开源软件的发布相关的内容还在构思当中，先摆烂重发部分以前讨论过的关于构建系统的文章。构建和发布密不可分，可以认为都是持续交付流水线的一环。</p>
+<p>我会分多篇文章讨论软件发布和开源软件发布的各个方面，文章内容再加以提炼放到编撰当中的《开源指南》里。</p>
+</blockquote>
+<p>构建系统是软件开发的重要组成部分，生产环境中的绝大多数软件都由多个组件所组成，由一系列依赖和分散的编译单元聚合而成，而自动化这些组件的集成的系统，就是构建系统。</p>
+<p>笼统地说，构建系统负责除了应用代码编写以外的，所有从代码到可执行文件的步骤的自动化。其中，查找、编译和链接等具体执行由其他工具支持。构建系统本身处理的内容分为两大部分，第一部分是构建过程各个步骤的编排，第二部分是包管理或说第三方依赖管理。这两者的区别可以参考 Java 生态中 Ant 和 Ivy 的区别和联系。狭义的构建系统仅包括第一部分，因为狭义的构建过程只关心有某种方法可以取得依赖并将其引入构建，而不关心依赖本身是怎么管理和获取的。</p>
+<p>那么，本文主角 CMake 是哪一种或者两者都是呢？</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/04/15/how-cmake-works/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://tisonkun.org/2022/04/10/code-contributions/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -257,7 +370,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-02 02:03:03" itemprop="dateModified" datetime="2022-07-02T02:03:03+00:00">2022-07-02</time>
+      <time title="修改时间：2022-07-05 07:58:38" itemprop="dateModified" datetime="2022-07-05T07:58:38+00:00">2022-07-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -365,7 +478,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-02 02:03:03" itemprop="dateModified" datetime="2022-07-02T02:03:03+00:00">2022-07-02</time>
+      <time title="修改时间：2022-07-05 07:58:38" itemprop="dateModified" datetime="2022-07-05T07:58:38+00:00">2022-07-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -475,7 +588,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-02 02:03:03" itemprop="dateModified" datetime="2022-07-02T02:03:03+00:00">2022-07-02</time>
+      <time title="修改时间：2022-07-05 07:58:38" itemprop="dateModified" datetime="2022-07-05T07:58:38+00:00">2022-07-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -582,7 +695,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-02 02:03:03" itemprop="dateModified" datetime="2022-07-02T02:03:03+00:00">2022-07-02</time>
+      <time title="修改时间：2022-07-05 07:58:38" itemprop="dateModified" datetime="2022-07-05T07:58:38+00:00">2022-07-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -693,7 +806,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-02 02:03:03" itemprop="dateModified" datetime="2022-07-02T02:03:03+00:00">2022-07-02</time>
+      <time title="修改时间：2022-07-05 07:58:38" itemprop="dateModified" datetime="2022-07-05T07:58:38+00:00">2022-07-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -806,7 +919,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-02 02:03:03" itemprop="dateModified" datetime="2022-07-02T02:03:03+00:00">2022-07-02</time>
+      <time title="修改时间：2022-07-05 07:58:38" itemprop="dateModified" datetime="2022-07-05T07:58:38+00:00">2022-07-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -915,7 +1028,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-02 02:03:03" itemprop="dateModified" datetime="2022-07-02T02:03:03+00:00">2022-07-02</time>
+      <time title="修改时间：2022-07-05 07:58:38" itemprop="dateModified" datetime="2022-07-05T07:58:38+00:00">2022-07-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1024,7 +1137,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-02 02:03:03" itemprop="dateModified" datetime="2022-07-02T02:03:03+00:00">2022-07-02</time>
+      <time title="修改时间：2022-07-05 07:58:38" itemprop="dateModified" datetime="2022-07-05T07:58:38+00:00">2022-07-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1132,7 +1245,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-02 02:03:03" itemprop="dateModified" datetime="2022-07-02T02:03:03+00:00">2022-07-02</time>
+      <time title="修改时间：2022-07-05 07:58:38" itemprop="dateModified" datetime="2022-07-05T07:58:38+00:00">2022-07-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1196,116 +1309,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://tisonkun.org/2021/12/05/open-source-collaboration-enterprise-perspective/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/media/eugeo.jpg">
-      <meta itemprop="name" content="tison">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="夜天之书">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 夜天之书">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/12/05/open-source-collaboration-enterprise-perspective/" class="post-title-link" itemprop="url">企业如何实践开源协同</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-12-05 00:00:00" itemprop="dateCreated datePublished" datetime="2021-12-05T00:00:00+00:00">2021-12-05</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-02 02:03:03" itemprop="dateModified" datetime="2022-07-02T02:03:03+00:00">2022-07-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%A4%9C%E5%A4%A9%E4%B9%8B%E4%B9%A6/" itemprop="url" rel="index"><span itemprop="name">夜天之书</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>8.5k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>8 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>随着开源概念的红火，越来越多的企业将内部项目公开托管到 GitHub 等平台，也有越来越多依托开源项目建立起来的企业。对于这些企业来说，它们的目标不只是开放项目源代码，更希望能够形成开源共同体，打造围绕项目的软件生态。</p>
-<p>然而，其中大部分项目由于成员背景的单一性，最终都终结于仅源码可得的形态。对于这些新兴项目来说，初始成员从属于同一企业是既定事实。在这样的前提下，企业应该如何实践开源协同，形成开源共同体呢？</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/12/05/open-source-collaboration-enterprise-perspective/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>
@@ -1328,13 +1333,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">145k</span>
+    <span title="站点总字数">147k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:12</span>
+    <span title="站点阅读时长">2:14</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
