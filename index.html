@@ -159,7 +159,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-count">22</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -170,7 +170,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-count">25</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -221,6 +221,115 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://tisonkun.org/2022/07/25/clickhouse-metrics-model/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/media/eugeo.jpg">
+      <meta itemprop="name" content="tison">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夜天之书">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 夜天之书">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/07/25/clickhouse-metrics-model/" class="post-title-link" itemprop="url">ClickHouse 社群指标模型</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-07-25 00:00:00 / 修改时间：06:00:30" itemprop="dateCreated datePublished" datetime="2022-07-25T00:00:00+00:00">2022-07-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%A4%9C%E5%A4%A9%E4%B9%8B%E4%B9%A6/" itemprop="url" rel="index"><span itemprop="name">夜天之书</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>13k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>11 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>数字化时代下绝大多数工作都有关键绩效指标（KPI）指导，任何组织都期望找到一个合理的指标来校准战略方向，衡量工作成果。</p>
+<p>然而，并非所有工作都能有 KPI 准确的衡量产出。著名软件工程师，同时也是《重构》《分析模式》等书籍的作者 Martin Fowler 曾经写过一篇博客论证<a target="_blank" rel="noopener" href="https://martinfowler.com/bliki/CannotMeasureProductivity.html">软件工程师的生产力是无法衡量的</a>。</p>
+<p>开源社群成员的重要组成部分，也是一切价值的核心飞轮就是这样一群软件工程师。这是否意味着开源社群的工作也是无法衡量的吗？</p>
+<p>我认为，目前探索所及的一切开源社群指标都是人的活动产生的，并且这里的人都是匿名的网络用户。这样的背景下，如果有人背负着必须提高某个指标的任务，在不论对社群协作造成的次生影响的前提下，几乎所有指标都是可以做出来的。因此，只是考察社群指标的结果数字，甚至为了掩饰自己不愿意理解社群运作的深层逻辑，而要求组织的社群协调员以某种归一化的分数来汇报社群指标，都不能达到撬动社群杠杆完成组织生产力增效的目的。</p>
+<p>但是，没有北极星指标引领社群工作方向，难免会导致社群成员对自己所在的社群正处于一种什么状态缺乏清晰的认识。不是将指标作为目标结果，而是以定性和定量的指标来辅助校准社群发展的方向和衡量社群工作的效率，这样的工作是有价值的。</p>
+<p><a target="_blank" rel="noopener" href="https://guides.tisonkun.org/apache-maturity-model/">Apache 成熟度模型</a>就是一个定性模型，从代码、版权、发布、质量、社群、共识和独立性七个方面衡量一个软件项目是否符合 Apache 开源之道。绝大部分从 Apache 孵化器毕业的项目在毕业前都会准备一份对应成熟度模型的报告，例如 Apache Pulsar 在毕业之际就专门撰写了一份<a target="_blank" rel="noopener" href="https://github.com/apache/pulsar/wiki/Apache-Maturity-Model-Assessment-for-Pulsar">社群成熟度报告</a>来回应孵化器导师的质询。</p>
+<p>近年来，越来越多的企业和组织认识到社群运营的重要性。除了定性的指标以外，这些企业和组织投入的人力和资金也使得探索定量指标得到了更多的支持。这其中值得关注的两个，就是 <a target="_blank" rel="noopener" href="https://orbit.love/">orbit.love</a> 的<a target="_blank" rel="noopener" href="https://orbitmodel.com/">轨道模型</a>和 ClickHouse 社群基于 GitHub Events 全域公开数据进行的社群分析。</p>
+<p>相比之下，orbit.love 的轨道模型不只是针对开源社群，而是针对普遍的社群运营行为及其结果的建模，定义更加严谨，理论更加丰富。ClickHouse 社群的指标模型是从使用自家软件分析社群活动出发，目前还停留在比较简单的统计分析的阶段上。</p>
+<p>本文以 <a target="_blank" rel="noopener" href="https://ghe.clickhouse.tech/">ClickHouse 的社群分析报告</a>为基础，看看从 GitHub Events 全域数据能够进行哪些数字化社群指标分析。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/07/25/clickhouse-metrics-model/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://tisonkun.org/2022/07/05/open-source-free-rider/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -257,7 +366,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-21 08:56:48" itemprop="dateModified" datetime="2022-07-21T08:56:48+00:00">2022-07-21</time>
+      <time title="修改时间：2022-07-25 06:00:30" itemprop="dateModified" datetime="2022-07-25T06:00:30+00:00">2022-07-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -365,7 +474,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-21 08:56:48" itemprop="dateModified" datetime="2022-07-21T08:56:48+00:00">2022-07-21</time>
+      <time title="修改时间：2022-07-25 06:00:30" itemprop="dateModified" datetime="2022-07-25T06:00:30+00:00">2022-07-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -476,7 +585,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-21 08:56:48" itemprop="dateModified" datetime="2022-07-21T08:56:48+00:00">2022-07-21</time>
+      <time title="修改时间：2022-07-25 06:00:30" itemprop="dateModified" datetime="2022-07-25T06:00:30+00:00">2022-07-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -585,7 +694,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-21 08:56:48" itemprop="dateModified" datetime="2022-07-21T08:56:48+00:00">2022-07-21</time>
+      <time title="修改时间：2022-07-25 06:00:30" itemprop="dateModified" datetime="2022-07-25T06:00:30+00:00">2022-07-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -696,7 +805,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-21 08:56:48" itemprop="dateModified" datetime="2022-07-21T08:56:48+00:00">2022-07-21</time>
+      <time title="修改时间：2022-07-25 06:00:30" itemprop="dateModified" datetime="2022-07-25T06:00:30+00:00">2022-07-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -804,7 +913,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-21 08:56:48" itemprop="dateModified" datetime="2022-07-21T08:56:48+00:00">2022-07-21</time>
+      <time title="修改时间：2022-07-25 06:00:30" itemprop="dateModified" datetime="2022-07-25T06:00:30+00:00">2022-07-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -914,7 +1023,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-21 08:56:48" itemprop="dateModified" datetime="2022-07-21T08:56:48+00:00">2022-07-21</time>
+      <time title="修改时间：2022-07-25 06:00:30" itemprop="dateModified" datetime="2022-07-25T06:00:30+00:00">2022-07-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1022,7 +1131,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-21 08:56:48" itemprop="dateModified" datetime="2022-07-21T08:56:48+00:00">2022-07-21</time>
+      <time title="修改时间：2022-07-25 06:00:30" itemprop="dateModified" datetime="2022-07-25T06:00:30+00:00">2022-07-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1129,7 +1238,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-21 08:56:48" itemprop="dateModified" datetime="2022-07-21T08:56:48+00:00">2022-07-21</time>
+      <time title="修改时间：2022-07-25 06:00:30" itemprop="dateModified" datetime="2022-07-25T06:00:30+00:00">2022-07-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1196,114 +1305,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://tisonkun.org/2022/04/20/compiling-history/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/media/eugeo.jpg">
-      <meta itemprop="name" content="tison">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="夜天之书">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 夜天之书">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/20/compiling-history/" class="post-title-link" itemprop="url">我们为什么要编纂历史？</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-04-20 00:00:00" itemprop="dateCreated datePublished" datetime="2022-04-20T00:00:00+00:00">2022-04-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-21 08:56:48" itemprop="dateModified" datetime="2022-07-21T08:56:48+00:00">2022-07-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%A4%9C%E5%A4%A9%E4%B9%8B%E4%B9%A6/" itemprop="url" rel="index"><span itemprop="name">夜天之书</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.8k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>早在今年初，<a target="_blank" rel="noopener" href="https://opensourceway.community/">适兕</a>就建立了「开源之史」讨论小组，旨在探讨有关技术、人物、思想、文化等开源世界发生过的事件和演化。</p>
-<p>一开始，我对这个小组保持观望态度，既期待能够从中了解一些或许自己还不知道的历史，又对历史研究抱有一定的怀疑。一直以来，我都推崇关注现在，解决实际问题，研究历史尤其是尚未有定论也没有“信史”的“开源之史”，到底有多大的作用，我并不确定。但是，近日来发生的一些事情，让我重新考虑“历史”的价值，也对标题提出的“我们为什么要编纂历史”这个问题有了新的理解。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/04/20/compiling-history/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1328,13 +1329,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">151k</span>
+    <span title="站点总字数">164k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:17</span>
+    <span title="站点阅读时长">2:29</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
